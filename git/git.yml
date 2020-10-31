@@ -1,10 +1,15 @@
-- name: Git - Install
+- name: Git - Installed
   become: yes
   package:
     name: git
     state: present
 
-- name: Git - Deploy Config
+- name: Git - Config Directory Exists
+  file:
+    path: ~/.config/git
+    state: directory
+
+- name: Git - Config File Sync
   copy:
     src: config
     dest: ~/.config/git/config
