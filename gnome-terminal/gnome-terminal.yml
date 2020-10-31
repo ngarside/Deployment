@@ -52,4 +52,4 @@
 - name: Gnome Terminal - Headerbar
   dconf:
     key: /org/gnome/terminal/legacy/headerbar
-    value: "true"
+    value: "@mb true"
