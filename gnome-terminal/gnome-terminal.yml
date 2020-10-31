@@ -48,3 +48,8 @@
   dconf:
     key: /org/gnome/terminal/legacy/theme-variant
     value: "'system'"
+
+- name: Gnome Terminal - Headerbar
+  dconf:
+    key: /org/gnome/terminal/legacy/headerbar
+    value: "true"
