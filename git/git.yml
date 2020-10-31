@@ -1,0 +1,5 @@
+- name: Git - Install
+  become: yes
+  package:
+    name: git
+    state: present
