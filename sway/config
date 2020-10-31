@@ -17,7 +17,7 @@ bindsym Alt+F4 kill
 
 output * bg /usr/share/backgrounds/background.jpg fill
 
-gaps inner 5
+gaps inner 10
 
 default_border none
 
