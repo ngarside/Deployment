@@ -6,3 +6,4 @@
   - include: firefox/firefox.yml
   - include: blender/blender.yml
   - include: vscode/vscode.yml
+  - include: gnome-calculator/gnome-calculator.yml

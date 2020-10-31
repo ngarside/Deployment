@@ -1,0 +1,5 @@
+- name: Gnome Calculator - Installed
+  become: yes
+  package:
+    name: gnome-calculator
+    state: present
