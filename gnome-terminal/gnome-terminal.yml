@@ -43,3 +43,8 @@
   dconf:
     key: /org/gnome/terminal/legacy/keybindings/select-all
     value: "'<Ctrl>A'"
+
+- name: Gnome Terminal - System Theme
+  dconf:
+    key: /org/gnome/terminal/legacy/theme-variant
+    value: "'system'"
