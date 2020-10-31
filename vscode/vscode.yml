@@ -12,3 +12,13 @@
   package:
     name: code
     state: present
+
+- name: VS Code - Settings File Sync
+  copy:
+    src: settings.json
+    dest: ~/.config/Code/User/settings.json
+
+- name: VS Code - Keybindings File Sync
+  copy:
+    src: keybindings.json
+    dest: ~/.config/Code/User/keybindings.json

@@ -1,0 +1,14 @@
+{
+	"editor.detectIndentation": true,
+	"editor.fontFamily": "monospace",
+	"editor.insertSpaces": false,
+	"editor.renderLineHighlight": "all",
+	"editor.wordWrap": "on",
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"telemetry.enableCrashReporter": false,
+	"telemetry.enableTelemetry": false,
+	"workbench.startupEditor": "none",
+	"window.restoreWindows": "none",
+	"workbench.colorTheme": "Default Dark+"
+}
