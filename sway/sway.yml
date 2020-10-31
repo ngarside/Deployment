@@ -15,6 +15,7 @@
     dest: ~/.config/sway/config
 
 - name: Sway - VirtualBox Compatibility
+  become: yes
   lineinfile:
     path: /etc/environment
     regexp: 'WLR_NO_HARDWARE_CURSORS'
