@@ -7,7 +7,7 @@
 REPO=$(mktemp -d -t ci-XXXXXXXX)
 
 # Install pre-requisites
-sudo dnf install git ansible -y
+sudo dnf install git ansible -assumeyes -cacheonly
 
 # Clone repo
 git clone --depth=1 https://github.com/ngarside/deployment.git $REPO
