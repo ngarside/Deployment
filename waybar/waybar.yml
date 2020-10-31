@@ -1,0 +1,5 @@
+- name: Waybar - Installed
+  become: yes
+  package:
+    name: waybar
+    state: present

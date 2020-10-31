@@ -2,3 +2,4 @@
   tasks:
   - include: git/git.yml
   - include: sway/sway.yml
+  - include: waybar/waybar.yml
