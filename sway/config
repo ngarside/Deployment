@@ -9,12 +9,15 @@ set $mod Mod4
 # --------------------
 
 bindsym $mod+Return exec urxvt
+bindsym Alt+F4 kill
 
 # --------------------
 # Appearance
 # --------------------
 
 output * bg /usr/share/backgrounds/background.jpg fill
+
+gaps inner 5
 
 # --------------------
 # Waybar
