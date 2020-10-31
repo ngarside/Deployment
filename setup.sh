@@ -7,7 +7,8 @@
 REPO=$(mktemp -d -t ci-XXXXXXXX)
 
 # Install pre-requisites
-sudo dnf install --assumeyes git ansible
+# 'python-psutil' is required by Ansible dbus module
+sudo dnf install --assumeyes git ansible python-psutil
 
 # Clone repo
 git clone --depth=1 https://github.com/ngarside/deployment.git $REPO
