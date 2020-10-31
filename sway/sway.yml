@@ -26,3 +26,9 @@
   copy:
     src: background.jpg
     dest: /usr/share/backgrounds/background.jpg
+
+- name: Sway - I3IPC Installed
+  become: yes
+  pip:
+    name: i3ipc
+    state: present
