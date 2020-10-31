@@ -1,0 +1,4 @@
+# Waybar
+bar {
+	swaybar_command waybar
+}

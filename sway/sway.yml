@@ -3,3 +3,13 @@
   package:
     name: sway
     state: present
+
+- name: Sway - Config Directory Exists
+  file:
+    path: ~/.config/sway
+    state: directory
+
+- name: Sway - Config File Sync
+  copy:
+    src: config
+    dest: ~/.config/sway/config
