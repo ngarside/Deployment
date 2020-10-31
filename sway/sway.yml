@@ -14,6 +14,11 @@
     src: config
     dest: ~/.config/sway/config
 
+- name: Sway - Fader Sync
+  copy:
+    src: fader.py
+    dest: ~/.config/sway/fader.py
+
 - name: Sway - VirtualBox Compatibility
   become: yes
   lineinfile:
