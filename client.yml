@@ -8,3 +8,4 @@
   - include: vscode/vscode.yml
   - include: gnome-calculator/gnome-calculator.yml
   - include: gnome-terminal/gnome-terminal.yml
+  - include: nautilus/nautilus.yml

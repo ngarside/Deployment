@@ -1,0 +1,5 @@
+- name: Nautilus - Installed
+  become: yes
+  package:
+    name: nautilus
+    state: present
