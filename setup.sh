@@ -1,7 +1,7 @@
 # Bootstrapper for setting up localhost.
 # Downloads this repository then installs and runs ansible.
 # Run with:
-# wget -O - https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bash
+# wget --no-cache -O - https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bash
 
 # Variables
 REPO=$(mktemp -d -t ci-XXXXXXXX)
