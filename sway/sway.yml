@@ -1,0 +1,5 @@
+- name: Sway - Installed
+  become: yes
+  package:
+    name: sway
+    state: present
