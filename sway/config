@@ -19,6 +19,8 @@ output * bg /usr/share/backgrounds/background.jpg fill
 
 gaps inner 5
 
+default_border none
+
 for_window [class="^.*"] border pixel 0
 
 # --------------------
