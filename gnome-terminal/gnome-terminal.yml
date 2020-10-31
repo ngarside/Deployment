@@ -1,0 +1,45 @@
+- name: Gnome Terminal - Installed
+  become: yes
+  package:
+    name: gnome-terminal
+    state: present
+
+- name: Gnome Terminal - New Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/new-tab
+    value: "'<Ctrl>t'"
+
+- name: Gnome Terminal - Close Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/close-tab
+    value: "'<Ctrl>w'"
+
+- name: Gnome Terminal - Next Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/next-tab
+    value: "'<Ctrl>Tab'"
+
+- name: Gnome Terminal - Previous Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/prev-tab
+    value: "'<Ctrl><Shift>Tab'"
+
+- name: Gnome Terminal - Copy
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/copy
+    value: "'<Ctrl>C'"
+
+- name: Gnome Terminal - Paste
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/paste
+    value: "'<Ctrl>V'"
+
+- name: Gnome Terminal - Find
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/find
+    value: "'<Ctrl>F'"
+
+- name: Gnome Terminal - Select All
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/select-all
+    value: "'<Ctrl>A'"
