@@ -15,3 +15,5 @@ wget --no-cache -O - https://raw.githubusercontent.com/ngarside/deployment/maste
 # License
 
 This repository is licensed under the [Unlicense](license.md) except where otherwise stated.
+
+The [background image](sway/background.jpg) belongs to [Louis Coyle](https://dribbble.com/louiscoyle/projects/243171-Lakeside#attachment-332811).

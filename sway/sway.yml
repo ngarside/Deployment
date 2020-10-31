@@ -20,3 +20,9 @@
     path: /etc/environment
     regexp: 'WLR_NO_HARDWARE_CURSORS'
     line: 'export WLR_NO_HARDWARE_CURSORS=1'
+
+- name: Sway - Background Sync
+  become: yes
+  copy:
+    src: background.jpg
+    dest: /usr/share/backgrounds/background.jpg

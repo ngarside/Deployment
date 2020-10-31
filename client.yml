@@ -3,3 +3,5 @@
   - include: git/git.yml
   - include: sway/sway.yml
   - include: waybar/waybar.yml
+  - include: firefox/firefox.yml
+  - include: blender/blender.yml

@@ -11,6 +11,12 @@ set $mod Mod4
 bindsym $mod+Return exec urxvt
 
 # --------------------
+# Appearance
+# --------------------
+
+output * bg /usr/share/backgrounds/background.jpg fill
+
+# --------------------
 # Waybar
 # --------------------
 
