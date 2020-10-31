@@ -13,3 +13,9 @@
   copy:
     src: config
     dest: ~/.config/sway/config
+
+- name: Sway - VirtualBox Compatibility
+  lineinfile:
+    path: /etc/environment
+    regexp: 'WLR_NO_HARDWARE_CURSORS'
+    line: 'export WLR_NO_HARDWARE_CURSORS=1'

@@ -5,6 +5,12 @@
 set $mod Mod4
 
 # --------------------
+# Keybindings
+# --------------------
+
+bindsym $mod+Return exec urxvt
+
+# --------------------
 # Waybar
 # --------------------
 
