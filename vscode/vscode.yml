@@ -1,0 +1,14 @@
+- name: VS Code - Yum Key & Repo
+  become: yes
+  yum_repository:
+    name: microsoft
+    description: VS Code
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    gpgcheck: yes
+
+- name: VS Code - Installed
+  become: yes
+  package:
+    name: code
+    state: present
