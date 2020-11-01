@@ -1,0 +1,5 @@
+- name: Remmina - Installed
+  become: yes
+  package:
+    name: remmina
+    state: present

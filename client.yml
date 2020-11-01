@@ -18,3 +18,4 @@
   - include: audacity/audacity.yml
   - include: geary/geary.yml
   - include: dotnet/dotnet.yml
+  - include: remmina/remmina.yml
