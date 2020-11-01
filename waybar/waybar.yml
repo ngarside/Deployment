@@ -8,3 +8,13 @@
   file:
     path: ~/.config/waybar
     state: directory
+
+- name: Waybar - Config File Sync
+  copy:
+    src: config
+    dest: ~/.config/waybar/config
+
+- name: Waybar - Style File Sync
+  copy:
+    src: style.css
+    dest: ~/.config/waybar/style.css
