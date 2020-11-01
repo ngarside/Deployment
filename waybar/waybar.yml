@@ -3,3 +3,8 @@
   package:
     name: waybar
     state: present
+
+- name: Waybar - Config Directory Exists
+  file:
+    path: ~/.config/waybar
+    state: directory
