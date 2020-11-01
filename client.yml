@@ -17,3 +17,4 @@
   - include: inkscape/inkscape.yml
   - include: audacity/audacity.yml
   - include: geary/geary.yml
+  - include: dotnet/dotnet.yml
