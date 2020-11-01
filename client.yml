@@ -12,3 +12,4 @@
   - include: system/rescue.yml
   - include: libreoffice/writer.yml
   - include: libreoffice/calc.yml
+  - include: chromium/chromium.yml

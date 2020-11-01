@@ -1,0 +1,5 @@
+- name: Chromium - Installed
+  become: yes
+  package:
+    name: chromium
+    state: present
