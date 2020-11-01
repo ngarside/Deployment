@@ -13,3 +13,4 @@
   - include: libreoffice/writer.yml
   - include: libreoffice/calc.yml
   - include: chromium/chromium.yml
+  - include: gimp/gimp.yml

@@ -1,0 +1,5 @@
+- name: GIMP - Installed
+  become: yes
+  package:
+    name: gimp
+    state: present
