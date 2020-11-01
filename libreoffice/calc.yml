@@ -1,0 +1,5 @@
+- name: Libre Office Calc - Installed
+  become: yes
+  package:
+    name: libreoffice-calc
+    state: present

@@ -1,0 +1,5 @@
+- name: Libre Office Writer - Installed
+  become: yes
+  package:
+    name: libreoffice-writer
+    state: present

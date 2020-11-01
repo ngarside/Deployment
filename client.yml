@@ -10,3 +10,5 @@
   - include: gnome-terminal/gnome-terminal.yml
   - include: nautilus/nautilus.yml
   - include: system/rescue.yml
+  - include: libreoffice/writer.yml
+  - include: libreoffice/calc.yml
