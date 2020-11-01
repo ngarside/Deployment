@@ -4,7 +4,7 @@ Ansible scripts for setting up my personal systems. Feel free to poke around, bu
 
 # Setup
 
-Only currently tested on Fedora 33 (minimal install with standard packages).
+Currently tested on Fedora 33 (minimal install with standard packages).
 
 Run with:
 

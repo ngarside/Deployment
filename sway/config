@@ -10,6 +10,7 @@ set $mod Mod4
 
 bindsym $mod+Return exec gnome-terminal
 bindsym Alt+F4 kill
+bindsym $mod+Shift+c reload
 
 # --------------------
 # Appearance
