@@ -7,7 +7,7 @@
 - name: Rescue - Find Junk
   find:
     path: /boot
-    patterns: vmlinuz-*rescue*
+    patterns: *-rescue-*
   register: junk
 
 - name: Rescue - No Junk
