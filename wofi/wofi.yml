@@ -1,0 +1,5 @@
+- name: Wofi - Installed
+  become: yes
+  package:
+    name: wofi
+    state: present

@@ -19,3 +19,4 @@
   - include: geary/geary.yml
   - include: dotnet/dotnet.yml
   - include: remmina/remmina.yml
+  - include: wofi/wofi.yml
