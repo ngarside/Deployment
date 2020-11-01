@@ -6,7 +6,7 @@
 
 - name: Rescue - Find Junk
   find:
-    path: /etc/boot
+    path: /boot
     patterns: vmlinuz-*rescue*
   register: junk
 
