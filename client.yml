@@ -1,6 +1,5 @@
 - hosts: localhost
   tasks:
-  - include: system/rescue.yml
   - include: git/git.yml
   - include: sway/sway.yml
   - include: waybar/waybar.yml
@@ -10,3 +9,4 @@
   - include: gnome-calculator/gnome-calculator.yml
   - include: gnome-terminal/gnome-terminal.yml
   - include: nautilus/nautilus.yml
+  - include: system/rescue.yml
