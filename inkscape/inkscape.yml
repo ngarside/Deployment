@@ -1,0 +1,5 @@
+- name: Inkscape - Installed
+  become: yes
+  package:
+    name: inkscape
+    state: present

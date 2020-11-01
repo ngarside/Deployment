@@ -1,0 +1,5 @@
+- name: Audacity - Installed
+  become: yes
+  package:
+    name: audacity
+    state: present

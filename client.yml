@@ -14,3 +14,5 @@
   - include: libreoffice/calc.yml
   - include: chromium/chromium.yml
   - include: gimp/gimp.yml
+  - include: inkscape/inkscape.yml
+  - include: audacity/audacity.yml
