@@ -1,0 +1,5 @@
+- name: Geary - Installed
+  become: yes
+  package:
+    name: geary
+    state: present
