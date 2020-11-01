@@ -11,10 +11,6 @@
   register: junk
 
 - name: Rescue - No Junk
-  debug:
-    msg: "{{ junk }}"
-
-- name: Rescue - No Junk
   become: yes
   file:
     path: "{{ item.path }}"
