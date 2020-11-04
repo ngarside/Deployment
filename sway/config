@@ -14,7 +14,7 @@ bindsym Alt+F4 kill
 
 bindsym $mod+Shift+c reload
 
-bindsym $mod+d wofi --show drun
+bindsym $mod+d exec wofi --show drun
 
 # --------------------
 # Appearance
