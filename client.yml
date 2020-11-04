@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: gtk/gtk.yml
   - include: gdm/gdm.yml
   - include: templates/templates.yml
   - include: git/git.yml
