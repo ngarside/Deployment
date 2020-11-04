@@ -14,7 +14,7 @@ sudo dnf install --assumeyes git ansible python-psutil
 git clone --depth=1 https://github.com/ngarside/deployment.git $REPO
 
 # Run ansible
-ansible-playbook $REPO/client.yml
+sudo ansible-playbook $REPO/client.yml
 
 # Delete repo
 rm -r -f $REPO
