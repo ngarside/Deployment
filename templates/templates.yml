@@ -1,0 +1,9 @@
+- name: Templates - Directory Exists
+  file:
+    path: ~/Templates
+    state: directory
+
+- name: Templates - Text File Sync
+  copy:
+    src: text.txt
+    dest: ~/Templates/Text.txt
