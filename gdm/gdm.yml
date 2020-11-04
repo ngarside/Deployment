@@ -4,7 +4,7 @@
     name: gdm
     state: present
 
-- name: GDM - Service
+- name: GDM - Enabled
   become: yes
   systemd:
     name: gdm
