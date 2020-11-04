@@ -3,6 +3,11 @@
     path: ~/Templates
     state: directory
 
+- name: Nautilus - User Dirs File Sync
+  copy:
+    src: user-dirs.dirs
+    dest: ~/.config/user-dirs.dirs
+
 - name: Templates - Text File Sync
   copy:
     src: text.txt
