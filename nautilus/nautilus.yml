@@ -3,3 +3,8 @@
   package:
     name: nautilus
     state: present
+
+- name: Nautilus - User Dirs File Sync
+  copy:
+    src: user-dirs.dirs
+    dest: ~/.config/user-dirs.dirs
