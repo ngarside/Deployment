@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: gpodder/gpodder.yml
   - include: gnome-clocks/gnome-clocks.yml
   - include: gnome-weather/gnome-weather.yml
   - include: gtk/gtk.yml
