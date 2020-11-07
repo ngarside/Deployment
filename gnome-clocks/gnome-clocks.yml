@@ -1,0 +1,5 @@
+- name: Gnome Clocks - Installed
+  become: yes
+  package:
+    name: gnome-clocks
+    state: present

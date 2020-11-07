@@ -1,5 +1,7 @@
 - hosts: localhost
   tasks:
+  - include: gnome-clocks/gnome-clocks.yml
+  - include: gnome-weather/gnome-weather.yml
   - include: gtk/gtk.yml
   - include: gdm/gdm.yml
   - include: templates/templates.yml

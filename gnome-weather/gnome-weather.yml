@@ -1,0 +1,5 @@
+- name: Gnome Weather - Installed
+  become: yes
+  package:
+    name: gnome-weather
+    state: present
