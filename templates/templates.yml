@@ -12,3 +12,13 @@
   copy:
     src: text.txt
     dest: ~/Templates/Text.txt
+
+- name: Templates - Document File Sync
+  copy:
+    src: document.odt
+    dest: ~/Templates/Document.odt
+
+- name: Templates - Spreadsheet File Sync
+  copy:
+    src: spreadsheet.ods
+    dest: ~/Templates/Spreadsheet.ods
