@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: templates/templates.yml
   - include: papirus/papirus.yml
   - include: jekyll/jekyll.yml
   - include: nautilus/nautilus.yml
@@ -8,7 +9,6 @@
   - include: gnome-weather/gnome-weather.yml
   - include: gtk/gtk.yml
   - include: gdm/gdm.yml
-  - include: templates/templates.yml
   - include: git/git.yml
   - include: sway/sway.yml
   - include: waybar/waybar.yml
