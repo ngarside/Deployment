@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: nautilus/nautilus.yml
   - include: gpodder/gpodder.yml
   - include: gnome-clocks/gnome-clocks.yml
   - include: gnome-weather/gnome-weather.yml
@@ -14,7 +15,6 @@
   - include: vscode/vscode.yml
   - include: gnome-calculator/gnome-calculator.yml
   - include: gnome-terminal/gnome-terminal.yml
-  - include: nautilus/nautilus.yml
   - include: system/rescue.yml
   - include: libreoffice/writer.yml
   - include: libreoffice/calc.yml

@@ -3,3 +3,13 @@
   package:
     name: nautilus
     state: present
+
+- name: Nautilus - Bookmarks Directory Exists
+  file:
+    path: ~/.config/gtk-3.0
+    state: directory
+
+- name: Nautilus - Bookmarks File Sync
+  copy:
+    src: bookmarks
+    dest: ~/.config/gtk-3.0/bookmarks
