@@ -6,6 +6,7 @@
 	"editor.insertSpaces": false,
 	"editor.renderLineHighlight": "all",
 	"editor.wordWrap": "on",
+	"explorer.openEditors.visible": 0,
 	"git.autofetch": true,
 	"git.confirmSync": false,
 	"telemetry.enableCrashReporter": false,
