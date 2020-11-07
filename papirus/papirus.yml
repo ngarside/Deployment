@@ -1,0 +1,10 @@
+- name: Papirus - Installed
+  become: yes
+  package:
+    name: papirus-icon-theme
+    state: present
+
+- name: Papirus - Activated
+  dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "'Papirus'"

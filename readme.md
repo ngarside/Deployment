@@ -37,6 +37,7 @@ App keybindings have been standardised where possible:
 | Ctrl + Z | Undo |
 | Ctrl + Shift + Z | Redo |
 | Ctrl + I | Interrupt |
+| Ctrl + D | Duplicate |
 
 # License
 

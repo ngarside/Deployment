@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: papirus/papirus.yml
   - include: jekyll/jekyll.yml
   - include: nautilus/nautilus.yml
   - include: gpodder/gpodder.yml
