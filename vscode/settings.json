@@ -1,5 +1,7 @@
 {
 	"editor.detectIndentation": true,
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.editor.enablePreview": false,
 	"editor.fontFamily": "monospace",
 	"editor.insertSpaces": false,
 	"editor.renderLineHighlight": "all",

@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: vscode/vscode.yml
   - include: user/projects.yml
   - include: systemd/resolved.yml
   - include: templates/templates.yml
@@ -16,7 +17,6 @@
   - include: waybar/waybar.yml
   - include: firefox/firefox.yml
   - include: blender/blender.yml
-  - include: vscode/vscode.yml
   - include: gnome-calculator/gnome-calculator.yml
   - include: gnome-terminal/gnome-terminal.yml
   - include: system/rescue.yml
