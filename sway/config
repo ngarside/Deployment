@@ -30,6 +30,8 @@ for_window [class="^.*"] border pixel 0
 
 exec python3 ~/.config/sway/fader.py
 
+output Virtual-1 mode 1400x1050
+
 # --------------------
 # Waybar
 # --------------------
