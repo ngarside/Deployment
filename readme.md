@@ -9,7 +9,7 @@ Currently tested on Fedora 33 (minimal install with standard packages).
 Run with:
 
 ```sh
-wget --no-cache -O - https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bash
+curl https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bash
 ```
 
 # Keybindings
