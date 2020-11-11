@@ -9,7 +9,6 @@
   - include: user/projects.yml
   - include: systemd/resolved.yml
   - include: templates/templates.yml
-  - include: jekyll/jekyll.yml
   - include: nautilus/nautilus.yml
   - include: gpodder/gpodder.yml
   - include: gnome-clocks/gnome-clocks.yml
@@ -31,3 +30,4 @@
   - include: dotnet/dotnet.yml
   - include: remmina/remmina.yml
   - include: papirus/papirus.yml
+  - include: jekyll/jekyll.yml
