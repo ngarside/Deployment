@@ -1,0 +1,5 @@
+- name: Dbus Daemon - Installed
+  become: yes
+  package:
+    name: dbus-daemon
+    state: present

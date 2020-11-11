@@ -3,6 +3,7 @@
   - include: sway/sway.yml
   - include: waybar/waybar.yml
   - include: wofi/wofi.yml
+  - include: dbus-daemon/dbus-daemon.yml
   - include: gnome-terminal/gnome-terminal.yml
   - include: vscode/vscode.yml
   - include: user/projects.yml
