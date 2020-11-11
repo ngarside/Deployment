@@ -1,6 +1,8 @@
 - hosts: localhost
   tasks:
   - include: sway/sway.yml
+  - include: waybar/waybar.yml
+  - include: wofi/wofi.yml
   - include: gnome-terminal/gnome-terminal.yml
   - include: vscode/vscode.yml
   - include: user/projects.yml
@@ -14,7 +16,6 @@
   - include: gtk/gtk.yml
   - include: gdm/gdm.yml
   - include: git/git.yml
-  - include: waybar/waybar.yml
   - include: firefox/firefox.yml
   - include: blender/blender.yml
   - include: gnome-calculator/gnome-calculator.yml
@@ -29,4 +30,3 @@
   - include: dotnet/dotnet.yml
   - include: remmina/remmina.yml
   - include: papirus/papirus.yml
-  - include: wofi/wofi.yml
