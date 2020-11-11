@@ -1,5 +1,7 @@
 - hosts: localhost
   tasks:
+  - include: sway/sway.yml
+  - include: gnome-terminal/gnome-terminal.yml
   - include: vscode/vscode.yml
   - include: user/projects.yml
   - include: systemd/resolved.yml
@@ -12,12 +14,10 @@
   - include: gtk/gtk.yml
   - include: gdm/gdm.yml
   - include: git/git.yml
-  - include: sway/sway.yml
   - include: waybar/waybar.yml
   - include: firefox/firefox.yml
   - include: blender/blender.yml
   - include: gnome-calculator/gnome-calculator.yml
-  - include: gnome-terminal/gnome-terminal.yml
   - include: system/rescue.yml
   - include: libreoffice/writer.yml
   - include: libreoffice/calc.yml
