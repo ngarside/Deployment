@@ -13,6 +13,11 @@
     name: code
     state: present
 
+- name: VS Code - Config Directory Exists
+  file:
+    path: ~/.config/Code/User
+    state: directory
+
 - name: VS Code - Settings File Sync
   copy:
     src: settings.json
