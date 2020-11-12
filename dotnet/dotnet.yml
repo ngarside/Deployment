@@ -1,5 +1,11 @@
-- name: .NET - Installed
+- name: .NET Core - Installed
   become: yes
   package:
     name: dotnet-sdk-3.1
+    state: present
+
+- name: .NET - Installed
+  become: yes
+  package:
+    name: dotnet-sdk-5.0
     state: present
