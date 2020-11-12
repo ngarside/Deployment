@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: android-studio/android-studio.yml
   - include: sway/sway.yml
   - include: waybar/waybar.yml
   - include: wofi/wofi.yml
