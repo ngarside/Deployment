@@ -38,6 +38,10 @@ App keybindings have been standardised where possible:
 | Ctrl + Shift + Z | Redo |
 | Ctrl + I | Interrupt |
 | Ctrl + D | Duplicate |
+| Ctrl + S | Save |
+| Ctrl + Shift + S | Save As |
+| Ctrl + Alt + S | Save All |
+| Ctrl + O | Open |
 
 # License
 
