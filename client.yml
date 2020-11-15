@@ -25,7 +25,7 @@
   - include: dconf-editor/dconf-editor.yml
   - include: gnome-shell/gnome-shell.yml
   - include: android-studio/android-studio.yml
-  # - include: dbus-daemon/dbus-daemon.yml
+  - include: dbus-daemon/dbus-daemon.yml
   # - include: user/projects.yml
   # - include: systemd/resolved.yml
   # - include: templates/templates.yml
