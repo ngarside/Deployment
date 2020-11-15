@@ -1,33 +1,32 @@
 - hosts: localhost
   tasks:
-  - include: flathub/flathub.yml
-  - include: gnome-podcasts/gnome-podcasts.yml
-  - include: git/git.yml
-  - include: gnome-terminal/gnome-terminal.yml
-  - include: vscode/vscode.yml
-  - include: gnome-calculator/gnome-calculator.yml
-  - include: gnome-weather/gnome-weather.yml
-  - include: gnome-clocks/gnome-clocks.yml
-  - include: libreoffice/writer.yml
-  - include: libreoffice/calc.yml
-  - include: chromium/chromium.yml
-  - include: gimp/gimp.yml
-  - include: inkscape/inkscape.yml
-  - include: audacity/audacity.yml
-  - include: dotnet/dotnet.yml
-  - include: remmina/remmina.yml
-  - include: papirus/papirus.yml
-  - include: geary/geary.yml
-  - include: firefox/firefox.yml
-  - include: blender/blender.yml
-  - include: nautilus/nautilus.yml
-  - include: jekyll/jekyll.yml
-  - include: dconf-editor/dconf-editor.yml
-  - include: gnome-shell/gnome-shell.yml
-  - include: android-studio/android-studio.yml
-  - include: systemd/resolved.yml
-  - include: templates/templates.yml
-  - include: user/projects.yml
-  # - include: gtk/gtk.yml
-  # - include: gdm/gdm.yml
-  # - include: system/rescue.yml
+  # - include: background/background.yml
+  # - include: flathub/flathub.yml
+  # - include: gnome-podcasts/gnome-podcasts.yml
+  # - include: git/git.yml
+  # - include: gnome-terminal/gnome-terminal.yml
+  # - include: vscode/vscode.yml
+  # - include: gnome-calculator/gnome-calculator.yml
+  # - include: gnome-weather/gnome-weather.yml
+  # - include: gnome-clocks/gnome-clocks.yml
+  # - include: libreoffice/writer.yml
+  # - include: libreoffice/calc.yml
+  # - include: chromium/chromium.yml
+  # - include: gimp/gimp.yml
+  # - include: inkscape/inkscape.yml
+  # - include: audacity/audacity.yml
+  # - include: dotnet/dotnet.yml
+  # - include: remmina/remmina.yml
+  # - include: papirus/papirus.yml
+  # - include: geary/geary.yml
+  # - include: firefox/firefox.yml
+  # - include: blender/blender.yml
+  # - include: nautilus/nautilus.yml
+  # - include: jekyll/jekyll.yml
+  # - include: dconf-editor/dconf-editor.yml
+  # - include: gnome-shell/gnome-shell.yml
+  # - include: android-studio/android-studio.yml
+  # - include: systemd/resolved.yml
+  # - include: templates/templates.yml
+  # - include: user/projects.yml
+  - include: gtk/gtk.yml
