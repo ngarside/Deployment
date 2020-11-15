@@ -13,3 +13,8 @@
   copy:
     src: bookmarks
     dest: ~/.config/gtk-3.0/bookmarks
+
+- name: Nautilus - Sort Folders First
+  dconf:
+    key: /org/gtk/settings/file-chooser/sort-directories-first
+    value: "true"
