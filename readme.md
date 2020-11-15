@@ -4,7 +4,7 @@ Ansible scripts for setting up my personal systems. Very much a work in progress
 
 # Setup
 
-Currently tested on Fedora 33 minimal install.
+Currently tested on Fedora Workstation 33.
 
 Run with:
 
