@@ -3,3 +3,11 @@
   package:
     name: libreoffice-writer
     state: present
+
+- name: Libre Office Writer - Desktop Name
+  become: yes
+  ini_file:
+    path: /usr/share/applications/libreoffice-writer.desktop
+    section: Desktop Entry
+    option: Name
+    value: Writer

@@ -27,3 +27,11 @@
   copy:
     src: keybindings.json
     dest: ~/.config/Code/User/keybindings.json
+
+- name: VS Code - Desktop Name
+  become: yes
+  ini_file:
+    path: /usr/share/applications/code.desktop
+    section: Desktop Entry
+    option: Name
+    value: VS Code

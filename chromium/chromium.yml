@@ -3,3 +3,11 @@
   package:
     name: chromium
     state: present
+
+- name: Chromium - Desktop Name
+  become: yes
+  ini_file:
+    path: /usr/share/applications/chromium-browser.desktop
+    section: Desktop Entry
+    option: Name
+    value: Chromium

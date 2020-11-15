@@ -3,3 +3,11 @@
   package:
     name: gimp
     state: present
+
+- name: GIMP - Desktop Name
+  become: yes
+  ini_file:
+    path: /usr/share/applications/gimp.desktop
+    section: Desktop Entry
+    option: Name[en_GB]
+    value: GIMP
