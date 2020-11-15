@@ -42,6 +42,8 @@ App keybindings have been standardised where possible:
 | Ctrl + Shift + S | Save As |
 | Ctrl + Alt + S | Save All |
 | Ctrl + O | Open |
+| Ctrl + A | Select All |
+| Ctrl + Shift + A | Clear Selection |
 
 # License
 
