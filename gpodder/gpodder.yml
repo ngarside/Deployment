@@ -1,5 +1,0 @@
-- name: gPodder - Installed
-  become: yes
-  package:
-    name: gpodder
-    state: present

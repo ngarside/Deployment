@@ -1,6 +1,7 @@
 - hosts: localhost
   tasks:
   - include: flathub/flathub.yml
+  - include: gnome-podcasts/gnome-podcasts.yml
   - include: git/git.yml
   - include: gnome-terminal/gnome-terminal.yml
   - include: vscode/vscode.yml
@@ -28,7 +29,6 @@
   # - include: user/projects.yml
   # - include: systemd/resolved.yml
   # - include: templates/templates.yml
-  # - include: gpodder/gpodder.yml
   # - include: gtk/gtk.yml
   # - include: gdm/gdm.yml
   # - include: system/rescue.yml
