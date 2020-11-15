@@ -1,5 +1,9 @@
-[user]
-name = Nathan Garside
-email = code@nathangarside.com
+[color]
+	ui = auto
+
 [init]
-defaultBranch = master
+	defaultBranch = master
+
+[user]
+	name = Nathan Garside
+	email = code@nathangarside.com

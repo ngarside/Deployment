@@ -1,34 +1,34 @@
 - hosts: localhost
   tasks:
-  - include: android-studio/android-studio.yml
-  - include: sway/sway.yml
-  - include: waybar/waybar.yml
-  - include: wofi/wofi.yml
-  - include: dbus-daemon/dbus-daemon.yml
-  - include: gnome-terminal/gnome-terminal.yml
-  - include: vscode/vscode.yml
-  - include: user/projects.yml
-  - include: systemd/resolved.yml
-  - include: templates/templates.yml
-  - include: nautilus/nautilus.yml
-  - include: gpodder/gpodder.yml
-  - include: gnome-clocks/gnome-clocks.yml
-  - include: gnome-weather/gnome-weather.yml
-  - include: gtk/gtk.yml
-  - include: gdm/gdm.yml
   - include: git/git.yml
-  - include: firefox/firefox.yml
-  - include: blender/blender.yml
-  - include: gnome-calculator/gnome-calculator.yml
-  - include: system/rescue.yml
-  - include: libreoffice/writer.yml
-  - include: libreoffice/calc.yml
-  - include: chromium/chromium.yml
-  - include: gimp/gimp.yml
-  - include: inkscape/inkscape.yml
-  - include: audacity/audacity.yml
-  - include: geary/geary.yml
-  - include: dotnet/dotnet.yml
-  - include: remmina/remmina.yml
-  - include: papirus/papirus.yml
-  - include: jekyll/jekyll.yml
+  # - include: android-studio/android-studio.yml
+  # - include: sway/sway.yml
+  # - include: waybar/waybar.yml
+  # - include: wofi/wofi.yml
+  # - include: dbus-daemon/dbus-daemon.yml
+  # - include: gnome-terminal/gnome-terminal.yml
+  # - include: vscode/vscode.yml
+  # - include: user/projects.yml
+  # - include: systemd/resolved.yml
+  # - include: templates/templates.yml
+  # - include: nautilus/nautilus.yml
+  # - include: gpodder/gpodder.yml
+  # - include: gnome-clocks/gnome-clocks.yml
+  # - include: gnome-weather/gnome-weather.yml
+  # - include: gtk/gtk.yml
+  # - include: gdm/gdm.yml
+  # - include: firefox/firefox.yml
+  # - include: blender/blender.yml
+  # - include: gnome-calculator/gnome-calculator.yml
+  # - include: system/rescue.yml
+  # - include: libreoffice/writer.yml
+  # - include: libreoffice/calc.yml
+  # - include: chromium/chromium.yml
+  # - include: gimp/gimp.yml
+  # - include: inkscape/inkscape.yml
+  # - include: audacity/audacity.yml
+  # - include: geary/geary.yml
+  # - include: dotnet/dotnet.yml
+  # - include: remmina/remmina.yml
+  # - include: papirus/papirus.yml
+  # - include: jekyll/jekyll.yml
