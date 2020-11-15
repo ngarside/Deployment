@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: flathub/flathub.yml
   - include: git/git.yml
   - include: gnome-terminal/gnome-terminal.yml
   - include: vscode/vscode.yml
@@ -22,7 +23,7 @@
   - include: jekyll/jekyll.yml
   - include: dconf-editor/dconf-editor.yml
   - include: gnome-shell/gnome-shell.yml
-  # - include: android-studio/android-studio.yml
+  - include: android-studio/android-studio.yml
   # - include: dbus-daemon/dbus-daemon.yml
   # - include: user/projects.yml
   # - include: systemd/resolved.yml
