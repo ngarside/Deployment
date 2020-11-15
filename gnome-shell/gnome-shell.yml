@@ -27,3 +27,16 @@
   dconf:
     key: /org/gnome/settings-daemon/plugins/power/ambient-enabled
     value: "false"
+
+- name: Gnome Shell - Find Extensions
+  find:
+    path: /usr/share/gnome-shell/extensions
+    file_type: any
+  register: junk_extensions
+
+- name: Gnome Shell - No Extensions
+  become: yes
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ junk_extensions.files }}"
