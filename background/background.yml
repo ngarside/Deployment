@@ -37,3 +37,8 @@
     path: "{{ item.path }}"
     state: absent
   with_items: "{{ junk_properties.files }}"
+
+- name: Background - Set Desktop
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///usr/share/backgrounds/background.jpg'"
