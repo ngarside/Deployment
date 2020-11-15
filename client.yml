@@ -19,9 +19,6 @@
   - include: firefox/firefox.yml
   - include: blender/blender.yml
   # - include: android-studio/android-studio.yml
-  # - include: sway/sway.yml
-  # - include: waybar/waybar.yml
-  # - include: wofi/wofi.yml
   # - include: dbus-daemon/dbus-daemon.yml
   # - include: user/projects.yml
   # - include: systemd/resolved.yml
