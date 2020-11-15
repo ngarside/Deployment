@@ -27,7 +27,7 @@
   - include: android-studio/android-studio.yml
   - include: systemd/resolved.yml
   - include: templates/templates.yml
-  # - include: user/projects.yml
+  - include: user/projects.yml
   # - include: gtk/gtk.yml
   # - include: gdm/gdm.yml
   # - include: system/rescue.yml
