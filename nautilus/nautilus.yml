@@ -18,3 +18,8 @@
   dconf:
     key: /org/gtk/settings/file-chooser/sort-directories-first
     value: "true"
+
+- name: Nautilus - Use Standard Zoom Level
+  dconf:
+    key: /org/gnome/nautilus/icon-view/default-zoom-level
+    value: "'standard'"
