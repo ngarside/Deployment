@@ -1,5 +1,9 @@
 - hosts: localhost
   tasks:
+  - include: macbook/fan.yml
+  - include: macbook/keyboard.yml
+  - include: macbook/power.yml
+  - include: powertop/powertop.yml
   - include: background/background.yml
   - include: flathub/flathub.yml
   - include: gnome-podcasts/gnome-podcasts.yml

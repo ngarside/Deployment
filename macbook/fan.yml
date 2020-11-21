@@ -1,0 +1,86 @@
+- name: Mac Fan - Install
+  become: yes
+  package:
+    name: mbpfan
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Copy Service File
+  become: yes
+  copy:
+    src: mbpfan.service
+    dest: /etc/systemd/system/mbpfan.service
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Enable Service
+  become: yes
+  systemd:
+    name: mbpfan.service
+    enabled: yes
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Reload Systemd Config
+  become: yes
+  systemd:
+    daemon_reload: yes
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Start Service
+  become: yes
+  systemd:
+    name: mbpfan.service
+    state: started
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Get Minimum Speed
+  shell:
+    chdir: /sys/devices/platform/applesmc.768
+    cmd: echo $(($(cat fan*_min | sort -n | head -1) + 500))
+  register: speedmin
+  changed_when: False
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Get Maximum Speed
+  shell:
+    chdir: /sys/devices/platform/applesmc.768
+    cmd: cat fan*_max | sort -n | tail -1
+  register: speedmax
+  changed_when: False
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Get Maximum Speed
+  shell: echo $(($(cat /sys/devices/platform/coretemp.*/hwmon/hwmon*/temp*_max | sort -n | tail -1) / 1000))
+  register: tempmax
+  changed_when: False
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Set Minimum Speed
+  become: yes
+  lineinfile:
+    path: /etc/mbpfan.conf
+    regexp: 'min_fan1_speed = '
+    line: 'min_fan1_speed = {{ speedmin.stdout }}'
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Set Maximum Speed
+  become: yes
+  lineinfile:
+    path: /etc/mbpfan.conf
+    regexp: 'max_fan1_speed = '
+    line: 'max_fan1_speed = {{ speedmax.stdout }}'
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Set Maximum Temperature
+  become: yes
+  lineinfile:
+    path: /etc/mbpfan.conf
+    regexp: 'max_temp = '
+    line: 'max_temp = {{ tempmax.stdout }}'
+  when: ansible_facts['system_vendor'] == "Apple Inc."
+
+- name: Mac Fan - Set Polling Interval
+  become: yes
+  lineinfile:
+    path: /etc/mbpfan.conf
+    regexp: 'polling_interval = '
+    line: 'polling_interval = 2'
+  when: ansible_facts['system_vendor'] == "Apple Inc."
