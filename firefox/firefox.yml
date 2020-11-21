@@ -3,3 +3,13 @@
   package:
     name: firefox
     state: present
+
+- name: Firefox - Get Profile Folder
+  shell: find ~/.mozilla/firefox "$(pwd -P)" -maxdepth 1 -name '*.default-release'
+  register: profile
+  changed_when: False
+
+- name: Firefox - Update Preferences
+  copy:
+    src: user.js
+    dest: "{{ profile.stdout }}/user.js"
