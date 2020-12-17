@@ -4,7 +4,12 @@
     name: git
     state: present
 
+- name: Git - Config Directory Exists
+  file:
+    path: ~/.config/git
+    state: directory
+
 - name: Git - Config File Sync
   copy:
     src: config
-    dest: ~/.gitconfig
+    dest: ~/.config/git/config
