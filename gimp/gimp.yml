@@ -1,13 +1,6 @@
 - name: GIMP - Installed
   become: yes
-  package:
-    name: gimp
+  flatpak:
+    name: org.gimp.GIMP
+    remote: flathub-beta
     state: present
-
-- name: GIMP - Desktop Name
-  become: yes
-  ini_file:
-    path: /usr/share/applications/gimp.desktop
-    section: Desktop Entry
-    option: Name[en_GB]
-    value: GIMP

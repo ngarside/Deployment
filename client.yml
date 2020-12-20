@@ -7,6 +7,7 @@
   - include: gnome-weather/gnome-weather.yml
   - include: gnome-calculator/gnome-calculator.yml
   - include: gnome-clocks/gnome-clocks.yml
+  - include: gimp/gimp.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
@@ -17,7 +18,6 @@
   # - include: libreoffice/writer.yml
   # - include: libreoffice/calc.yml
   # - include: chromium/chromium.yml
-  # - include: gimp/gimp.yml
   # - include: inkscape/inkscape.yml
   # - include: audacity/audacity.yml
   # - include: dotnet/dotnet.yml
