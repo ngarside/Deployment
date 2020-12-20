@@ -1,6 +1,0 @@
-- name: Flathub - Repository Added
-  become: yes
-  flatpak_remote:
-    name: flathub
-    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
-    state: present

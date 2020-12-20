@@ -1,12 +1,12 @@
 - hosts: localhost
   tasks:
   - include: git/git.yml
+  - include: flatpak/flatpak.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
   # - include: powertop/powertop.yml
   # - include: background/background.yml
-  # - include: flathub/flathub.yml
   # - include: gnome-podcasts/gnome-podcasts.yml
   # - include: gnome-terminal/gnome-terminal.yml
   # - include: vscode/vscode.yml

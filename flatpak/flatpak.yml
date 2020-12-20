@@ -1,0 +1,19 @@
+- name: Flatpak - Installed
+  become: yes
+  package:
+    name: flatpak
+    state: present
+
+- name: Flatpak - Flathub Stable Repository Added
+  become: yes
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
+
+- name: Flatpak - Flathub Beta Repository Added
+  become: yes
+  flatpak_remote:
+    name: flathub-beta
+    flatpakrepo_url: https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+    state: present
