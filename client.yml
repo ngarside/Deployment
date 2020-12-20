@@ -11,14 +11,14 @@
   - include: papirus/papirus.yml
   - include: gnome-terminal/gnome-terminal.yml
   - include: remmina/remmina.yml
+  - include: libreoffice/writer.yml
+  - include: libreoffice/calc.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
   # - include: powertop/powertop.yml
   # - include: background/background.yml
   # - include: vscode/vscode.yml
-  # - include: libreoffice/writer.yml
-  # - include: libreoffice/calc.yml
   # - include: chromium/chromium.yml
   # - include: inkscape/inkscape.yml
   # - include: audacity/audacity.yml
