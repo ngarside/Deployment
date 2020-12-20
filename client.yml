@@ -2,6 +2,7 @@
   tasks:
   - include: git/git.yml
   - include: flatpak/flatpak.yml
+  - include: gdm/gdm.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
