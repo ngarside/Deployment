@@ -5,6 +5,8 @@
   - include: gdm/gdm.yml
   - include: gnome-podcasts/gnome-podcasts.yml
   - include: gnome-weather/gnome-weather.yml
+  - include: gnome-calculator/gnome-calculator.yml
+  - include: gnome-clocks/gnome-clocks.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
@@ -12,8 +14,6 @@
   # - include: background/background.yml
   # - include: gnome-terminal/gnome-terminal.yml
   # - include: vscode/vscode.yml
-  # - include: gnome-calculator/gnome-calculator.yml
-  # - include: gnome-clocks/gnome-clocks.yml
   # - include: libreoffice/writer.yml
   # - include: libreoffice/calc.yml
   # - include: chromium/chromium.yml

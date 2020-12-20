@@ -1,5 +1,6 @@
 - name: Gnome Clocks - Installed
   become: yes
-  package:
-    name: gnome-clocks
+  flatpak:
+    name: org.gnome.Clocks
+    remote: flathub
     state: present

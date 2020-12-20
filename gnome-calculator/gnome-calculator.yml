@@ -1,5 +1,6 @@
 - name: Gnome Calculator - Installed
   become: yes
-  package:
-    name: gnome-calculator
+  flatpak:
+    name: org.gnome.Calculator
+    remote: flathub
     state: present
