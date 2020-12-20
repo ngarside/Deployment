@@ -9,12 +9,12 @@
   - include: gnome-clocks/gnome-clocks.yml
   - include: gimp/gimp.yml
   - include: papirus/papirus.yml
+  - include: gnome-terminal/gnome-terminal.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
   # - include: powertop/powertop.yml
   # - include: background/background.yml
-  # - include: gnome-terminal/gnome-terminal.yml
   # - include: vscode/vscode.yml
   # - include: libreoffice/writer.yml
   # - include: libreoffice/calc.yml
