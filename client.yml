@@ -13,12 +13,13 @@
   - include: remmina/remmina.yml
   - include: libreoffice/writer.yml
   - include: libreoffice/calc.yml
+  - include: vscode/vscode.yml
+  - include: nautilus/nautilus.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
   # - include: powertop/powertop.yml
   # - include: background/background.yml
-  # - include: vscode/vscode.yml
   # - include: chromium/chromium.yml
   # - include: inkscape/inkscape.yml
   # - include: audacity/audacity.yml
@@ -26,7 +27,6 @@
   # - include: geary/geary.yml
   # - include: firefox/firefox.yml
   # - include: blender/blender.yml
-  # - include: nautilus/nautilus.yml
   # - include: jekyll/jekyll.yml
   # - include: dconf-editor/dconf-editor.yml
   # - include: gnome-shell/gnome-shell.yml
