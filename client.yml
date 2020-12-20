@@ -3,16 +3,16 @@
   - include: git/git.yml
   - include: flatpak/flatpak.yml
   - include: gdm/gdm.yml
+  - include: gnome-podcasts/gnome-podcasts.yml
+  - include: gnome-weather/gnome-weather.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
   # - include: powertop/powertop.yml
   # - include: background/background.yml
-  # - include: gnome-podcasts/gnome-podcasts.yml
   # - include: gnome-terminal/gnome-terminal.yml
   # - include: vscode/vscode.yml
   # - include: gnome-calculator/gnome-calculator.yml
-  # - include: gnome-weather/gnome-weather.yml
   # - include: gnome-clocks/gnome-clocks.yml
   # - include: libreoffice/writer.yml
   # - include: libreoffice/calc.yml

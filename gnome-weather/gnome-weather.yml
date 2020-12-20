@@ -1,5 +1,6 @@
 - name: Gnome Weather - Installed
   become: yes
-  package:
-    name: gnome-weather
+  flatpak:
+    name: org.gnome.Weather
+    remote: flathub
     state: present
