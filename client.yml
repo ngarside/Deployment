@@ -10,6 +10,7 @@
   - include: gimp/gimp.yml
   - include: papirus/papirus.yml
   - include: gnome-terminal/gnome-terminal.yml
+  - include: remmina/remmina.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
@@ -22,7 +23,6 @@
   # - include: inkscape/inkscape.yml
   # - include: audacity/audacity.yml
   # - include: dotnet/dotnet.yml
-  # - include: remmina/remmina.yml
   # - include: geary/geary.yml
   # - include: firefox/firefox.yml
   # - include: blender/blender.yml
