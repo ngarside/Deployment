@@ -1,42 +1,24 @@
+- name: Background - Backgrounds Directory Exists
+  file:
+    path: /usr/share/backgrounds
+    state: directory
+
 - name: Background - Background Image Sync
   become: yes
   copy:
     src: background.jpg
     dest: /usr/share/backgrounds/background.jpg
 
-- name: Background - Find Junk Images
-  find:
-    path: /usr/share/backgrounds
-    excludes: background.jpg
-    file_type: any
-  register: junk_images
-
-- name: Background - No Junk Images
-  become: yes
+- name: Background - Properties Directory Exists
   file:
-    path: "{{ item.path }}"
-    state: absent
-  with_items: "{{ junk_images.files }}"
+    path: /usr/share/gnome-background-properties
+    state: directory
 
 - name: Background - Background Property Sync
   become: yes
   copy:
     src: backgrounds.xml
     dest: /usr/share/gnome-background-properties/backgrounds.xml
-
-- name: Background - Find Junk Properties
-  find:
-    path: /usr/share/gnome-background-properties
-    excludes: backgrounds.xml
-    file_type: any
-  register: junk_properties
-
-- name: Background - No Junk Properties
-  become: yes
-  file:
-    path: "{{ item.path }}"
-    state: absent
-  with_items: "{{ junk_properties.files }}"
 
 - name: Background - Set Desktop
   dconf:

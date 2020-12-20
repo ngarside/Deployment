@@ -15,11 +15,11 @@
   - include: libreoffice/calc.yml
   - include: vscode/vscode.yml
   - include: nautilus/nautilus.yml
+  - include: background/background.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
   # - include: powertop/powertop.yml
-  # - include: background/background.yml
   # - include: chromium/chromium.yml
   # - include: inkscape/inkscape.yml
   # - include: audacity/audacity.yml
