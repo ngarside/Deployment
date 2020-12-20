@@ -16,6 +16,10 @@
   - include: vscode/vscode.yml
   - include: nautilus/nautilus.yml
   - include: background/background.yml
+  - include: dotnet/dotnet.yml
+  - include: gtk/gtk.yml
+  - include: gnome-shell/gnome-shell.yml
+  - include: dconf-editor/dconf-editor.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
@@ -23,15 +27,11 @@
   # - include: chromium/chromium.yml
   # - include: inkscape/inkscape.yml
   # - include: audacity/audacity.yml
-  # - include: dotnet/dotnet.yml
   # - include: geary/geary.yml
   # - include: firefox/firefox.yml
   # - include: blender/blender.yml
   # - include: jekyll/jekyll.yml
-  # - include: dconf-editor/dconf-editor.yml
-  # - include: gnome-shell/gnome-shell.yml
   # - include: android-studio/android-studio.yml
   # - include: systemd/resolved.yml
   # - include: templates/templates.yml
   # - include: user/projects.yml
-  # - include: gtk/gtk.yml
