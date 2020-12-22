@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+  - include: unity/unity.yml
   - include: git/git.yml
   - include: flatpak/flatpak.yml
   - include: gdm/gdm.yml
