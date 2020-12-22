@@ -1,5 +1,6 @@
 - name: Audacity - Installed
   become: yes
-  package:
-    name: audacity
+  flatpak:
+    name: org.audacityteam.Audacity
+    remote: flathub
     state: present

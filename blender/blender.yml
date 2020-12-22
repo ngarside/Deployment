@@ -1,5 +1,6 @@
 - name: Blender - Installed
   become: yes
-  package:
-    name: blender
+  flatpak:
+    name: org.blender.Blender
+    remote: flathub
     state: present
