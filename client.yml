@@ -26,11 +26,11 @@
   - include: inkscape/inkscape.yml
   - include: chromium/chromium.yml
   - include: user/projects.yml
+  - include: firefox/firefox.yml
   # - include: macbook/fan.yml
   # - include: macbook/keyboard.yml
   # - include: macbook/power.yml
   # - include: powertop/powertop.yml
-  # - include: firefox/firefox.yml
   # - include: jekyll/jekyll.yml
   # - include: android-studio/android-studio.yml
   # - include: systemd/resolved.yml
