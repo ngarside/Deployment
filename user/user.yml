@@ -1,0 +1,9 @@
+- name: User - Projects Directory Exists
+  file:
+    path: ~/Projects
+    state: directory
+
+- name: User - Downloads Directory Exists
+  file:
+    path: ~/Downloads
+    state: directory

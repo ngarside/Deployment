@@ -25,7 +25,7 @@
   - include: geary/geary.yml
   - include: inkscape/inkscape.yml
   - include: chromium/chromium.yml
-  - include: user/projects.yml
+  - include: user/user.yml
   - include: firefox/firefox.yml
   - include: macbook/fan.yml
   - include: macbook/keyboard.yml

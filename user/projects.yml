@@ -1,9 +1,0 @@
-- name: Projects - Directory Exists
-  file:
-    path: ~/Projects
-    state: directory
-
-- name: Git - Clone Deployment Repository
-  git:
-    repo: https://github.com/ngarside/deployment.git
-    dest: ~/Projects/Deployment
