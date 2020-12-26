@@ -1,0 +1,17 @@
+- name: Sanity Check
+  fail:
+    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
+  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+
+- name: Package Uninstalled
+  become: yes
+  package:
+    name: gnome-calculator
+    state: absent
+
+- name: Flatpak Installed
+  become: yes
+  flatpak:
+    name: org.gnome.Calculator
+    remote: flathub
+    state: present
