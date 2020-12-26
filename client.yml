@@ -2,7 +2,6 @@
   tasks:
   - include: unity/unity.yml
   - include: git/git.yml
-  - include: flatpak/flatpak.yml
   - include: gdm/gdm.yml
   - include: gnome-podcasts/gnome-podcasts.yml
   - include: gnome-weather/gnome-weather.yml
