@@ -1,4 +1,6 @@
 - hosts: localhost
+  roles:
+  - flatpak
   tasks:
   - include: unity/unity.yml
   - include: git/git.yml
