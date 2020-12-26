@@ -6,6 +6,8 @@
 	"editor.insertSpaces": false,
 	"editor.renderLineHighlight": "all",
 	"editor.wordWrap": "on",
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
 	"explorer.openEditors.visible": 0,
 	"git.autofetch": true,
 	"git.confirmSync": false,
