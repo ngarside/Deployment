@@ -1,11 +1,15 @@
-- name: VS Code - Yum Key & Repo
-  become: yes
-  yum_repository:
-    name: vscode
-    description: VS Code
-    baseurl: https://packages.microsoft.com/yumrepos/vscode
-    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-    gpgcheck: yes
+- name: Sanity Check
+  fail:
+    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
+  when: ansible_os_family not in ['RedHat', 'Suse']
+
+- name: Include RedHat Tasks
+  include: rhel.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Include RedHat Tasks
+  include: suse.yml
+  when: ansible_os_family == 'Suse'
 
 - name: VS Code - Installed
   become: yes
