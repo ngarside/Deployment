@@ -4,11 +4,16 @@
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bash
 
 # Setup variables
+OS=$(awk -F= '/^ID_LIKE=/{print $2}' /etc/os-release)
 REPO=$(mktemp -d -t ci-XXXXXXXX)
 
 # Install pre-requisites
 # 'python-psutil' is required by Ansible dbus module
-sudo dnf install --assumeyes git ansible python-psutil
+if [ "$OS" == "rhel" ]; then
+	sudo dnf install -y git ansible python-psutil
+elif [ "$OS" == "suse" ]; then
+	sudo zypper install -y git ansible python-psutil
+fi
 
 # Clone repo
 git clone --depth=1 https://github.com/ngarside/deployment.git $REPO
