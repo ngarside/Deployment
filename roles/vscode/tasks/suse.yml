@@ -5,6 +5,7 @@
     state: present
 
 - name: Repo File Sync
+  become: true
   copy:
     src: vscode.repo
     dest: /etc/zypp/repos.d/vscode.repo
