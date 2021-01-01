@@ -29,6 +29,7 @@ App keybindings have been standardised where possible:
 |-|-|
 | Ctrl + T | New tab |
 | Ctrl + W | Close current tab |
+| Ctrl + Shift + W | Close all tabs |
 | Ctrl + Tab | Switch to tab to right of current |
 | Ctrl + Shift + Tab | Switch to tab to left of current |
 | Ctrl + X | Cut |
