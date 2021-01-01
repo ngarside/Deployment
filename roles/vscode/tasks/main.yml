@@ -7,7 +7,7 @@
   include: rhel.yml
   when: ansible_os_family == 'RedHat'
 
-- name: Include RedHat Tasks
+- name: Include Suse Tasks
   include: suse.yml
   when: ansible_os_family == 'Suse'
 

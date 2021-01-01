@@ -3,3 +3,8 @@
   rpm_key:
     key: https://packages.microsoft.com/keys/microsoft.asc
     state: present
+
+- name: Repo File Sync
+  copy:
+    src: vscode.repo
+    dest: /etc/zypp/repos.d/vscode.repo
