@@ -3,18 +3,18 @@
     msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
   when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
 
-- name: Git - Installed
+- name: Installed
   become: yes
   package:
     name: git
     state: present
 
-- name: Git - Config Directory Exists
+- name: Config Directory Exists
   file:
     path: ~/.config/git
     state: directory
 
-- name: Git - Config File Sync
+- name: Config File Sync
   copy:
     src: config
     dest: ~/.config/git/config
