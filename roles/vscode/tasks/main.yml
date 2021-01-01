@@ -11,28 +11,28 @@
   include: suse.yml
   when: ansible_os_family == 'Suse'
 
-- name: VS Code - Installed
+- name: Installed
   become: yes
   package:
     name: code
     state: present
 
-- name: VS Code - Config Directory Exists
+- name: Config Directory Exists
   file:
     path: ~/.config/Code/User
     state: directory
 
-- name: VS Code - Settings File Sync
+- name: Settings File Sync
   copy:
     src: settings.json
     dest: ~/.config/Code/User/settings.json
 
-- name: VS Code - Keybindings File Sync
+- name: Keybindings File Sync
   copy:
     src: keybindings.json
     dest: ~/.config/Code/User/keybindings.json
 
-- name: VS Code - Desktop Name
+- name: Desktop Name
   become: yes
   ini_file:
     path: /usr/share/applications/code.desktop

@@ -1,4 +1,4 @@
-- name: VS Code - RPM Key
+- name: RPM Key
   become: yes
   rpm_key:
     key: https://packages.microsoft.com/keys/microsoft.asc
