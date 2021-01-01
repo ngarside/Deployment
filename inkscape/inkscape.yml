@@ -1,6 +1,0 @@
-- name: Inkscape - Installed
-  become: yes
-  flatpak:
-    name: org.inkscape.Inkscape
-    remote: flathub
-    state: present
