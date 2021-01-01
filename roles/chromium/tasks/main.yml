@@ -1,10 +1,10 @@
-- name: Chromium - Installed
+- name: Installed
   become: yes
   package:
     name: chromium
     state: present
 
-- name: Chromium - Desktop Name
+- name: Desktop Name
   become: yes
   ini_file:
     path: /usr/share/applications/chromium-browser.desktop
