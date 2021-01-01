@@ -12,7 +12,7 @@ REPO=$(mktemp -d -t ci-XXXXXXXX)
 if [[ "$OS" == *"rhel"* ]]; then
 	sudo dnf install -y git ansible python-psutil
 elif [[ "$OS" == *"suse"* ]]; then
-	sudo zypper install -y git ansible python-psutil
+	sudo zypper install -y git ansible python3-psutil
 fi
 
 # Clone repo
