@@ -9,9 +9,9 @@ REPO=$(mktemp -d -t ci-XXXXXXXX)
 
 # Install pre-requisites
 # 'python-psutil' is required by Ansible dbus module
-if [ "$OS" == *"rhel"* ]; then
+if [[ "$OS" == *"rhel"* ]]; then
 	sudo dnf install -y git ansible python-psutil
-elif [ "$OS" == *"suse"* ]; then
+elif [[ "$OS" == *"suse"* ]]; then
 	sudo zypper install -y git ansible python-psutil
 fi
 
