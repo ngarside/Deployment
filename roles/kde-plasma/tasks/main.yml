@@ -10,16 +10,7 @@
     option: SingleClick
     value: false
 
-- name: Configure Titlebar Buttons On Left
-  ini_file:
-    path: ~/.config/kwinrc
-    section: org.kde.kdecoration2
-    option: ButtonsOnLeft
-    value: M
-
-- name: Configure Titlebar Buttons On Right
-  ini_file:
-    path: ~/.config/kwinrc
-    section: org.kde.kdecoration2
-    option: ButtonsOnRight
-    value: IAX
+- name: Config File Sync
+  copy:
+    src: kwinrc
+    dest: ~/.config/kwinrc
