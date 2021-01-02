@@ -1,0 +1,25 @@
+- name: Sanity Check
+  fail:
+    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
+  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+
+- name: Double Click Selection
+  ini_file:
+    path: ~/.config/kdeglobals
+    section: KDE
+    option: SingleClick
+    value: false
+
+- name: Configure Titlebar Buttons On Left
+  ini_file:
+    path: ~/.config/kwinrc
+    section: org.kde.kdecoration2
+    option: ButtonsOnLeft
+    value: M
+
+- name: Configure Titlebar Buttons On Right
+  ini_file:
+    path: ~/.config/kwinrc
+    section: org.kde.kdecoration2
+    option: ButtonsOnRight
+    value: IAX

@@ -1,0 +1,6 @@
+- hosts: localhost
+  roles:
+  - gnome-calculator
+  - nautilus
+  - gnome-terminal
+  - gnome-shell

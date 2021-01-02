@@ -1,6 +1,5 @@
 - hosts: localhost
   roles:
   - chromium
-  - konsole
   - inkscape
   - vscode
