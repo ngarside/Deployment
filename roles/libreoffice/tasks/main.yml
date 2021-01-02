@@ -1,0 +1,5 @@
+- name: Include Writer Tasks
+  include: writer.yml
+
+- name: Include Calc Tasks
+  include: calc.yml

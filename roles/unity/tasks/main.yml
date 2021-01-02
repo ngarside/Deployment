@@ -1,14 +1,14 @@
-- name: Unity - Directory Exists
+- name: Directory Exists
   file:
     path: ~/.local/bin
     state: directory
 
-- name: Unity - Download Unity Hub
+- name: Download Hub
   get_url:
     url: https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage
     dest: ~/.local/bin/UnityHub.AppImage
 
-- name: Unity - Hub Execute Permission
+- name: Hub Execute Permission
   file:
     path: ~/.local/bin/UnityHub.AppImage
     state: file

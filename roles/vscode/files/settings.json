@@ -16,5 +16,6 @@
 	"workbench.startupEditor": "none",
 	"window.restoreWindows": "none",
 	"workbench.colorTheme": "Default Dark+",
-	"workbench.list.openMode": "doubleClick"
+	"workbench.list.openMode": "doubleClick",
+	"workbench.tree.indent": 20
 }

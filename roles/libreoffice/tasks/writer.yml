@@ -1,10 +1,10 @@
-- name: Libre Office Writer - Installed
+- name: Writer - Installed
   become: yes
   package:
     name: libreoffice-writer
     state: present
 
-- name: Libre Office Writer - Desktop Name
+- name: Writer - Desktop Name
   become: yes
   ini_file:
     path: /usr/share/applications/libreoffice-writer.desktop

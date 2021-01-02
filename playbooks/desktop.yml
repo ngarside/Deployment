@@ -1,2 +1,6 @@
 - import_playbook: kde.yml
 - import_playbook: client.yml
+
+- hosts: localhost
+  roles:
+  - unity

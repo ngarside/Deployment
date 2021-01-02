@@ -1,4 +1,4 @@
-- name: Remmina - Installed
+- name: Installed
   become: yes
   flatpak:
     name: org.remmina.Remmina
