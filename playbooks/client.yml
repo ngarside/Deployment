@@ -1,5 +1,6 @@
 - hosts: localhost
   roles:
+  - papirus
   - chromium
   - inkscape
   - vscode
@@ -7,3 +8,4 @@
   - audacity
   - firefox
   - gimp
+  - blender

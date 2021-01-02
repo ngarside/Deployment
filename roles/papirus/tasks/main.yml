@@ -8,3 +8,10 @@
   dconf:
     key: "/org/gnome/desktop/interface/icon-theme"
     value: "'Papirus'"
+
+- name: Activated
+  ini_file:
+    path: ~/.config/kdeglobals
+    section: Icons
+    option: Theme
+    value: Papirus
