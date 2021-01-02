@@ -14,3 +14,8 @@
   copy:
     src: kwinrc
     dest: ~/.config/kwinrc
+
+- name: Config File Sync
+  copy:
+    src: appletsrc
+    dest: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
