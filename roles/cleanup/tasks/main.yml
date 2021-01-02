@@ -6,5 +6,7 @@
 - name: Uninstalled
   become: yes
   package:
-    name: opensuse-welcome
-    state: present
+    name:
+    - opensuse-welcome
+    - tigervnc
+    state: absent
