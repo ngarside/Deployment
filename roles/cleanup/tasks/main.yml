@@ -9,4 +9,5 @@
     name:
     - opensuse-welcome
     - tigervnc
+    - xterm
     state: absent
