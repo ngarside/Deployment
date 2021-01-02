@@ -1,0 +1,11 @@
+[General]
+RememberOpenedTabs=false
+ShowFullPath=true
+ShowSpaceInfo=false
+ShowZoomSlider=false
+
+[MainWindow]
+MenuBar=Enabled
+
+[PlacesPanel]
+IconSize=22

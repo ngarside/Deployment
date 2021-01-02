@@ -1,0 +1,15 @@
+- name: Sanity Check
+  fail:
+    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
+  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+
+- name: Installed
+  become: yes
+  package:
+    name: dolphin
+    state: present
+
+- name: Config File Sync
+  copy:
+    src: dolphinrc
+    dest: ~/.config/dolphinrc
