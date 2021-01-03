@@ -8,4 +8,4 @@
 
 # References
 
-- https://invent.kde.org/plasma/plasma-systemmonitor
+- https://apps.kde.org/en/plasma-systemmonitor
