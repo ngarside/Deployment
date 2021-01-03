@@ -12,6 +12,72 @@ Run with:
 curl https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bash
 ```
 
+# Playbooks
+
+- Base
+- KDE
+- Gnome
+- Workstation
+
+- Desktop
+	- Base
+	- KDE
+	- Workstation
+- Laptop
+	- Base
+	- KDE
+	- Workstation
+- Tablet
+	- Base
+	- Gnome
+
+# Roles
+
+android-studio
+background
+cleanup
+dotnet
+gdm
+git
+gnome-podcasts
+gnome-weather
+jekyll
+kde-plasma
+krita
+nautilus
+powertop
+systemd
+user
+appimage
+blender
+dconf-editor
+firefox
+geary
+gnome-calculator
+gnome-shell
+gtk
+kcalc
+konsole
+libreoffice
+papirus
+remmina
+templates
+vscode
+audacity
+chromium
+dolphin
+flatpak
+gimp
+gnome-clocks
+gnome-terminal
+inkscape
+kdenlive
+krdc
+macbook
+plasma-systemmonitor
+spotify
+unity
+
 # Keybindings
 
 System keybindings:
