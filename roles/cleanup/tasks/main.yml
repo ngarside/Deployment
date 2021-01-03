@@ -10,4 +10,5 @@
     - opensuse-welcome
     - tigervnc
     - xterm
+    - ksysguard5
     state: absent
