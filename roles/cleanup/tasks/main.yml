@@ -12,4 +12,5 @@
     - xterm
     - ksysguard5
     - khelpcenter5
+    - git-gui
     state: absent
