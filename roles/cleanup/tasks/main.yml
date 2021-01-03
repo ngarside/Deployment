@@ -11,4 +11,5 @@
     - tigervnc
     - xterm
     - ksysguard5
+    - khelpcenter5
     state: absent
