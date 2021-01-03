@@ -80,6 +80,7 @@ macbook
 plasma-systemmonitor
 spotify
 unity
+thunderbird
 
 # Keybindings
 
