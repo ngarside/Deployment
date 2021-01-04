@@ -1,4 +1,4 @@
-- name: Blender - Installed
+- name: Installed
   become: yes
   flatpak:
     name: org.blender.Blender
