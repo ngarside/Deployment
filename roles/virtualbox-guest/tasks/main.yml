@@ -1,9 +1,13 @@
-- name: Include Tasks
-  include: run.yml
-  when: ansible_virtualization_type == 'virtualbox'
+- name: openSUSE
+  include: opensuse.yml
+  when: ansible_distribution == 'openSUSE Tumbleweed' && ansible_virtualization_type == 'virtualbox'
 
-- name: Warn
-  fail:
+- name: Warn (Distribution)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
+  when: ansible_distribution != 'openSUSE Tumbleweed'
+
+- name: Warn (Virtualization)
+  debug:
     msg: Role '{{ role_name }}' is not supported when using virtualization '{{ ansible_virtualization_type }}'
-  ignore_errors: yes
   when: ansible_virtualization_type != 'virtualbox'
