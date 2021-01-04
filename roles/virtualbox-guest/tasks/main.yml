@@ -1,12 +1,9 @@
-- name: Sanity Check
-  fail:
-    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+- name: Include openSUSE Tasks
+  include: opensuse.yml
+  when: ansible_distribution == 'openSUSE Tumbleweed'
 
-- name: Installed
-  become: yes
-  package:
-    name:
-    - virtualbox-guest-tools
-    - virtualbox-guest-x11
-    state: present
+- name: Warn
+  fail:
+    msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
+  ignore_errors: yes
+  when: ansible_distribution != 'openSUSE Tumbleweed'

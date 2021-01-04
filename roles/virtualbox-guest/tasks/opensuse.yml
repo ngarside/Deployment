@@ -1,0 +1,7 @@
+- name: Installed
+  become: yes
+  package:
+    name:
+    - virtualbox-guest-tools
+    - virtualbox-guest-x11
+    state: present
