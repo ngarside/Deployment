@@ -1,0 +1,29 @@
+- name: BSD
+  set_fact:
+    ansible_kernel_family: 'BSD'
+  when: ansible_os_family in ['FreeBSD', 'NetBSD', 'OpenBSD']
+
+- name: Windows
+  set_fact:
+    ansible_kernel_family: 'Windows'
+  when: ansible_os_family == 'Windows'
+
+- name: macOS
+  set_fact:
+    ansible_kernel_family: 'Darwin'
+  when: ansible_os_family == 'Darwin'
+
+- name: Solaris
+  set_fact:
+    ansible_kernel_family: 'Solaris'
+  when: ansible_os_family == 'Solaris'
+
+- name: HP-UX
+  set_fact:
+    ansible_kernel_family: 'HP-UX'
+  when: ansible_os_family == 'HP-UX'
+
+- name: Linux
+  set_fact:
+    ansible_kernel_family: 'Linux'
+  when: ansible_os_family not in ['FreeBSD', 'NetBSD', 'OpenBSD', 'Windows', 'Darwin', 'Solaris', 'HP-UX']
