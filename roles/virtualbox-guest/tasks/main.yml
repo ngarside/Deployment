@@ -1,15 +1,15 @@
 - name: openSUSE
   include: opensuse.yml
   when:
-    - ansible_distribution == 'openSUSE Tumbleweed'
+    - ansible_distribution in ['openSUSE Tumbleweed', 'openSUSE Leap']
     - ansible_virtualization_type == 'virtualbox'
 
-- name: Warn (Distribution)
+- name: Warning (Distribution)
   debug:
     msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
-  when: ansible_distribution != 'openSUSE Tumbleweed'
+  when: ansible_distribution not in ['openSUSE Tumbleweed', 'openSUSE Leap']
 
-- name: Warn (Virtualization)
+- name: Warning (Virtualization)
   debug:
     msg: Role '{{ role_name }}' is not supported when using virtualization '{{ ansible_virtualization_type }}'
   when: ansible_virtualization_type != 'virtualbox'
