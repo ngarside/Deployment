@@ -1,0 +1,4 @@
+- name: Config File Sync
+  copy:
+    src: config
+    dest: ~/.gitconfig

@@ -1,20 +1,13 @@
-- name: Sanity Check
-  fail:
-    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
-
 - name: Installed
   become: yes
   package:
     name: git
     state: present
 
-- name: Config Directory Exists
-  file:
-    path: ~/.config/git
-    state: directory
+- name: Linux & BSD
+  include_tasks: linux-bsd.yml
+  when: ansible_kernel_family in ['Linux', 'BSD']
 
-- name: Config File Sync
-  copy:
-    src: config
-    dest: ~/.config/git/config
+- name: Not Linux Or BSD
+  include_tasks: non-linux-bsd.yml
+  when: ansible_kernel_family not in ['Linux', 'BSD']
