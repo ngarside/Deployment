@@ -15,9 +15,9 @@ curl https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bas
 # Playbooks
 
 - Base
-- Mobile
-- KDE
 - Gnome
+- KDE
+- Mobile
 - Workstation
 
 - Desktop

@@ -1,3 +1,0 @@
-- import_playbook: kde.yml
-- import_playbook: client.yml
-- import_playbook: development.yml

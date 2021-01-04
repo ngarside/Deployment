@@ -19,7 +19,7 @@ fi
 git clone --depth=1 https://github.com/ngarside/deployment.git $REPO
 
 # Run ansible
-ansible-playbook --ask-become-pass $REPO/playbooks/desktop.yml
+ansible-playbook --ask-become-pass $REPO/playbooks/systems/desktop.yml
 
 # Delete repo
 rm -r -f $REPO

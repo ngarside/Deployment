@@ -1,0 +1,4 @@
+- import_playbook: ../includes/base.yml
+- import_playbook: ../includes/mobile.yml
+- import_playbook: ../includes/kde.yml
+- import_playbook: ../includes/workstation.yml
