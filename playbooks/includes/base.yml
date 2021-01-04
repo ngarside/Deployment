@@ -1,14 +1,2 @@
 - hosts: localhost
   roles:
-  - flatpak
-  - papirus
-  - chromium
-  - inkscape
-  - vscode
-  - libreoffice
-  - audacity
-  - firefox
-  - gimp
-  - blender
-  - cleanup
-  - spotify

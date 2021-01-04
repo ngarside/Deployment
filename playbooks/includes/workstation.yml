@@ -1,6 +1,2 @@
 - hosts: localhost
   roles:
-  - unity
-  - krita
-  - kdenlive
-  - git
