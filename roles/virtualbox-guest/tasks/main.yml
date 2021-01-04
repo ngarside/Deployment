@@ -1,5 +1,5 @@
 - name: openSUSE
-  include: opensuse.yml
+  include_tasks: opensuse.yml
   when:
     - ansible_distribution in ['openSUSE Tumbleweed', 'openSUSE Leap']
     - ansible_virtualization_type == 'virtualbox'
