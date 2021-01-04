@@ -4,7 +4,7 @@
 
 # Platforms
 
-- BSD (All)
+- BSD
 - Linux
 - macOS
 - Windows
