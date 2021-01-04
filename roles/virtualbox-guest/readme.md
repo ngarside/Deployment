@@ -4,7 +4,7 @@
 
 # Platforms
 
-- OpenSUSE
+- openSUSE
 
 # Notes
 
@@ -13,3 +13,5 @@
 # References
 
 - https://www.virtualbox.org
+- https://software.opensuse.org/package/virtualbox-guest-tools
+- https://software.opensuse.org/package/virtualbox-guest-x11
