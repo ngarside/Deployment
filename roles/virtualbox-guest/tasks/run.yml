@@ -1,0 +1,9 @@
+- name: Include openSUSE Tasks
+  include: opensuse.yml
+  when: ansible_distribution == 'openSUSE Tumbleweed'
+
+- name: Warn
+  fail:
+    msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
+  ignore_errors: yes
+  when: ansible_distribution != 'openSUSE Tumbleweed'
