@@ -1,14 +1,12 @@
-- name: GIMP - Installed
-  become: yes
-  flatpak:
-    name: org.gimp.GIMP
-    remote: flathub-beta
-    state: present
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: GIMP - Desktop Name
-  become: yes
-  ini_file:
-    path: /var/lib/flatpak/exports/share/applications/org.gimp.GIMP.desktop
-    section: Desktop Entry
-    option: Name[en_GB]
-    value: GIMP
+- name: Non Linux
+  include_tasks: non-linux.yml
+  when: ansible_kernel_family in ['BSD', 'Windows', 'Darwin']
+
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family not in ['BSD', 'Linux', 'Windows', 'Darwin']
