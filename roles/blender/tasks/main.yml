@@ -2,8 +2,8 @@
   include_tasks: linux.yml
   when: ansible_kernel_family == 'Linux'
 
-- name: All
-  include_tasks: all.yml
+- name: Non Linux
+  include_tasks: non-linux.yml
   when: ansible_kernel_family in ['BSD', 'Windows', 'Darwin']
 
 - name: Warning (Kernel)
