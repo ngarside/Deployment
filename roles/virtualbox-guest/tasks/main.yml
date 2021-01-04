@@ -1,6 +1,8 @@
 - name: openSUSE
   include: opensuse.yml
-  when: ansible_distribution == 'openSUSE Tumbleweed' && ansible_virtualization_type == 'virtualbox'
+  when:
+    - ansible_distribution == 'openSUSE Tumbleweed'
+    - ansible_virtualization_type == 'virtualbox'
 
 - name: Warn (Distribution)
   debug:
