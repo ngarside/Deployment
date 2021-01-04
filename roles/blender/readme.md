@@ -4,7 +4,10 @@
 
 # Platforms
 
-- All
+- BSD (All)
+- Linux
+- macOS
+- Windows
 
 # References
 

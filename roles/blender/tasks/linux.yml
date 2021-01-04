@@ -1,0 +1,6 @@
+- name: Installed
+  become: yes
+  flatpak:
+    name: org.blender.Blender
+    remote: flathub
+    state: present
