@@ -1,0 +1,13 @@
+- name: Installed
+  become: yes
+  package:
+    name:
+    - kdenlive
+    - ffmpeg-4
+    - frei0r-plugins
+    state: present
+
+- name: Config File Sync
+  copy:
+    src: kdenliverc
+    dest: ~/.config/kdenliverc

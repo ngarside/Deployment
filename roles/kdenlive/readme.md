@@ -1,10 +1,12 @@
 # Kdenlive
 
 - Installs Kdenlive
+- Configures Kdenlive
 
 # Platforms
 
-- Linux
+- openSUSE Tumbleweed
+- openSUSE Leap
 
 # References
 

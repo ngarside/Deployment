@@ -1,19 +1,12 @@
-- name: Sanity Check
-  fail:
-    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Installed
-  become: yes
-  flatpak:
-    name: org.audacityteam.Audacity
-    remote: flathub
-    state: present
-  when: ansible_os_family == 'RedHat'
+- name: Non Linux
+  include_tasks: non-linux.yml
+  when: ansible_kernel_family in ['BSD', 'Windows']
 
-- name: Installed
-  become: yes
-  package:
-    name: audacity
-    state: present
-  when: ansible_os_family == 'Suse'
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family not in ['BSD', 'Linux', 'Windows']
