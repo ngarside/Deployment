@@ -1,0 +1,20 @@
+- name: Installed
+  become: yes
+  package:
+    name: visual-studio-code
+    state: present
+
+- name: Config Directory Exists
+  file:
+    path: ~/Library/Application Support/Code/User
+    state: directory
+
+- name: Settings File Sync
+  copy:
+    src: settings.json
+    dest: ~/Library/Application Support/Code/User/settings.json
+
+- name: Keybindings File Sync
+  copy:
+    src: keybindings.json
+    dest: ~/Library/Application Support/Code/User/keybindings.json

@@ -1,11 +1,17 @@
 # VS Code
 
-- Adds Visual Studio Code repository
 - Installs Visual Studio Code
+- Configures Visual Studio Code
 
 # Platforms
 
 - Linux
+- macOS
+- Windows
+
+# Notes
+
+- Adds Visual Studio Code repository on Linux
 
 # References
 

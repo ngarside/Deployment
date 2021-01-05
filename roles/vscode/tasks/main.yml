@@ -1,41 +1,16 @@
-- name: Sanity Check
-  fail:
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_os_family in ['Suse', 'RedHat']
+
+- name: Windows
+  include_tasks: windows.yml
+  when: ansible_os_family == 'Windows'
+
+- name: macOS
+  include_tasks: mac.yml
+  when: ansible_os_family == 'Darwin'
+
+- name: Warning (OS Family)
+  debug:
     msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['RedHat', 'Suse']
-
-- name: Include RedHat Tasks
-  include: rhel.yml
-  when: ansible_os_family == 'RedHat'
-
-- name: Include Suse Tasks
-  include: suse.yml
-  when: ansible_os_family == 'Suse'
-
-- name: Installed
-  become: yes
-  package:
-    name: code
-    state: present
-
-- name: Config Directory Exists
-  file:
-    path: ~/.config/Code/User
-    state: directory
-
-- name: Settings File Sync
-  copy:
-    src: settings.json
-    dest: ~/.config/Code/User/settings.json
-
-- name: Keybindings File Sync
-  copy:
-    src: keybindings.json
-    dest: ~/.config/Code/User/keybindings.json
-
-- name: Desktop Name
-  become: yes
-  ini_file:
-    path: /usr/share/applications/code.desktop
-    section: Desktop Entry
-    option: Name
-    value: VS Code
+  when: ansible_os_family not in ['Suse', 'RedHat', 'Windows', 'Darwin']
