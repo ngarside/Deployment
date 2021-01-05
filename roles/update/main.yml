@@ -1,0 +1,9 @@
+- name: openSUSE Tumbleweed
+  become: true
+  shell: zypper --no-cd dist-upgrade --no-recommends --no-confirm
+  when: ansible_distribution == 'openSUSE Tumbleweed'
+
+- name: Warning (Distribution)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
+  when: ansible_distribution != 'openSUSE Tumbleweed'

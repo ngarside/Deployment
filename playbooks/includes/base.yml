@@ -3,6 +3,7 @@
     - name: Kernel
       include_tasks: ../../tasks/kernel.yml
   roles:
-    - virtualbox-guest
-    - flatpak
+    - update
     - cleanup
+    - flatpak
+    - virtualbox-guest
