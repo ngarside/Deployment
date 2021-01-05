@@ -1,6 +1,4 @@
 - hosts: localhost
-  collections:
-    - community.general
   pre_tasks:
     - name: Kernel
       include_tasks: ../../tasks/kernel.yml

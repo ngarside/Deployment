@@ -14,6 +14,7 @@ if [[ "$OS" == *"rhel"* ]]; then
 elif [[ "$OS" == *"suse"* ]]; then
 	sudo zypper --no-cd install --no-confirm --no-recommends git ansible python3-psutil
 fi
+ansible-galaxy collection install community.general
 
 # Clone repo
 git clone --depth=1 https://github.com/ngarside/deployment.git $REPO
