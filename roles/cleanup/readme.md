@@ -4,4 +4,4 @@
 
 # Platforms
 
-- Linux
+- All
