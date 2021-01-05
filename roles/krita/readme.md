@@ -4,7 +4,7 @@
 
 # Platforms
 
-- Linux
+- All
 
 # References
 
