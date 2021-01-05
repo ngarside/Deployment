@@ -1,10 +1,8 @@
-- name: Sanity Check
-  fail:
-    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+- name: Linux
+  include_tasks: linux-bsd.yml
+  when: ansible_kernel_family in ['BSD', 'Linux']
 
-- name: Installed
-  become: yes
-  package:
-    name: konsole
-    state: present
+- name: Warning (Kernel Family)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel family '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family not in ['BSD', 'Linux']
