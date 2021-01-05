@@ -1,6 +1,8 @@
 - name: openSUSE Tumbleweed
   become: true
-  shell: zypper --no-cd dist-upgrade --no-recommends --no-confirm
+  community.general.zypper:
+    name: '*'
+    state: dist-upgrade
   when: ansible_distribution == 'openSUSE Tumbleweed'
 
 - name: Warning (Distribution)
