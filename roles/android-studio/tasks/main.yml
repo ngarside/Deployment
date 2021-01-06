@@ -1,8 +1,8 @@
-- name: Dependencies Installed
-  become: yes
-  package:
-    name:
-      - zlib.i686
-      - ncurses-libs.i686
-      - bzip2-libs.i686
-    state: present
+- name: Fedora
+  include_tasks: fedora.yml
+  when: ansible_distribution == 'Fedora'
+
+- name: Warning (Distribution)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_distribution }}'
+  when: ansible_distribution != 'Fedora'

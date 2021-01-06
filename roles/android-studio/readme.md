@@ -4,7 +4,7 @@
 
 # Platforms
 
-- All
+- Fedora
 
 # References
 
