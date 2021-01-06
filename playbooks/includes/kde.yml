@@ -1,4 +1,9 @@
 - hosts: localhost
   roles:
-    - thunderbird
+    - dolphin
+    - kcalc
+    - kde-plasma
     - konsole
+    - krdc
+    - plasma-systemmonitor
+    - thunderbird

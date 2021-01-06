@@ -1,7 +1,7 @@
 # Bootstrapper for setting up localhost.
 # Downloads this repository and installs and runs ansible.
 # Run with:
-# curl https://raw.githubusercontent.com/ngarside/deployment/master/setup.sh | bash
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/nix.sh | bash
 
 # Setup variables
 OS=$(awk -F= '/^ID_LIKE=/{print $2}' /etc/os-release)

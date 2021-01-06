@@ -1,2 +1,12 @@
 - hosts: localhost
   roles:
+    - gdm
+    - geary
+    - gnome-calculator
+    - gnome-clocks
+    - gnome-podcasts
+    - gnome-shell
+    - gnome-terminal
+    - gnome-weather
+    - nautilus
+    - remmina

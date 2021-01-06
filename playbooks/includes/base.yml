@@ -6,4 +6,15 @@
     - update
     - cleanup
     - flatpak
+    - appimage
+    - background
+    - dconf-editor
+    - dotnet
+    - firefox
+    - libreoffice
+    - papirus
+    - spotify
+    - systemd
+    - templates
+    - user
     - virtualbox-guest

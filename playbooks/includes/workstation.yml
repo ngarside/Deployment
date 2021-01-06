@@ -1,10 +1,14 @@
 - hosts: localhost
   roles:
-    - git
-    - blender
-    - gimp
-    - krita
-    - inkscape
-    - vscode
-    - kdenlive
+    - android-studio
     - audacity
+    - blender
+    - chromium
+    - gimp
+    - git
+    - inkscape
+    - jekyll
+    - kdenlive
+    - krita
+    - unity
+    - vscode
