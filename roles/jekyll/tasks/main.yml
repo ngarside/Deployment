@@ -1,8 +1,8 @@
-- name: Linux
-  include_tasks: linux.yml
-  when: ansible_kernel_family == 'Linux'
+- name: Fedora
+  include_tasks: fedora.yml
+  when: ansible_distribution == 'Fedora'
 
-- name: Warning (Kernel)
+- name: Warning (Distribution)
   debug:
-    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
-  when: ansible_kernel_family != 'Linux'
+    msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
+  when: ansible_distribution != 'Fedora'

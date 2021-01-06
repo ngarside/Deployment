@@ -4,5 +4,5 @@
 
 - name: Warning (Distribution)
   debug:
-    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_distribution }}'
+    msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
   when: ansible_distribution != 'Fedora'
