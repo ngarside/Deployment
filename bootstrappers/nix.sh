@@ -12,7 +12,7 @@ REPO=$(mktemp -d -t ci-XXXXXXXX)
 if [[ "$OS" == *"rhel"* ]]; then
 	sudo dnf install --assume-yes git ansible python-psutil
 elif [[ "$OS" == *"suse"* ]]; then
-	sudo zypper --no-cd install --no-confirm --no-recommends git ansible python3-psutil
+	sudo zypper --non-interactive --quiet --no-cd install --no-recommends git ansible python3-psutil
 fi
 ansible-galaxy collection install community.general
 
