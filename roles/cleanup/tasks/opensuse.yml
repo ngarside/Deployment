@@ -1,0 +1,4 @@
+- name: No Local Repositories
+  become: yes
+  shell: zypper removerepo --local
+  warn: false

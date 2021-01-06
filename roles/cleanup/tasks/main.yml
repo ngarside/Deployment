@@ -1,3 +1,7 @@
+- name: openSUSE
+  include_tasks: opensuse.yml
+  when: ansible_distribution in ['openSUSE Tumbleweed', 'openSUSE Leap']
+
 - name: Uninstalled
   become: yes
   package:

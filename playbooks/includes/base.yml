@@ -3,8 +3,8 @@
     - name: Kernel
       include_tasks: ../../tasks/kernel.yml
   roles:
-    - update
     - cleanup
+    - update
     - flatpak
     - appimage
     - background
