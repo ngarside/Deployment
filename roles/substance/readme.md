@@ -5,7 +5,7 @@
 
 # Platforms
 
-- Linux
+- None
 
 # References
 
