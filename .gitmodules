@@ -1,0 +1,6 @@
+[submodule "submodules/firefox-material"]
+	path = submodules/firefox-material
+	url = https://github.com/ngarside/firefox-material
+[submodule "submodules/firefox-gnome"]
+	path = submodules/firefox-gnome
+	url = https://github.com/ngarside/firefox-gnome
