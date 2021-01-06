@@ -1,0 +1,17 @@
+- name: Installed
+  become: yes
+  package:
+    name: papirus-icon-theme
+    state: present
+
+- name: Gnome
+  dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: "'Papirus'"
+
+- name: KDE
+  ini_file:
+    path: ~/.config/kdeglobals
+    section: Icons
+    option: Theme
+    value: Papirus

@@ -1,17 +1,8 @@
-- name: Installed
-  become: yes
-  package:
-    name: papirus-icon-theme
-    state: present
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Activated
-  dconf:
-    key: "/org/gnome/desktop/interface/icon-theme"
-    value: "'Papirus'"
-
-- name: Activated
-  ini_file:
-    path: ~/.config/kdeglobals
-    section: Icons
-    option: Theme
-    value: Papirus
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

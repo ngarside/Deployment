@@ -1,0 +1,6 @@
+- name: Installed
+  become: yes
+  flatpak:
+    name: org.gnome.Weather
+    remote: flathub
+    state: present

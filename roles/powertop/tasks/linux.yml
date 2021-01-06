@@ -1,0 +1,30 @@
+- name: Install
+  become: yes
+  package:
+    name: powertop
+
+- name: Copy Service File
+  become: yes
+  copy:
+    src: powertop.service
+    dest: /etc/systemd/system/powertop.service
+
+- name: Enable Service
+  become: yes
+  systemd:
+    name: powertop.service
+    enabled: yes
+  register: powertopenabled
+
+- name: Reload Systemd Config
+  become: yes
+  systemd:
+    daemon_reload: yes
+  when: powertopenabled.changed
+
+- name: Start Service
+  become: yes
+  systemd:
+    name: powertop.service
+    state: started
+  when: powertopenabled.changed

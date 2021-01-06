@@ -1,4 +1,4 @@
-- name: Mac Power - Disable faulty gpe06 when running on Mac
+- name: Disable faulty gpe06 when running on Mac
   become: yes
   cron:
     name: "Disable faulty gpe06 when running on Mac"
@@ -6,7 +6,7 @@
     job: "echo \"disable\" > /sys/firmware/acpi/interrupts/gpe06"
   when: ansible_facts['system_vendor'] == "Apple Inc."
 
-- name: Mac Power - Copy Sleep Config File
+- name: Copy Sleep Config File
   become: yes
   copy:
     src: 30_disable_gpe06

@@ -1,13 +1,8 @@
-- name: Installed
-  become: yes
-  package:
-    name: chromium
-    state: present
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Desktop Name
-  become: yes
-  ini_file:
-    path: /usr/share/applications/chromium-browser.desktop
-    section: Desktop Entry
-    option: Name
-    value: Chromium
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

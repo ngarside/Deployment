@@ -1,0 +1,10 @@
+- name: Installed
+  become: yes
+  package:
+    name: dolphin
+    state: present
+
+- name: Config File Sync
+  copy:
+    src: dolphinrc
+    dest: ~/.config/dolphinrc

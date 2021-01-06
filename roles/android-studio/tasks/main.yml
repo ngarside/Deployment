@@ -1,8 +1,8 @@
-- name: Android Studio - Dependencies Installed
+- name: Dependencies Installed
   become: yes
   package:
     name:
-    - zlib.i686
-    - ncurses-libs.i686
-    - bzip2-libs.i686
+      - zlib.i686
+      - ncurses-libs.i686
+      - bzip2-libs.i686
     state: present

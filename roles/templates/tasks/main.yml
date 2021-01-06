@@ -1,19 +1,8 @@
-- name: Templates - Directory Exists
-  file:
-    path: ~/Templates
-    state: directory
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Templates - Text File Sync
-  copy:
-    src: text.txt
-    dest: ~/Templates/Text.txt
-
-- name: Templates - Document File Sync
-  copy:
-    src: document.odt
-    dest: ~/Templates/Document.odt
-
-- name: Templates - Spreadsheet File Sync
-  copy:
-    src: spreadsheet.ods
-    dest: ~/Templates/Spreadsheet.ods
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

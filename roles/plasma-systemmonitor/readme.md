@@ -4,7 +4,7 @@
 
 # Platforms
 
-- Linux
+- openSUSE Tumbleweed
 
 # References
 

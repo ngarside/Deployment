@@ -1,15 +1,8 @@
-- name: Directory Exists
-  file:
-    path: ~/.local/bin
-    state: directory
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Download Hub
-  get_url:
-    url: https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage
-    dest: ~/.local/bin/UnityHub.AppImage
-
-- name: Hub Execute Permission
-  file:
-    path: ~/.local/bin/UnityHub.AppImage
-    state: file
-    mode: a+x
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

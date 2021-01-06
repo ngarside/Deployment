@@ -1,0 +1,35 @@
+- name: Window Buttons
+  dconf:
+    key: /org/gnome/desktop/wm/preferences/button-layout
+    value: "':minimize,maximize,close'"
+
+- name: Favourites
+  dconf:
+    key: /org/gnome/shell/favorite-apps
+    value: "['firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'code.desktop']"
+
+- name: Show Day Of Week
+  dconf:
+    key: /org/gnome/desktop/interface/clock-show-weekday
+    value: "true"
+
+- name: Enable Touchpad While Typing
+  dconf:
+    key: /org/gnome/desktop/peripherals/touchpad/disable-while-typing
+    value: "false"
+
+- name: Enable Fractional Scaling
+  dconf:
+    key: /org/gnome/mutter/experimental-features
+    value: "['scale-monitor-framebuffer']"
+
+- name: Disable Auto Brightness
+  dconf:
+    key: /org/gnome/settings-daemon/plugins/power/ambient-enabled
+    value: "false"
+
+- name: Extra Themes Installed
+  become: yes
+  package:
+    name: gnome-themes-extra
+    state: present

@@ -1,10 +1,8 @@
-- name: Sanity Check
-  fail:
-    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+- name: openSUSE Tumbleweed
+  include_tasks: opensuse-tumbleweed.yml
+  when: ansible_distribution == 'openSUSE Tumbleweed'
 
-- name: Installed
-  become: yes
-  package:
-    name: plasma5-systemmonitor
-    state: present
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_distribution != 'openSUSE Tumbleweed'

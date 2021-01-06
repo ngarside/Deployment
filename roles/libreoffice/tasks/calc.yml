@@ -1,10 +1,10 @@
-- name: Calc - Installed
+- name: Installed
   become: yes
   package:
     name: libreoffice-calc
     state: present
 
-- name: Calc - Desktop Name
+- name: Desktop Name
   become: yes
   ini_file:
     path: /usr/share/applications/libreoffice-calc.desktop

@@ -1,0 +1,55 @@
+- name: Installed
+  become: yes
+  package:
+    name: gnome-terminal
+    state: present
+
+- name: New Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/new-tab
+    value: "'<Ctrl>t'"
+
+- name: Close Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/close-tab
+    value: "'<Ctrl>w'"
+
+- name: Next Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/next-tab
+    value: "'<Ctrl>Tab'"
+
+- name: Previous Tab
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/prev-tab
+    value: "'<Ctrl><Shift>Tab'"
+
+- name: Copy
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/copy
+    value: "'<Ctrl>C'"
+
+- name: Paste
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/paste
+    value: "'<Ctrl>V'"
+
+- name: Find
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/find
+    value: "'<Ctrl>F'"
+
+- name: Select All
+  dconf:
+    key: /org/gnome/terminal/legacy/keybindings/select-all
+    value: "'<Ctrl>A'"
+
+- name: Use System Theme
+  dconf:
+    key: /org/gnome/terminal/legacy/theme-variant
+    value: "'system'"
+
+- name: Use Headerbar
+  dconf:
+    key: /org/gnome/terminal/legacy/headerbar
+    value: "@mb true"

@@ -1,29 +1,8 @@
-- name: Gnome Shell - Window Buttons
-  dconf:
-    key: /org/gnome/desktop/wm/preferences/button-layout
-    value: "':minimize,maximize,close'"
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Gnome Shell - Favourites
-  dconf:
-    key: /org/gnome/shell/favorite-apps
-    value: "['firefox.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'code.desktop']"
-
-- name: Gnome Shell - Show Day Of Week
-  dconf:
-    key: /org/gnome/desktop/interface/clock-show-weekday
-    value: "true"
-
-- name: Gnome Shell - Enable Touchpad While Typing
-  dconf:
-    key: /org/gnome/desktop/peripherals/touchpad/disable-while-typing
-    value: "false"
-
-- name: Gnome Shell - Enable Fractional Scaling
-  dconf:
-    key: /org/gnome/mutter/experimental-features
-    value: "['scale-monitor-framebuffer']"
-
-- name: Gnome Shell - Disable Auto Brightness
-  dconf:
-    key: /org/gnome/settings-daemon/plugins/power/ambient-enabled
-    value: "false"
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

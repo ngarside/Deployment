@@ -1,31 +1,8 @@
-- name: Jekyll - Dependencies Installed
-  become: yes
-  package:
-    name:
-    - ruby
-    - ruby-devel
-    - "@development-tools"
-    state: present
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Jekyll - Configure Gem Install Directory
-  blockinfile:
-    dest: ~/.bashrc
-    marker: "# {mark} Install Ruby Gems to ~/.gems"
-    block: |
-      export GEM_HOME="$HOME/.gems"
-      export PATH="$HOME/.gems/bin:$PATH"
-  register: bashrc_updated
-
-- name: Jekyll - Run Updated '.bashrc'
-  shell: . ~/.bashrc
-  when: bashrc_updated.changed
-
-- name: Jekyll - Jekyll Installed
-  gem:
-    name: jekyll
-    state: present
-
-- name: Jekyll - Bundler Installed
-  gem:
-    name: bundler
-    state: present
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

@@ -1,25 +1,8 @@
-- name: Installed
-  become: yes
-  package:
-    name: nautilus
-    state: present
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Bookmarks Directory Exists
-  file:
-    path: ~/.config/gtk-3.0
-    state: directory
-
-- name: Bookmarks File Sync
-  copy:
-    src: bookmarks
-    dest: ~/.config/gtk-3.0/bookmarks
-
-- name: Sort Folders First
-  dconf:
-    key: /org/gtk/settings/file-chooser/sort-directories-first
-    value: "true"
-
-- name: Use Standard Zoom Level
-  dconf:
-    key: /org/gnome/nautilus/icon-view/default-zoom-level
-    value: "'standard'"
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

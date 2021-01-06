@@ -1,26 +1,8 @@
-- name: Sanity Check
-  fail:
-    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['RedHat', 'Debian', 'Suse', 'Gentoo', 'Archlinux', 'Alpine']
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Double Click Selection
-  ini_file:
-    path: ~/.config/kdeglobals
-    section: KDE
-    option: SingleClick
-    value: false
-
-- name: Config File Sync
-  copy:
-    src: kwinrc
-    dest: ~/.config/kwinrc
-
-- name: Config File Sync
-  copy:
-    src: appletsrc
-    dest: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
-
-- name: Config File Sync
-  copy:
-    src: kdeglobals
-    dest: ~/.config/kdeglobals
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'
