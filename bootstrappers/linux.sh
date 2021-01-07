@@ -6,6 +6,11 @@
 # - Installs the pre-requisite packages for running the setup
 # - Downloads and runs the setup against localhost
 
+# Platforms:
+# - Fedora
+# - openSUSE Leap
+# - openSUSE Tumbleweed
+
 # Run with:
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s <system>
 
