@@ -9,7 +9,15 @@ Currently tested on Fedora Workstation 33.
 Run with:
 
 ```sh
-curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash
+curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s <system>
+```
+
+Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
+
+Example to configure desktop:
+
+```sh
+curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s desktop
 ```
 
 # Playbooks
