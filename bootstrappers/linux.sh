@@ -4,8 +4,8 @@
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash
 
 # Setup variables
-os_id=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
-os_name=$(awk -F= '/^NAME=/{print $2}' /etc/os-release)
+os_id=$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"')
+os_name=$(awk -F= '/^NAME=/{print $2}' /etc/os-release | tr -d '"')
 repo=$(mktemp -d -t ci-XXXXXXXX)
 
 # Install pre-requisites
