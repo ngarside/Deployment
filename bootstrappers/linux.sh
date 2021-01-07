@@ -6,9 +6,21 @@
 # Setup variables
 os_id=$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"')
 os_name=$(awk -F= '/^NAME=/{print $2}' /etc/os-release | tr -d '"')
-repo=$(mktemp -d -t ci-XXXXXXXX)
+
+# Check the current OS is supported
+if [[ "$OSTYPE" != "linux" ]]
+then
+	echo "Bootstrapper is not supported on operating system '$OSTYPE'"
+	exit 1
+fi
+if [[ "$os_id" != "fedora" && "$os_id" != "opensuse-leap" && "$os_id" != "opensuse-tumbleweed" ]]
+then
+	echo "Bootstrapper is not supported on distribution '$os_name'"
+	exit 1
+fi
 
 # Install pre-requisites
+# 'git' is required by ansible-pull
 # 'psutil' is required by Ansible dbus module - https://pypi.org/project/psutil
 if [[ "$os_id" == "fedora" ]]
 then
@@ -17,18 +29,8 @@ then
 elif [[ "$os_id" == "opensuse-leap" || "$os_id" == "opensuse-tumbleweed" ]]
 then
 	sudo zypper --non-interactive --quiet --no-cd install --no-recommends git ansible python3-psutil
-else
-	echo "Bootstrapper is not supported on operating system '$os_name'"
-	exit 1
 fi
 ansible-galaxy collection install community.general
 
-# Clone repo
-git clone --depth=1 https://github.com/ngarside/deployment.git $repo
-
 # Run ansible
-cd $repo
-ansible-playbook --ask-become-pass $repo/playbooks/systems/desktop.yml
-
-# Delete repo
-rm -r -f $repo
+ansible-pull --ask-become-pass --url https://github.com/ngarside/deployment.git playbooks/systems/desktop.yml
