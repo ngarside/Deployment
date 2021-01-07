@@ -9,7 +9,7 @@ os_name=$(awk -F= '/^NAME=/{print $2}' /etc/os-release)
 repo=$(mktemp -d -t ci-XXXXXXXX)
 
 # Install pre-requisites
-# 'python-psutil' is required by Ansible dbus module
+# 'psutil' is required by Ansible dbus module - https://pypi.org/project/psutil
 if [[ "$os_id" == "fedora" ]]
 then
 	sudo dnf install --assume-yes git ansible python-psutil
