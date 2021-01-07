@@ -1,9 +1,21 @@
-# Bootstrapper for setting up localhost.
-# Downloads this repository and installs and runs ansible.
+#-------------------------------------------------------------------------------
+# Linux bootstrapper
+#-------------------------------------------------------------------------------
+
+# This script installs ansible and all pre-requisites, then runs it against localhost
+
 # Run with:
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s <system>
+
+# Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
+
+# Example to configure desktop:
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s desktop
 
-# Check parameters
+#-------------------------------------------------------------------------------
+# Process arguments
+#-------------------------------------------------------------------------------
+
 if [[ -z "$1" ]]
 then
     echo "Parameter not passed, must be one of [ 'desktop', 'laptop', 'tablet' ]"
@@ -16,11 +28,17 @@ else
     playbook=$1
 fi
 
+#-------------------------------------------------------------------------------
 # Setup variables
+#-------------------------------------------------------------------------------
+
 os_id=$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"')
 os_name=$(awk -F= '/^NAME=/{print $2}' /etc/os-release | tr -d '"')
 
+#-------------------------------------------------------------------------------
 # Check the current OS is supported
+#-------------------------------------------------------------------------------
+
 if [[ "$OSTYPE" != "linux" ]]
 then
 	echo "Bootstrapper is not supported on operating system '$OSTYPE'"
@@ -32,7 +50,10 @@ then
 	exit 1
 fi
 
+#-------------------------------------------------------------------------------
 # Install pre-requisites
+#-------------------------------------------------------------------------------
+
 # 'git' is required by ansible-pull
 # 'psutil' is required by Ansible dbus module - https://pypi.org/project/psutil
 if [[ "$os_id" == "fedora" ]]
@@ -45,5 +66,8 @@ then
 fi
 ansible-galaxy collection install community.general
 
+#-------------------------------------------------------------------------------
 # Run ansible
+#-------------------------------------------------------------------------------
+
 ansible-pull --ask-become-pass --url https://github.com/ngarside/deployment.git playbooks/systems/$playbook.yml
