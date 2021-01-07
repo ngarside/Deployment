@@ -9,7 +9,7 @@ Currently tested on Fedora Workstation 33.
 Run with:
 
 ```sh
-curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/nix.sh | bash
+curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash
 ```
 
 # Playbooks
