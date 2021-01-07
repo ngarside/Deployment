@@ -1,7 +1,7 @@
 - name: Has Local Repositories
-  become: yes
   shell:
     cmd: zypper repos --show-enabled-only --uri | grep cd
+    warn: false
   register: localrepos
   changed_when: False
 
