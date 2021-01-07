@@ -2,7 +2,7 @@
 # Linux bootstrapper
 #-------------------------------------------------------------------------------
 
-# This script:
+# Overview:
 # - Installs the pre-requisite packages for running the setup
 # - Downloads and runs the setup against localhost
 
