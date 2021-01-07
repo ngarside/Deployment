@@ -4,8 +4,8 @@
 
 # Platforms
 
-- openSUSE Tumbleweed
 - openSUSE Leap
+- openSUSE Tumbleweed
 
 # Notes
 
