@@ -11,11 +11,9 @@
 # - openSUSE Leap
 # - openSUSE Tumbleweed
 
-# Run with:
+# Usage:
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s <system>
-
 # Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
-
 # Example to configure desktop:
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s desktop
 
