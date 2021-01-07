@@ -2,7 +2,9 @@
 # Linux bootstrapper
 #-------------------------------------------------------------------------------
 
-# This script installs ansible and all pre-requisites, then runs it against localhost
+# This script:
+# - Installs the pre-requisite packages for running the setup
+# - Downloads and runs the setup against localhost
 
 # Run with:
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s <system>
