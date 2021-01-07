@@ -1,8 +1,7 @@
 - name: Has Local Repositories
   become: yes
   shell:
-    cmd: zypper repos --show-enabled-only | grep --count cd
-    warn: false
+    cmd: zypper repos --show-enabled-only --uri | grep cd
   register: localrepos
   changed_when: False
 
@@ -11,4 +10,4 @@
   shell:
     cmd: zypper removerepo --local
     warn: false
-  when: localrepos.stdout != "0"
+  when: localrepos.stdout
