@@ -1,6 +1,6 @@
 # Deployment
 
-Ansible scripts for setting up my personal systems. Very much a work in progress. Intended use is development using .NET, Xamarin and Jekyll as well as basic office use. Feel free to poke around, but be aware that I'm not a professional sys-admin so there's no guarantee anything here is done the correct way.
+Ansible scripts for setting up my devices. Very much a work in progress.
 
 # Platforms
 
