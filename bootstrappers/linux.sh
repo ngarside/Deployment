@@ -1,7 +1,20 @@
 # Bootstrapper for setting up localhost.
 # Downloads this repository and installs and runs ansible.
 # Run with:
-# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s desktop
+
+# Check parameters
+if [[ -z "$1" ]]
+then
+    echo "Parameter not passed, must be one of [ 'desktop', 'laptop', 'tablet' ]"
+    exit 1
+elif [[ "$1" != "desktop" && "$1" != "laptop" && "$1" != "tablet" ]]
+then
+    echo "Parameter invalid, must be one of [ 'desktop', 'laptop', 'tablet' ]"
+    exit 1
+else
+    playbook=$1
+fi
 
 # Setup variables
 os_id=$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"')
@@ -33,4 +46,4 @@ fi
 ansible-galaxy collection install community.general
 
 # Run ansible
-ansible-pull --ask-become-pass --url https://github.com/ngarside/deployment.git playbooks/systems/desktop.yml
+ansible-pull --ask-become-pass --url https://github.com/ngarside/deployment.git playbooks/systems/$playbook.yml
