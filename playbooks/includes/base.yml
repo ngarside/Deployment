@@ -4,17 +4,17 @@
       include_tasks: ../../tasks/kernel.yml
   roles:
     - cleanup
-    - update
-    - flatpak
-    - appimage
-    - background
-    - dconf-editor
-    - firefox
-    - libreoffice
-    - papirus
-    - spotify
-    - systemd
-    - templates
-    - user
-    - virtualbox-guest
-    - dropbox
+#    - update
+#    - flatpak
+#    - appimage
+#    - background
+#    - dconf-editor
+#    - firefox
+#    - libreoffice
+#    - papirus
+#    - spotify
+#    - systemd
+#    - templates
+#    - user
+#    - virtualbox-guest
+#    - dropbox
