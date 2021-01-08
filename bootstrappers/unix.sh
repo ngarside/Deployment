@@ -12,10 +12,10 @@
 # - openSUSE Tumbleweed
 
 # Usage:
-# sudo curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | bash -s <system>
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | sudo bash -s <system>
 # Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
 # Example to configure desktop:
-# sudo curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | bash -s desktop
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | sudo bash -s desktop
 
 #-------------------------------------------------------------------------------
 # Process arguments
@@ -44,7 +44,7 @@ os_name=$(awk -F= '/^NAME=/{print $2}' /etc/os-release | tr -d '"')
 # Check the current OS is supported
 #-------------------------------------------------------------------------------
 
-if [[ "$OSTYPE" != "linux" ]]
+if [[ "$OSTYPE" != "linux" && "$OSTYPE" != "linux-gnu" ]]
 then
 	echo "Bootstrapper is not supported on operating system '$OSTYPE'"
 	exit 1
