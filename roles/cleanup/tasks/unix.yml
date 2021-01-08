@@ -1,12 +1,12 @@
-#- name: Uninstalled
-#  become: yes
-#  package:
-#    name:
-#    - opensuse-welcome
-#    - tigervnc
-#    - xterm
-#    - ksysguard5
-#    - khelpcenter5
-#    - git-gui
-#    - appimagelauncher
-#    state: absent
+- name: Uninstalled
+  become: yes
+  package:
+    name:
+    # - opensuse-welcome
+    # - tigervnc
+    # - xterm
+    # - ksysguard5
+    # - khelpcenter5
+    - git-gui
+    - appimagelauncher
+    state: absent

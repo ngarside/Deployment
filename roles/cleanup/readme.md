@@ -5,4 +5,4 @@
 
 # Platforms
 
-- All
+- Unix
