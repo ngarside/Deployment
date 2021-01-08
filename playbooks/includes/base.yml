@@ -4,7 +4,7 @@
       include_tasks: ../../tasks/kernel.yml
   roles:
     - cleanup
-#    - update
+    - update
 #    - flatpak
 #    - appimage
 #    - background

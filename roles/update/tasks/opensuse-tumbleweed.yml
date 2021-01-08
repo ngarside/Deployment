@@ -1,0 +1,5 @@
+- name: Distribution Upgrade
+  become: true
+  community.general.zypper:
+    name: '*'
+    state: dist-upgrade

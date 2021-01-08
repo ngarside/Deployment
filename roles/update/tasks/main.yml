@@ -1,8 +1,5 @@
 - name: openSUSE Tumbleweed
-  become: true
-  community.general.zypper:
-    name: '*'
-    state: dist-upgrade
+  include_tasks: opensuse-tumbleweed.yml
   when: ansible_distribution == 'openSUSE Tumbleweed'
 
 - name: Warning (Distribution)

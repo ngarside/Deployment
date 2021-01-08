@@ -5,3 +5,8 @@
 - name: Unix
   include_tasks: unix.yml
   when: ansible_distribution != 'Windows'
+
+- name: Warning (Distribution)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
+  when: ansible_distribution == 'Windows'
