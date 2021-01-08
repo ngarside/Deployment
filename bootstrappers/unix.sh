@@ -12,10 +12,10 @@
 # - openSUSE Tumbleweed
 
 # Usage:
-# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s <system>
+# sudo curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | bash -s <system>
 # Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
 # Example to configure desktop:
-# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s desktop
+# sudo curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | bash -s desktop
 
 #-------------------------------------------------------------------------------
 # Process arguments
@@ -63,11 +63,11 @@ fi
 # 'psutil' is required by Ansible dbus module - https://pypi.org/project/psutil
 if [[ "$os_id" == "fedora" ]]
 then
-	sudo dnf install --assume-yes git ansible python-psutil
+	dnf install --assume-yes git ansible python-psutil
 # Don't use 'ID_LIKE' as other variants of openSUSE aren't supported
 elif [[ "$os_id" == "opensuse-leap" || "$os_id" == "opensuse-tumbleweed" ]]
 then
-	sudo zypper --non-interactive --no-cd install --no-recommends git ansible python3-psutil
+	zypper --non-interactive --no-cd install --no-recommends git ansible python3-psutil
 fi
 ansible-galaxy collection install community.general
 

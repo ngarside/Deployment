@@ -13,7 +13,7 @@ Ansible scripts for setting up my devices. Very much a work in progress.
 Run with:
 
 ```sh
-curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s <system>
+sudo curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | bash -s <system>
 ```
 
 Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
@@ -21,7 +21,7 @@ Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
 Example to configure desktop:
 
 ```sh
-curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/linux.sh | bash -s desktop
+sudo curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | bash -s desktop
 ```
 
 # Playbooks
