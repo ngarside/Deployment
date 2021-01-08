@@ -2,8 +2,8 @@
   become: yes
   package:
     name:
-    # - opensuse-welcome
-    # - tigervnc
+    - opensuse-welcome
+    - tigervnc
     # - xterm
     # - ksysguard5
     # - khelpcenter5
