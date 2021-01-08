@@ -6,7 +6,7 @@
     - tigervnc
     # - xterm
     # - ksysguard5
-    # - khelpcenter5
+    - khelpcenter5
     - git-gui
     - appimagelauncher
     state: absent
