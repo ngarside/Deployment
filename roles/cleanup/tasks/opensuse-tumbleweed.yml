@@ -1,6 +1,0 @@
-- name: Uninstalled
-  become: yes
-  package:
-    name:
-    - ksysguard5
-    state: absent
