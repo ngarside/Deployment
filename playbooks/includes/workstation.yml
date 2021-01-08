@@ -1,9 +1,9 @@
 - hosts: localhost
   roles:
+    - blender
     # - dotnet
     # - android-studio
     # - audacity
-    # - blender
     # - chromium
     # - gimp
     # - git

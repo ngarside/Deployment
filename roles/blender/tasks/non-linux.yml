@@ -1,5 +1,0 @@
-- name: Installed
-  become: yes
-  package:
-    name: blender
-    state: present
