@@ -6,7 +6,6 @@
   changed_when: False
 
 - name: No Local Repositories
-  become: yes
   shell:
     cmd: zypper removerepo --local
     warn: false

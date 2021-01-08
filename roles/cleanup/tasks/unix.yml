@@ -1,5 +1,4 @@
 - name: Uninstalled
-  become: yes
   package:
     name:
     - opensuse-welcome
