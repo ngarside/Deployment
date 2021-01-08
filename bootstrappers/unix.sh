@@ -75,4 +75,4 @@ ansible-galaxy collection install community.general
 # Run ansible
 #-------------------------------------------------------------------------------
 
-ansible-pull --ask-become-pass --url https://github.com/ngarside/deployment.git playbooks/systems/$playbook.yml
+ansible-pull --url https://github.com/ngarside/deployment.git playbooks/systems/$playbook.yml
