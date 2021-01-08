@@ -1,12 +1,12 @@
 - hosts: localhost
   roles:
-    - dolphin
-    - kcalc
-    - kde-plasma
-    - konsole
-    - krdc
-    - plasma-systemmonitor
-    - thunderbird
-    - cpod
-    - kclock
-    - kweather
+    # - dolphin
+    # - kcalc
+    # - kde-plasma
+    # - konsole
+    # - krdc
+    # - plasma-systemmonitor
+    # - thunderbird
+    # - cpod
+    # - kclock
+    # - kweather

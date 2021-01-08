@@ -1,21 +1,21 @@
 - hosts: localhost
   roles:
-    - dotnet
-    - android-studio
-    - audacity
-    - blender
-    - chromium
-    - gimp
-    - git
-    - inkscape
-    - jekyll
-    - kdenlive
-    - krita
-    - unity
-    - vscode
-    - substance
-    - rider
-    - virtualbox
-    - obs
-    - visual-studio
-    - 7zip
+    # - dotnet
+    # - android-studio
+    # - audacity
+    # - blender
+    # - chromium
+    # - gimp
+    # - git
+    # - inkscape
+    # - jekyll
+    # - kdenlive
+    # - krita
+    # - unity
+    # - vscode
+    # - substance
+    # - rider
+    # - virtualbox
+    # - obs
+    # - visual-studio
+    # - 7zip
