@@ -11,5 +11,5 @@
 
 - name: Warning (Virtualization)
   debug:
-    msg: Role '{{ role_name }}' is not supported when using virtualization '{{ ansible_virtualization_type }}'
+    msg: Role '{{ role_name }}' is not supported when running under virtualization '{{ ansible_virtualization_type }}'
   when: ansible_virtualization_type != 'virtualbox'

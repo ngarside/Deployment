@@ -6,6 +6,7 @@
     - cleanup
     - update
     - flatpak
+    - virtualbox-guest
 #    - appimage
 #    - background
 #    - dconf-editor
@@ -16,5 +17,4 @@
 #    - systemd
 #    - templates
 #    - user
-#    - virtualbox-guest
 #    - dropbox
