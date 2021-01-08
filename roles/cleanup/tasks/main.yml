@@ -2,6 +2,10 @@
   include_tasks: opensuse.yml
   when: ansible_distribution in ['openSUSE Tumbleweed', 'openSUSE Leap']
 
+- name: openSUSE
+  include_tasks: opensuse-tumbleweed.yml
+  when: ansible_distribution == 'openSUSE Tumbleweed'
+
 - name: Unix
   include_tasks: unix.yml
   when: ansible_distribution != 'Windows'

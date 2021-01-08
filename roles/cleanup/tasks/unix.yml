@@ -4,8 +4,6 @@
     name:
     - opensuse-welcome
     - tigervnc
-    # - xterm
-    # - ksysguard5
     - khelpcenter5
     - git-gui
     - appimagelauncher
