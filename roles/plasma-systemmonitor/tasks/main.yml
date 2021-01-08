@@ -1,8 +1,0 @@
-- name: openSUSE Tumbleweed
-  include_tasks: opensuse-tumbleweed.yml
-  when: ansible_distribution == 'openSUSE Tumbleweed'
-
-- name: Warning (Kernel)
-  debug:
-    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
-  when: ansible_distribution != 'openSUSE Tumbleweed'
