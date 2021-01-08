@@ -7,13 +7,13 @@
     - update
     - flatpak
     - virtualbox-guest
+    - spotify
 #    - appimage
 #    - background
 #    - dconf-editor
 #    - firefox
 #    - libreoffice
 #    - papirus
-#    - spotify
 #    - systemd
 #    - templates
 #    - user

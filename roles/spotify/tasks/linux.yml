@@ -1,5 +1,4 @@
 - name: Installed
-  become: yes
   flatpak:
     name: com.spotify.Client
     remote: flathub
