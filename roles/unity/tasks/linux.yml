@@ -8,7 +8,6 @@
   file:
     path: {{ hub.path | dirname }}
     state: directory
-  become_user: nathan
   when: not hub.exists
 
 - name: Hub Downloaded
