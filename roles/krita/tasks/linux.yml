@@ -1,12 +1,12 @@
 - name: Package Uninstalled
   become: yes
   package:
-    name: audacity
+    name: krita
     state: absent
 
 - name: Flatpak Installed
   become: yes
   flatpak:
-    name: org.audacityteam.Audacity
+    name: org.kde.krita
     remote: flathub
     state: present

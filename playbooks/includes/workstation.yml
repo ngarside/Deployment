@@ -3,14 +3,14 @@
     - blender
     # - dotnet
     # - android-studio
-    # - audacity
+    - audacity
     # - chromium
-    # - gimp
+    - gimp
     # - git
-    # - inkscape
+    - inkscape
     # - jekyll
     # - kdenlive
-    # - krita
+    - krita
     # - unity
     # - vscode
     # - substance

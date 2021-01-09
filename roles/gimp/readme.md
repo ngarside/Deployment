@@ -8,8 +8,7 @@
 
 # Notes
 
-- Installs from Flathub beta repository on Linux
-- Installs from package manager on other platforms
+- Installs beta release
 
 # References
 

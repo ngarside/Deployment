@@ -2,11 +2,7 @@
   include_tasks: linux.yml
   when: ansible_kernel_family == 'Linux'
 
-- name: Non Linux
-  include_tasks: non-linux.yml
-  when: ansible_kernel_family in ['BSD', 'Windows']
-
 - name: Warning (Kernel)
   debug:
     msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
-  when: ansible_kernel_family not in ['BSD', 'Linux', 'Windows']
+  when: ansible_kernel_family != 'Linux'
