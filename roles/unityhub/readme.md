@@ -1,6 +1,6 @@
-# Unity
+# Unity Hub
 
-- Installs Unity
+- Installs Unity Hub
 
 # Platforms
 
