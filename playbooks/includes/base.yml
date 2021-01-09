@@ -8,7 +8,7 @@
     - flatpak
     - virtualbox-guest
     - spotify
-#    - appimage
+    - appimage
 #    - background
     - dconf-editor
 #    - firefox

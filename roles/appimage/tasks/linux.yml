@@ -1,0 +1,4 @@
+- name: Daemon Installed
+  package:
+    name: appimaged
+    state: present

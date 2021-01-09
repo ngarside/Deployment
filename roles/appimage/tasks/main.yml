@@ -1,8 +1,5 @@
-- name: Daemon Installed
-  become: yes
-  package:
-    name: appimaged
-    state: present
+- name: Linux
+  include_tasks: linux.yml
   when: ansible_kernel_family == 'Linux'
 
 - name: Warning (Kernel)
