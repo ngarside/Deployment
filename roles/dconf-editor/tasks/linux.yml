@@ -1,0 +1,4 @@
+- name: Warning Disabled
+  dconf:
+    key: /ca/desrt/dconf-editor/show-warning
+    value: "false"

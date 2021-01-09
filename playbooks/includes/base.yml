@@ -10,7 +10,7 @@
     - spotify
 #    - appimage
 #    - background
-#    - dconf-editor
+    - dconf-editor
 #    - firefox
 #    - libreoffice
 #    - papirus
