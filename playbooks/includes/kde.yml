@@ -3,7 +3,7 @@
     # - dolphin
     - kcalc
     # - kde-plasma
-    # - konsole
+    - konsole
     - krdc
     - thunderbird
     # - cpod

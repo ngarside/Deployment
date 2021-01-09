@@ -4,7 +4,6 @@
 
 # Platforms
 
-- BSD
 - Linux
 
 # References
