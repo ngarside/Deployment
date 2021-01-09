@@ -7,13 +7,11 @@
   when: ansible_os_family == 'Suse'
 
 - name: Installed
-  become: yes
   package:
     name: code
     state: present
 
 - name: Desktop Name
-  become: yes
   ini_file:
     path: /usr/share/applications/code.desktop
     section: Desktop Entry

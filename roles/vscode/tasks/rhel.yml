@@ -1,5 +1,4 @@
 - name: Yum Key & Repo
-  become: yes
   yum_repository:
     name: vscode
     description: VS Code

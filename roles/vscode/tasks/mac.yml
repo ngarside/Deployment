@@ -1,5 +1,4 @@
 - name: Installed
-  become: yes
   package:
     name: visual-studio-code
     state: present
