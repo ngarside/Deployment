@@ -1,0 +1,5 @@
+- name: Flatpak Installed
+  flatpak:
+    name: com.obsproject.Studio
+    remote: flathub
+    state: present
