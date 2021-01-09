@@ -5,6 +5,7 @@
 
 - name: Repo Present
   community.general.zypper_repository:
+    name: dotnet
     repo: 'https://packages.microsoft.com/config/opensuse/15/prod.repo'
     state: present
 
