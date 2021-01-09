@@ -7,7 +7,7 @@
 
 - name: Directory Exists
   file:
-    path: '{{ hub.path | dirname }}'
+    path: '{{ hub.stat.path | dirname }}'
     state: directory
   when: not hub.stat.exists
 
