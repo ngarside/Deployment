@@ -1,21 +1,25 @@
-- name: Directory Exists
-  file:
-    path: ~/.local/bin
-    state: directory
-
 - name: Hub Exists
   stat:
     path: ~/.local/bin/UnityHub.AppImage
   register: hub
+  become_user: nathan
+
+- name: Directory Exists
+  file:
+    path: {{ hub.path | dirname }}
+    state: directory
+  become_user: nathan
+  when: not hub.exists
 
 - name: Hub Downloaded
   get_url:
     url: https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage
-    dest: ~/.local/bin/UnityHub.AppImage
+    dest: {{ hub.path }}
   when: not hub.exists
 
 - name: Hub Execute Permission
   file:
-    path: ~/.local/bin/UnityHub.AppImage
+    path: {{ hub.path }}
     state: file
     mode: a+x
+  when: not hub.exists
