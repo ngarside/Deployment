@@ -5,7 +5,7 @@
     # - kde-plasma
     # - konsole
     - krdc
-    # - thunderbird
+    - thunderbird
     # - cpod
     # - kclock
     # - kweather
