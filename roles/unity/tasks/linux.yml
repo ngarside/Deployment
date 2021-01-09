@@ -2,6 +2,7 @@
   stat:
     path: ~/.local/bin/UnityHub.AppImage
   register: hub
+  changed_when: False
   become_user: nathan
 
 - name: Directory Exists
