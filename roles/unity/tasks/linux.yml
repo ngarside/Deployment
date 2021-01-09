@@ -9,17 +9,17 @@
   file:
     path: '{{ hub.path | dirname }}'
     state: directory
-  when: not hub.exists
+  when: not hub.stat.exists
 
 - name: Hub Downloaded
   get_url:
     url: https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage
     dest: '{{ hub.path }}'
-  when: not hub.exists
+  when: not hub.stat.exists
 
 - name: Hub Execute Permission
   file:
     path: '{{ hub.path }}'
     state: file
     mode: a+x
-  when: not hub.exists
+  when: not hub.stat.exists
