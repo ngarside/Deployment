@@ -1,9 +1,3 @@
-- name: Installed
-  become: yes
-  package:
-    name: git
-    state: present
-
 - name: Linux & BSD
   include_tasks: linux-bsd.yml
   when: ansible_kernel_family in ['Linux', 'BSD']

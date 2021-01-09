@@ -5,7 +5,8 @@
 
 # Platforms
 
-- All
+- BSD
+- Linux
 
 # References
 

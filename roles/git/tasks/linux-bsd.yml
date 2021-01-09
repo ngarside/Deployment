@@ -1,3 +1,8 @@
+- name: Installed
+  package:
+    name: git
+    state: present
+
 - name: Config Directory Exists
   file:
     path: ~/.config/git
