@@ -9,7 +9,7 @@
 
 # Notes
 
-- Only executes when running under VirtualBox.
+- Only executes when running under VirtualBox
 
 # References
 

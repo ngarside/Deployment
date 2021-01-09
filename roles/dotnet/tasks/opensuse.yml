@@ -1,0 +1,14 @@
+- name: RPM Key
+  rpm_key:
+    key: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+
+- name: Repo Present
+  community.general.zypper_repository:
+    repo: 'https://packages.microsoft.com/config/opensuse/15/prod.repo'
+    state: present
+
+- name: Installed
+  package:
+    name: dotnet-sdk-3.1
+    state: present

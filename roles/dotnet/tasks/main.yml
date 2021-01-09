@@ -2,7 +2,11 @@
   include_tasks: fedora.yml
   when: ansible_distribution == 'Fedora'
 
+- name: openSUSE
+  include_tasks: opensuse.yml
+  when: ansible_distribution in ['openSUSE Tumbleweed', 'openSUSE Leap']
+
 - name: Warning (Distribution)
   debug:
     msg: Role '{{ role_name }}' is not supported on distribution '{{ ansible_distribution }}'
-  when: ansible_distribution != 'Fedora'
+  when: ansible_distribution not in ['Fedora', 'openSUSE Tumbleweed', 'openSUSE Leap']

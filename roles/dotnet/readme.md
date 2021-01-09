@@ -5,6 +5,8 @@
 # Platforms
 
 - Fedora
+- openSUSE Leap
+- openSUSE Tumbleweed
 
 # References
 
