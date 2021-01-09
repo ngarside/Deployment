@@ -1,28 +1,22 @@
-- name: Hub Exists
-  stat:
-    path: ~/.local/bin/UnityHub.AppImage
-  register: hub
-  changed_when: False
-  become_user: nathan
-
 - name: Directory Exists
   file:
-    path: ~/.local/bin/UnityHub.AppImage
+    path: /opt/unityhub
     state: directory
-  become_user: nathan
-  when: not hub.stat.exists
+
+- name: Hub Exists
+  stat:
+    path: /opt/unityhub/unityhub.appimage
+  register: hub
+  changed_when: False
 
 - name: Hub Downloaded
   get_url:
     url: https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage
-    dest: ~/.local/bin/UnityHub.AppImage
-  become_user: nathan
+    dest: /opt/unityhub/unityhub.appimage
   when: not hub.stat.exists
 
 - name: Hub Execute Permission
   file:
-    path: ~/.local/bin/UnityHub.AppImage
+    path: /opt/unityhub/unityhub.appimage
     state: file
     mode: a+x
-  become_user: nathan
-  when: not hub.stat.exists
