@@ -4,7 +4,7 @@
     - kcalc
     # - kde-plasma
     # - konsole
-    # - krdc
+    - krdc
     # - thunderbird
     # - cpod
     # - kclock
