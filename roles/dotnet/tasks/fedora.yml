@@ -1,5 +1,4 @@
 - name: Installed
-  become: yes
   package:
     name: dotnet-sdk-3.1
     state: present
