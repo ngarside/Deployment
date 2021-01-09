@@ -1,18 +1,15 @@
 - name: Package Uninstalled
-  become: yes
   package:
     name: gimp
     state: absent
 
 - name: Flatpak Installed
-  become: yes
   flatpak:
     name: org.gimp.GIMP
     remote: flathub-beta
     state: present
 
 - name: Desktop Name
-  become: yes
   ini_file:
     path: /var/lib/flatpak/exports/share/applications/org.gimp.GIMP.desktop
     section: Desktop Entry

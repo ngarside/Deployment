@@ -1,5 +1,4 @@
 - name: Installed
-  become: yes
   package:
     name:
     - kdenlive
