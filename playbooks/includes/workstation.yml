@@ -2,7 +2,7 @@
   roles:
     - blender
     - dotnet
-    # - android-studio
+    - android-studio
     - audacity
     - chromium
     - gimp
