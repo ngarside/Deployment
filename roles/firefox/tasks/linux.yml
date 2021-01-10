@@ -6,11 +6,13 @@
 
 - name: Create Profile
   shell: firefox -CreateProfile default-release
+  become_user: nathan
 
 - name: Get Profile Folder
   shell: find ~/.mozilla/firefox "$(pwd -P)" -maxdepth 1 -name '*.default-release'
   register: profile
   changed_when: False
+  become_user: nathan
 
 - name: Update Preferences
   copy:
