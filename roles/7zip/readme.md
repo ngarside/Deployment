@@ -4,7 +4,7 @@
 
 # Platforms
 
-- None
+- Windows
 
 # References
 
