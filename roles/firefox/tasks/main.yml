@@ -1,18 +1,8 @@
-- name: Installed
-  become: yes
-  package:
-    name: firefox
-    state: present
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Create Profile
-  shell: firefox -CreateProfile default-release
-
-- name: Get Profile Folder
-  shell: find ~/.mozilla/firefox "$(pwd -P)" -maxdepth 1 -name '*.default-release'
-  register: profile
-  changed_when: False
-
-- name: Update Preferences
-  copy:
-    src: user.js
-    dest: "{{ profile.stdout }}/user.js"
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

@@ -11,7 +11,7 @@
     - appimage
     - background
     - dconf-editor
-#    - firefox
+    - firefox
     - libreoffice-calc
     - libreoffice-writer
     - papirus
