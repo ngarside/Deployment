@@ -1,11 +1,11 @@
 [General]
-RememberOpenedTabs=false
-ShowFullPath=true
-ShowSpaceInfo=false
-ShowZoomSlider=false
+RememberOpenedTabs = false
+ShowFullPath = true
+ShowSpaceInfo = false
+ShowZoomSlider = false
 
 [MainWindow]
-MenuBar=Enabled
+MenuBar = Enabled
 
 [PlacesPanel]
-IconSize=22
+IconSize = 22

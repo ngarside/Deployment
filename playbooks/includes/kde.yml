@@ -1,6 +1,6 @@
 - hosts: localhost
   roles:
-    # - dolphin
+    - dolphin
     - kcalc
     # - kde-plasma
     - konsole
