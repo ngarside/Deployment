@@ -5,9 +5,7 @@
     state: present
 
 - name: Create Profile
-  shell: |
-    export DISPLAY=:0
-    firefox -CreateProfile default-release
+  shell: firefox -CreateProfile default-release -headless
   become: yes
   become_user: nathan
 
