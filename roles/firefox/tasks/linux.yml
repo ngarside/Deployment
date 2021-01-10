@@ -5,14 +5,14 @@
     state: present
 
 - name: Create Profile
-  shell: firefox -CreateProfile default-release
+  shell: |
+    export DISPLAY=:0
+    firefox -CreateProfile default-release
   become: yes
   become_user: nathan
 
 - name: Get Profile Folder
-  shell: |
-    export DISPLAY=:0
-    find ~/.mozilla/firefox "$(pwd -P)" -maxdepth 1 -name '*.default-release'
+  shell: find ~/.mozilla/firefox "$(pwd -P)" -maxdepth 1 -name '*.default-release'
   register: profile
   changed_when: False
   become: yes
