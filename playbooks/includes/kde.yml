@@ -6,6 +6,6 @@
     - konsole
     - krdc
     - thunderbird
-    # - cpod
-    # - kclock
-    # - kweather
+    - cpod
+    - kclock
+    - kweather
