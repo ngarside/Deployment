@@ -1,0 +1,4 @@
+- name: Installed
+  package:
+    name: virtualbox
+    state: present

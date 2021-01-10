@@ -15,7 +15,7 @@
     # - vscode
     # - substance
     # - rider
-    # - virtualbox
+    - virtualbox
     - obs
     - visual-studio
     # - 7zip
