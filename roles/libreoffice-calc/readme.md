@@ -1,6 +1,5 @@
-# LibreOffice
+# LibreOffice Calc
 
-- Installs LibreOffice Writer
 - Installs LibreOffice Calc
 
 # Platforms

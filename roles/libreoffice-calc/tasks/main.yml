@@ -1,9 +1,5 @@
-- name: Writer
-  include: writer.yml
-  when: ansible_kernel_family == 'Linux'
-
-- name: Calc
-  include: calc.yml
+- name: Linux
+  include: linux.yml
   when: ansible_kernel_family == 'Linux'
 
 - name: Warning (Kernel)
