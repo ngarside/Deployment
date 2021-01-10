@@ -1,16 +1,8 @@
 - name: Linux
   include_tasks: linux.yml
-  when: ansible_os_family in ['Suse', 'RedHat']
+  when: ansible_distribution in ['Fedora', 'openSUSE Tumbleweed', 'openSUSE Leap']
 
-- name: Windows
-  include_tasks: windows.yml
-  when: ansible_os_family == 'Windows'
-
-- name: macOS
-  include_tasks: mac.yml
-  when: ansible_os_family == 'Darwin'
-
-- name: Warning (OS Family)
+- name: Warning (Distribution)
   debug:
-    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_os_family }}'
-  when: ansible_os_family not in ['Suse', 'RedHat', 'Windows', 'Darwin']
+    msg: Role '{{ role_name }}' is not supported on OS family '{{ ansible_distribution }}'
+  when: ansible_distribution not in ['Fedora', 'openSUSE Tumbleweed', 'openSUSE Leap']
