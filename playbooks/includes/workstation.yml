@@ -4,7 +4,7 @@
     - dotnet
     # - android-studio
     - audacity
-    # - chromium
+    - chromium
     - gimp
     - git
     - inkscape
