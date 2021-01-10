@@ -32,3 +32,10 @@
     state: absent
   become: yes
   become_user: nathan
+
+- name: Public Directory Does Not Exist
+  file:
+    path: ~/Public
+    state: absent
+  become: yes
+  become_user: nathan
