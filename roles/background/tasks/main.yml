@@ -1,28 +1,8 @@
-- name: Backgrounds Directory Exists
-  become: yes
-  file:
-    path: /usr/share/backgrounds
-    state: directory
+- name: Linux
+  include_tasks: linux.yml
+  when: ansible_kernel_family == 'Linux'
 
-- name: Background Image Sync
-  become: yes
-  copy:
-    src: background.jpg
-    dest: /usr/share/backgrounds/background.jpg
-
-- name: Properties Directory Exists
-  become: yes
-  file:
-    path: /usr/share/gnome-background-properties
-    state: directory
-
-- name: Background Property Sync
-  become: yes
-  copy:
-    src: backgrounds.xml
-    dest: /usr/share/gnome-background-properties/backgrounds.xml
-
-- name: Set Desktop
-  dconf:
-    key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file:///usr/share/backgrounds/background.jpg'"
+- name: Warning (Kernel)
+  debug:
+    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
+  when: ansible_kernel_family != 'Linux'

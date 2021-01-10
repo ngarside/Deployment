@@ -9,7 +9,7 @@
     - virtualbox-guest
     - spotify
     - appimage
-#    - background
+    - background
     - dconf-editor
 #    - firefox
 #    - libreoffice

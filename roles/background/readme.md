@@ -1,11 +1,11 @@
-# Android Background
+# Background
 
 - Sets the desktop background
 
 # Platforms
 
-- All
+- Linux
 
 # References
 
-- https://developer.android.com/studio
+- https://dribbble.com/louiscoyle/projects/243171-Lakeside#attachment-332811
