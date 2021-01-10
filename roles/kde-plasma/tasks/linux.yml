@@ -2,13 +2,19 @@
   copy:
     src: kwinrc
     dest: ~/.config/kwinrc
+  become: yes
+  become_user: nathan
 
 - name: Applets File Sync
   copy:
     src: appletsrc
     dest: ~/.config/plasma-org.kde.plasma.desktop-appletsrc
+  become: yes
+  become_user: nathan
 
 - name: Globals File Sync
   copy:
     src: kdeglobals
     dest: ~/.config/kdeglobals
+  become: yes
+  become_user: nathan

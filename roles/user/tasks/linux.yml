@@ -1,9 +1,34 @@
-- name: User - Projects Directory Exists
+- name: Projects Directory Exists
   file:
     path: ~/Projects
     state: directory
+  become: yes
+  become_user: nathan
 
-- name: User - Downloads Directory Exists
+- name: Downloads Directory Exists
   file:
     path: ~/Downloads
     state: directory
+  become: yes
+  become_user: nathan
+
+- name: Templates Directory Does Not Exist
+  file:
+    path: ~/Templates
+    state: absent
+  become: yes
+  become_user: nathan
+
+- name: Bin Directory Does Not Exist
+  file:
+    path: ~/bin
+    state: absent
+  become: yes
+  become_user: nathan
+
+- name: Snap Directory Does Not Exist
+  file:
+    path: ~/snap
+    state: absent
+  become: yes
+  become_user: nathan

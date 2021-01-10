@@ -15,6 +15,6 @@
     - libreoffice-calc
     - libreoffice-writer
     - papirus
-#    - systemd
-#    - user
+    - systemd
+    - user
     - dropbox
