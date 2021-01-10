@@ -8,3 +8,5 @@
   copy:
     src: dolphinrc
     dest: ~/.config/dolphinrc
+  become: yes
+  become_user: nathan
