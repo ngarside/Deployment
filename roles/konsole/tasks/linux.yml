@@ -2,3 +2,10 @@
   package:
     name: konsole
     state: present
+
+- name: Config File Sync
+  copy:
+    src: konsolerc
+    dest: ~/.config/konsolerc
+  become: yes
+  become_user: nathan

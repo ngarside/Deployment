@@ -1,0 +1,6 @@
+[Notification Messages]
+CloseAllEmptyTabs = true
+
+[TabBar]
+CloseTabOnMiddleMouseButton = true
+TabBarPosition = Top
