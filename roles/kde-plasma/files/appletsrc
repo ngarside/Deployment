@@ -6,26 +6,6 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometriesHorizontal=
-activityId=3858dec1-7d31-4bb6-8a6e-60648f4eb0a9
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][1][Configuration]
-PreloadWeight=0
-
-[Containments][1][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=667
-
-[Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/openSUSEdefault/contents/images/1440x1080.jpg
-
 [Containments][2]
 activityId=
 formfactor=2
@@ -61,7 +41,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][2][Applets][3][Configuration]
-PreloadWeight=100
+PreloadWeight=70
 
 [Containments][2][Applets][3][Configuration][General]
 favorites=preferred://browser,/usr/share/applications/org.kde.kontact.desktop,/usr/share/applications/writer.desktop,/usr/share/applications/kde4/org.kde.amarok.desktop,/usr/share/applications/org.kde.digikam.desktop,/usr/share/applications/org.kde.dolphin.desktop,/usr/share/applications/systemsettings.desktop,/usr/share/applications/org.kde.Help.desktop,/usr/share/applications/org.kde.konsole.desktop
@@ -113,6 +93,23 @@ PreloadWeight=0
 
 [Containments][2][General]
 AppletOrder=3;4;20;5;21;6;16
+
+[Containments][22]
+activityId=171f3d87-d0dc-4fea-a4c4-fe7784f50108
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][22][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][22][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/backgrounds/background.jpg
+SlidePaths=/usr/share/wallpapers
 
 [Containments][7]
 activityId=
