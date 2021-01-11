@@ -1,3 +1,9 @@
+- name: Wallpapers Directory Not Exists
+  become: yes
+  file:
+    path: /usr/share/wallpapers
+    state: absent
+
 - name: Backgrounds Directory Exists
   become: yes
   file:
