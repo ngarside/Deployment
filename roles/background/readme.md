@@ -8,4 +8,4 @@
 
 # References
 
-- https://dribbble.com/louiscoyle/projects/243171-Lakeside#attachment-332811
+- https://github.com/ruvkr/milkyway

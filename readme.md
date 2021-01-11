@@ -132,4 +132,4 @@ App keybindings have been standardised where possible:
 
 This repository is licensed under the [Unlicense](license.md) except where otherwise stated.
 
-The [background image](sway/background.jpg) belongs to [Louis Coyle](https://dribbble.com/louiscoyle/projects/243171-Lakeside#attachment-332811).
+The [background image](roles/background/files/background.png) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
