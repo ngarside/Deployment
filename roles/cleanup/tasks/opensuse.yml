@@ -10,3 +10,17 @@
     cmd: zypper removerepo --local
     warn: false
   when: localrepos.stdout
+
+- name: No Downloaded Packages
+  shell:
+    cmd: zypper clean
+    warn: false
+
+- name: No Old Kernels
+  shell:
+    cmd: zypper purge-kernels
+    warn: false
+
+- name: No Old Journal Logs
+  shell:
+    cmd: journalctl --vacuum-time=1d
