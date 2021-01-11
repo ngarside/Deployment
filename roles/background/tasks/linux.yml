@@ -13,8 +13,8 @@
 - name: Image Sync
   become: yes
   copy:
-    src: background.jpg
-    dest: /usr/share/backgrounds/background.jpg
+    src: background.png
+    dest: /usr/share/backgrounds/background.png
 
 - name: Properties Directory Exists
   become: yes
@@ -31,4 +31,4 @@
 - name: Set Gnome
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file:///usr/share/backgrounds/background.jpg'"
+    value: "'file:///usr/share/backgrounds/background.png'"
