@@ -28,4 +28,5 @@
     - discover
     - kmag
     - knotes
+    - kate
     state: absent
