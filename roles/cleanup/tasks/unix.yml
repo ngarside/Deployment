@@ -6,4 +6,26 @@
     - khelpcenter5
     - git-gui
     - appimagelauncher
+    - kmahjongg
+    - kreversi
+    - kpat
+    - kmines
+    - ksudoku
+    - libreoffice-draw
+    - libreoffice-impress
+    - libreoffice-base
+    - skanlite
+    - gwenview5
+    - akregator
+    - kmail
+    - konversation
+    - ktnef
+    - pim-data-exporter
+    - pim-sieve-editor
+    - kaddressbook
+    - kontact
+    - korganizer
+    - discover
+    - kmag
+    - knotes
     state: absent
