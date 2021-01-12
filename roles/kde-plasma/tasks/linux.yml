@@ -18,3 +18,10 @@
     dest: ~/.config/kdeglobals
   become: yes
   become_user: nathan
+
+- name: Splash File Sync
+  copy:
+    src: ksplashrc
+    dest: ~/.config/ksplashrc
+  become: yes
+  become_user: nathan
