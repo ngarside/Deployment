@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Unity Hub
+Exec=/opt/unityhub/unityhub.appimage
+Terminal=false
+Type=Application
+Icon=appimagekit-unityhub
+StartupWMClass=Unity Hub
+X-AppImage-Version=2.4.2
+Comment=The Official Unity Hub
+MimeType=x-scheme-handler/unityhub;
+Categories=Development;
+TryExec=/opt/unityhub/unityhub.appimage
