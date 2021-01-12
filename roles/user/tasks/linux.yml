@@ -39,3 +39,18 @@
     state: absent
   become: yes
   become_user: nathan
+
+- name: Find Desktop Links
+  find:
+    path: ~/Desktop
+    patterns: '*.desktop'
+  register: junk_desktop
+  become: yes
+  become_user: nathan
+
+- name: No Desktop Links
+  become: yes
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ junk_desktop.files }}"

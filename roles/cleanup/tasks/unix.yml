@@ -33,4 +33,5 @@
     - kompare
     - kinfocenter5
     - xterm
+    - appimaged
     state: absent
