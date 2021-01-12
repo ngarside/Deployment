@@ -25,3 +25,10 @@
     dest: ~/.config/ksplashrc
   become: yes
   become_user: nathan
+
+- name: Server File Sync
+  copy:
+    src: ksmserverrc
+    dest: ~/.config/ksmserverrc
+  become: yes
+  become_user: nathan
