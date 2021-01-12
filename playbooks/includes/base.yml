@@ -18,3 +18,5 @@
     - systemd
     - user
     - dropbox
+    - gnome-clocks
+    - gnome-weather
