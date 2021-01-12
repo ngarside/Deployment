@@ -10,6 +10,34 @@
     path: /usr/share/backgrounds
     state: directory
 
+- name: Find Junk Backgrounds
+  find:
+    path: /usr/share/backgrounds
+    excludes: background.png
+    file_type: any
+  register: junk_images
+
+- name: No Junk Backgrounds
+  become: yes
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ junk_images.files }}"
+
+- name: Find Junk Properties
+  find:
+    path: /usr/share/gnome-background-properties
+    excludes: backgrounds.xml
+    file_type: any
+  register: junk_properties
+
+- name: No Junk Properties
+  become: yes
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ junk_properties.files }}"
+
 - name: Image Sync
   become: yes
   copy:
