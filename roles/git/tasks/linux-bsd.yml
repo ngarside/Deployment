@@ -7,8 +7,12 @@
   file:
     path: ~/.config/git
     state: directory
+  become: yes
+  become_user: nathan
 
 - name: Config File Sync
   copy:
     src: config
     dest: ~/.config/git/config
+  become: yes
+  become_user: nathan
