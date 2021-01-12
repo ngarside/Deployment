@@ -31,6 +31,5 @@
     - kate
     - kmousetool
     - kompare
-    - kinfocenter5
     - appimaged
     state: absent
