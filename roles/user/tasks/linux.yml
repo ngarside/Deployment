@@ -5,6 +5,13 @@
   become: yes
   become_user: nathan
 
+- name: Projects Directory File Sync
+  copy:
+    src: projects.directory
+    dest: ~/Projects/.directory
+  become: yes
+  become_user: nathan
+
 - name: Downloads Directory Exists
   file:
     path: ~/Downloads
