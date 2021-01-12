@@ -29,4 +29,7 @@
     - kmag
     - knotes
     - kate
+    - kmousetool
+    - kompare
+    - kinfocenter5
     state: absent
