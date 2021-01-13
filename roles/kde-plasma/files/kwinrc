@@ -22,3 +22,6 @@ kwin4_effect_translucencyEnabled = false
 
 [TabBox]
 LayoutName = big_icons
+
+[Windows]
+Placement = Centered
