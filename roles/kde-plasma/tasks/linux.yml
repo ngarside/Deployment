@@ -32,3 +32,10 @@
     dest: ~/.config/ksmserverrc
   become: yes
   become_user: nathan
+
+- name: Plasma File Sync
+  copy:
+    src: plasmarc
+    dest: ~/.config/plasmarc
+  become: yes
+  become_user: nathan
