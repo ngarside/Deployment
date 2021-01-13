@@ -15,7 +15,7 @@
 	"telemetry.enableTelemetry": false,
 	"workbench.startupEditor": "none",
 	"window.restoreWindows": "none",
-	"workbench.colorTheme": "Default Dark+",
+	"workbench.colorTheme": "Default Light+",
 	"workbench.list.openMode": "doubleClick",
 	"workbench.tree.indent": 20
 }

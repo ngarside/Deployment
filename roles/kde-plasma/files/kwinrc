@@ -10,5 +10,12 @@ Rows = 1
 ButtonsOnLeft =
 ButtonsOnRight = IAX
 
+[Plugins]
+blurEnabled = false
+contrastEnabled = false
+glideEnabled = true
+kwin4_effect_fadeEnabled = false
+kwin4_effect_translucencyEnabled = false
+
 [TabBox]
 LayoutName = big_icons
