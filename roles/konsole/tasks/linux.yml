@@ -9,3 +9,17 @@
     dest: ~/.config/konsolerc
   become: yes
   become_user: nathan
+
+- name: Menu File Sync
+  copy:
+    src: konsoleui.rc
+    dest: ~/.local/share/kxmlgui5/konsole/konsoleui.rc
+  become: yes
+  become_user: nathan
+
+- name: Session File Sync
+  copy:
+    src: sessionui.rc
+    dest: ~/.local/share/kxmlgui5/konsole/sessionui.rc
+  become: yes
+  become_user: nathan
