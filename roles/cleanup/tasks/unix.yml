@@ -32,4 +32,5 @@
     - kmousetool
     - kompare
     - appimaged
+    - vim
     state: absent
