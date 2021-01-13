@@ -26,5 +26,14 @@
 		"key": "ctrl+shift+v",
 		"command": "-workbench.action.terminal.paste",
 		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "editor.action.duplicateSelection"
 	}
 ]
