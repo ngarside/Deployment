@@ -6,6 +6,9 @@ Id_4 = 84770eb3-2ec0-4900-b95e-347befa18f35
 Number = 4
 Rows = 1
 
+[ElectricBorders]
+TopLeft = None
+
 [org.kde.kdecoration2]
 ButtonsOnLeft =
 ButtonsOnRight = IAX
