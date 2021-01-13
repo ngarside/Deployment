@@ -46,6 +46,7 @@ PreloadWeight=70
 [Containments][2][Applets][3][Configuration][General]
 favorites=preferred://browser,/usr/share/applications/org.kde.kontact.desktop,/usr/share/applications/writer.desktop,/usr/share/applications/kde4/org.kde.amarok.desktop,/usr/share/applications/org.kde.digikam.desktop,/usr/share/applications/org.kde.dolphin.desktop,/usr/share/applications/systemsettings.desktop,/usr/share/applications/org.kde.Help.desktop,/usr/share/applications/org.kde.konsole.desktop
 favoritesPortedToKAstats=true
+menuItems=application:t,computer:t,leave:t,oftenUsed:f,bookmark:f,used:f
 systemApplications=systemsettings.desktop,org.kde.kinfocenter.desktop
 
 [Containments][2][Applets][3][Configuration][Shortcuts]
