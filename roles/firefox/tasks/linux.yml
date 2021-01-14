@@ -39,6 +39,8 @@
     section: Profile0
     option: Path
     value: "{{ profile.stdout | basename }}"
+  become: yes
+  become_user: nathan
 
 - name: Set Profiles
   ini_file:
@@ -46,3 +48,5 @@
     section: Install11457493C5A56847
     option: Default
     value: "{{ profile.stdout | basename }}"
+  become: yes
+  become_user: nathan
