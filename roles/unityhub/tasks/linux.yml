@@ -1,3 +1,9 @@
+- name: Dependencies Installed
+  package:
+    name:
+      - xorg-x11-server-Xvfb
+      - xvfb-run
+
 - name: Directory Exists
   file:
     path: /opt/unityhub
@@ -48,8 +54,6 @@
 
 - name: Editor Install Location
   shell:
-    cmd: |
-      export DISPLAY=:0
-      /opt/unityhub/unityhub.appimage --headless install-path --set /opt/unityeditor/
+    cmd: xvfb-run /opt/unityhub/unityhub.appimage --headless install-path --set /opt/unityeditor/
   become: yes
   become_user: nathan
