@@ -25,3 +25,17 @@
   copy:
     src: unityhub.desktop
     dest: /usr/share/applications/unityhub.desktop
+
+- name: Config Directory Exists
+  file:
+    path: ~/.config/Unity Hub
+    state: directory
+  become: yes
+  become_user: nathan
+
+- name: Eula File Exists
+  file:
+    path: ~/.config/Unity Hub/eulaAccepted
+    state: touch
+  become: yes
+  become_user: nathan
