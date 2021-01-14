@@ -4,10 +4,18 @@
     name: firefox
     state: present
 
+- name: Get Existing Profile
+  shell: find ~/.mozilla/firefox "$(pwd -P)" -maxdepth 1 -name '*.default-release' | cat
+  register: existingprofile
+  changed_when: False
+  become: yes
+  become_user: nathan
+
 - name: Create Profile
   shell: firefox -CreateProfile default-release -headless
   become: yes
   become_user: nathan
+  when: not existingprofile.stdout
 
 - name: Get Profile Folder
   shell: find ~/.mozilla/firefox "$(pwd -P)" -maxdepth 1 -name '*.default-release'
