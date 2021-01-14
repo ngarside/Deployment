@@ -6,5 +6,5 @@
 
 - name: Editor Installed
   shell:
-    cmd: /opt/unityhub/unityhub.appimage --headless help install-path --set /opt/unityeditor/
+    cmd: /opt/unityhub/unityhub.appimage --headless help install --version 2019.4.18f1
   when: not editor.stat.exists
