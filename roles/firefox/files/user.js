@@ -15,6 +15,7 @@ user_pref("browser.startup.homepage", "about:home");
 user_pref("browser.tabs.drawInTitlebar", true);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("distribution.openSUSE.bookmarksProcessed", true);
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_ever_enabled", true);
 user_pref("gfx.webrender.all", true);
