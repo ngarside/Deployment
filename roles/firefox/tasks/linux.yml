@@ -25,3 +25,24 @@
   copy:
     src: prefs.js
     dest: "{{ profile.stdout }}/prefs.js"
+
+- name: Update Profiles
+  copy:
+    src: profiles.ini
+    dest: ~/.mozilla/firefox/profiles.ini
+  become: yes
+  become_user: nathan
+
+- name: Set Profiles
+  ini_file:
+    path: ~/.mozilla/firefox/profiles.ini
+    section: Profile0
+    option: Path
+    value: "{{ profile.stdout | basename }}"
+
+- name: Set Profiles
+  ini_file:
+    path: ~/.mozilla/firefox/profiles.ini
+    section: Install11457493C5A56847
+    option: Default
+    value: "{{ profile.stdout | basename }}"
