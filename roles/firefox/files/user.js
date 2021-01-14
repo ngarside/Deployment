@@ -9,6 +9,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
 user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 2);
 user_pref("browser.newtabpage.pinned", "[]");
+user_pref("browser.search.region", "GB");
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.startup.homepage", "about:home");
 user_pref("browser.tabs.drawInTitlebar", true);

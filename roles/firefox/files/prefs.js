@@ -22,16 +22,6 @@ user_pref("browser.pageActions.persistedActions", "{\"version\":1,\"ids\":[\"boo
 user_pref("browser.pagethumbnails.storage_version", 3);
 user_pref("browser.safebrowsing.provider.mozilla.lastupdatetime", "1610633793770");
 user_pref("browser.safebrowsing.provider.mozilla.nextupdatetime", "1610655393770");
-user_pref("browser.search.region", "GB");
-user_pref("browser.sessionstore.upgradeBackup.latestBuildID", "20210105180113");
-user_pref("browser.shell.didSkipDefaultBrowserCheckOnFirstRun", true);
-user_pref("browser.slowStartup.averageTime", 13298);
-user_pref("browser.slowStartup.samples", 1);
-user_pref("browser.startup.homepage_override.buildID", "20210105180113");
-user_pref("browser.startup.homepage_override.mstone", "84.0.2");
-user_pref("browser.startup.lastColdStartupCheck", 1610633788);
-user_pref("browser.toolbars.bookmarks.visibility", "always");
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"home-button\",\"customizableui-special-spring1\",\"urlbar-container\",\"customizableui-special-spring2\",\"downloads-button\",\"library-button\",\"sidebar-button\",\"fxa-toolbar-menu-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\"],\"currentVersion\":16,\"newElementCount\":2}");
 user_pref("browser.urlbar.placeholderName", "Google");
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionPolicyAcceptedVersion", 2);
