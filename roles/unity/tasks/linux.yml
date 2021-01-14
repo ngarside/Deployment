@@ -6,7 +6,7 @@
 
 - name: Editor Installed
   shell:
-    cmd: /opt/unityhub/unityhub.appimage --headless help install --version 2019.4.18f1
+    cmd: xvfb-run /opt/unityhub/unityhub.appimage --headless help install --version 2019.4.18f1
   when: not editor.stat.exists
   become: yes
   become_user: nathan
