@@ -20,7 +20,6 @@ user_pref("datareporting.policy.dataSubmissionPolicyAcceptedVersion", 2);
 user_pref("datareporting.policy.dataSubmissionPolicyNotifiedTime", "1610633794212");
 user_pref("distribution.iniFile.exists.appversion", "84.0.2");
 user_pref("distribution.iniFile.exists.value", true);
-user_pref("distribution.openSUSE.bookmarksProcessed", true);
 user_pref("doh-rollout.balrog-migration-done", true);
 user_pref("doh-rollout.doneFirstRun", true);
 user_pref("dom.push.userAgentID", "1b368d37cc334479b30b63f4d68bbdc7");
