@@ -39,6 +39,7 @@
     section: Profile0
     option: Path
     value: "{{ profile.stdout | basename }}"
+    no_extra_spaces: yes
   become: yes
   become_user: nathan
 
@@ -48,5 +49,6 @@
     section: Install11457493C5A56847
     option: Default
     value: "{{ profile.stdout | basename }}"
+    no_extra_spaces: yes
   become: yes
   become_user: nathan
