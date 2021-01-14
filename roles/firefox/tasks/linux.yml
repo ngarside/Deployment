@@ -16,7 +16,12 @@
   become: yes
   become_user: nathan
 
-- name: Update Preferences
+- name: Update User Preferences
   copy:
     src: user.js
     dest: "{{ profile.stdout }}/user.js"
+
+- name: Update Preferences
+  copy:
+    src: prefs.js
+    dest: "{{ profile.stdout }}/prefs.js"
