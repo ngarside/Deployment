@@ -1,4 +1,5 @@
 user_pref("app.shield.optoutstudies.enabled", false);
+user_pref("browser.contentblocking.category", "custom");
 user_pref("browser.ctrlTab.recentlyUsedOrder", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
@@ -24,3 +25,6 @@ user_pref("permissions.default.xr", 2);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
+user_pref("signon.autofillForms", false);
+user_pref("signon.generation.enabled", false);
+user_pref("signon.rememberSignons", false);
