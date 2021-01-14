@@ -40,6 +40,12 @@
   become: yes
   become_user: nathan
 
+- name: Editor Directory Exists
+  file:
+    path: /opt/unityeditor
+    state: directory
+    mode: a=rwx
+
 - name: Editor Install Location
   shell:
     cmd: /opt/unityhub/unityhub.appimage --headless help install-path --set /opt/unityeditor/
