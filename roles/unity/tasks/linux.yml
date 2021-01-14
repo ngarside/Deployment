@@ -39,7 +39,3 @@
     state: touch
   become: yes
   become_user: nathan
-
-- name: Editor Install Location
-  shell:
-    cmd: /opt/unityhub/unityhub.appimage --headless help install-path --set /opt/unityeditor/
