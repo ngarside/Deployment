@@ -48,6 +48,8 @@
 
 - name: Editor Install Location
   shell:
-    cmd: /opt/unityhub/unityhub.appimage --headless install-path --set /opt/unityeditor/
+    cmd: |
+      export DISPLAY=:0
+      /opt/unityhub/unityhub.appimage --headless install-path --set /opt/unityeditor/
   become: yes
   become_user: nathan
