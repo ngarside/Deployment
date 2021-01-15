@@ -2,24 +2,24 @@
   package:
     name: powertop
 
-- name: Copy Service File
+- name: Service File Exists
   copy:
     src: powertop.service
     dest: /etc/systemd/system/powertop.service
 
-- name: Enable Service
+- name: Service Enabled
   systemd:
     name: powertop.service
     enabled: yes
-  register: powertopenabled
+  register: enabled
 
-- name: Reload Systemd Config
+- name: Systemd Config Reloaded
   systemd:
     daemon_reload: yes
-  when: powertopenabled.changed
+  when: enabled.changed
 
-- name: Start Service
+- name: Service Started
   systemd:
     name: powertop.service
     state: started
-  when: powertopenabled.changed
+  when: enabled.changed
