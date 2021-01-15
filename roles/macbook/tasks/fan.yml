@@ -14,11 +14,13 @@
   systemd:
     name: mbpfan.service
     enabled: yes
+  register: enabled
 
 - name: Systemd Config Reloaded
   become: yes
   systemd:
     daemon_reload: yes
+  when: enabled.changed
 
 - name: Start Service
   become: yes
