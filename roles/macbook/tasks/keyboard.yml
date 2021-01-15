@@ -1,15 +1,13 @@
-- name: Remap Tilde Key To 'D'
+- name: '`' Key Remapped To 'D'
   become: yes
   lineinfile:
     path: /usr/share/X11/xkb/keycodes/evdev
     regexp: '<TLDE> = '
     line: '        <TLDE> = 40;'
-  when: ansible_facts['system_vendor'] == "Apple Inc."
 
-- name: Remap 'D' Key To Tilde
+- name: 'D' Key Remapped To '`'
   become: yes
   lineinfile:
     path: /usr/share/X11/xkb/keycodes/evdev
     regexp: '<AC03> = '
     line: '        <AC03> = 49;'
-  when: ansible_facts['system_vendor'] == "Apple Inc."
