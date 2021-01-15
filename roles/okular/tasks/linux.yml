@@ -1,0 +1,13 @@
+- name: Installed
+  package:
+    name: okular
+
+- name: First Config File Exists
+  copy:
+    src: okularrc
+    dest: ~/.config/okularrc
+
+- name: Second Config File Exists
+  copy:
+    src: okularpartrc
+    dest: ~/.config/okularpartrc
