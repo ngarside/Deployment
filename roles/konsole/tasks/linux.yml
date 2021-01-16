@@ -23,3 +23,17 @@
     dest: ~/.local/share/kxmlgui5/konsole/sessionui.rc
   become: yes
   become_user: nathan
+
+- name: Profile Directory Exists
+  file:
+    path: ~/.local/share/konsole
+    state: directory
+  become: yes
+  become_user: nathan
+
+- name: Profile File Sync
+  copy:
+    src: Profile.profile
+    dest: ~/.local/share/konsole/Profile.profile
+  become: yes
+  become_user: nathan
