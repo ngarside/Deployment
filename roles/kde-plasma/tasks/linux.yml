@@ -39,3 +39,10 @@
     dest: ~/.config/plasmarc
   become: yes
   become_user: nathan
+
+- name: Launch File Sync
+  copy:
+    src: klaunchrc
+    dest: ~/.config/klaunchrc
+  become: yes
+  become_user: nathan
