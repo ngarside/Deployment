@@ -107,6 +107,7 @@ ForegroundVisited=127,140,141
 
 [General]
 AllowKDEAppsToRememberWindowPositions=false
+BrowserApplication=firefox.desktop
 ColorScheme=Breeze
 Name[en_GB]=Breeze
 Name=Breeze
