@@ -46,3 +46,10 @@
     dest: ~/.config/klaunchrc
   become: yes
   become_user: nathan
+
+- name: Mime File Sync
+  copy:
+    src: mimeapps.list
+    dest: ~/.config/mimeapps.list
+  become: yes
+  become_user: nathan
