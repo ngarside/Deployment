@@ -1,3 +1,3 @@
 - name: Flatpaks Updated
   shell:
-    cmd: flatpak update --non-interactive
+    cmd: flatpak update --noninteractive
