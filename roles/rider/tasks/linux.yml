@@ -35,6 +35,6 @@
 - name: Archive Extracted
   unarchive:
     src: /tmp/JetBrains.Rider-2020.3.2.tar.gz
-    dst: /opt/jetbrains-rider-2020.3.2
+    dest: /opt/jetbrains-rider-2020.3.2
     remote_src: yes
   when: not rider.stat.exists
