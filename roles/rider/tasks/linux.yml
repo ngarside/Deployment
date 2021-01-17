@@ -37,7 +37,3 @@
     dst: /opt/jetbrains-rider-2020.3.2
     remote_src: yes
   when: not rider.stat.exists
-
-- name: Installed
-  shell:
-    cmd: /opt/jetbrains-rider-2020.3.2/bin/rider.sh
