@@ -26,7 +26,7 @@
 
 - name: Checksum
   fail:
-    msg: Checksum check failed
+    msg: Checksum '{{ archive.stat.checksum }}' does not match expected value '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
   when:
     - not rider.stat.exists
     - archive.stat.checksum != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
