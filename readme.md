@@ -24,6 +24,8 @@ Example to configure desktop:
 curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | sudo bash -s desktop
 ```
 
+https://ubuntuforums.org/showthread.php?t=2420066
+
 # Playbooks
 
 - Base
