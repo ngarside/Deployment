@@ -1,0 +1,4 @@
+- name: Cumulonimbus
+  flatpak:
+    name: com.github.z.Cumulonimbus
+    state: absent
