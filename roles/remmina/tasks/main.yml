@@ -1,8 +1,0 @@
-- name: Linux
-  include_tasks: linux.yml
-  when: ansible_kernel_family == 'Linux'
-
-- name: Warning (Kernel)
-  debug:
-    msg: Role '{{ role_name }}' is not supported on kernel '{{ ansible_kernel_family }}'
-  when: ansible_kernel_family != 'Linux'

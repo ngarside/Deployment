@@ -33,4 +33,6 @@
     - kompare
     - appimaged
     - vim
+    - krdc
+    - remmina
     state: absent

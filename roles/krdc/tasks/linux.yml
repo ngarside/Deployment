@@ -1,4 +1,0 @@
-- name: Installed
-  package:
-    name: krdc
-    state: present

@@ -1,6 +1,0 @@
-- name: Installed
-  become: yes
-  flatpak:
-    name: org.remmina.Remmina
-    remote: flathub
-    state: present
