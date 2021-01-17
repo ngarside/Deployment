@@ -1,5 +1,0 @@
-- name: Installed
-  flatpak:
-    name: com.github.z.Cumulonimbus
-    remote: flathub
-    state: present
