@@ -1,4 +1,9 @@
-- name: Installed
+- name: Package Uninstalled
+  package:
+    name: blender
+    state: absent
+
+- name: Flatpak Installed
   flatpak:
     name: org.blender.Blender
     remote: flathub
