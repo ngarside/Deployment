@@ -22,14 +22,14 @@
     state: absent
   when:
     - not rider.stat.exists
-    - hub.stat.exists != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
+    - archive.stat.checksum != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
 
 - name: Checksum
   fail:
     msg: Checksum check failed
   when:
     - not rider.stat.exists
-    - hub.stat.exists != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
+    - archive.stat.checksum != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
 
 - name: Archive Extracted
   unarchive:
