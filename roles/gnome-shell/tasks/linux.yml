@@ -33,3 +33,8 @@
   package:
     name: gnome-themes-extra
     state: present
+
+- name: Background Set
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///usr/share/backgrounds/background.png'"
