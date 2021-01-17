@@ -4,7 +4,12 @@
 
 # Platforms
 
+- Linux*
 - openSUSE Tumbleweed
+
+# Notes
+
+- General Linux support is limited to updating flatpaks
 
 # References
 
