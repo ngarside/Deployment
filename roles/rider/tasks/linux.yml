@@ -1,0 +1,43 @@
+- name: Rider Exists
+  stat:
+    path: /opt/jetbrains-rider-2020.3.2
+  register: rider
+  changed_when: False
+
+- name: Archive Downloaded
+  get_url:
+    url: https://download.jetbrains.com/rider/JetBrains.Rider-2020.3.2.tar.gz
+    dest: /tmp/JetBrains.Rider-2020.3.2.tar.gz
+  when: not rider.stat.exists
+
+- name: Archive Stat
+  stat:
+    path: /tmp/JetBrains.Rider-2020.3.2.tar.gz
+  register: archive
+  when: not rider.stat.exists
+
+- name: Archive Deleted
+  file:
+    path: /tmp/JetBrains.Rider-2020.3.2.tar.gz
+    state: absent
+  when:
+    - not rider.stat.exists
+    - hub.stat.exists != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
+
+- name: Checksum
+  fail:
+    msg: Checksum check failed
+  when:
+    - not rider.stat.exists
+    - hub.stat.exists != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
+
+- name: Archive Extracted
+  unarchive:
+    src: /tmp/JetBrains.Rider-2020.3.2.tar.gz
+    dst: /opt/jetbrains-rider-2020.3.2
+    remote_src: yes
+  when: not rider.stat.exists
+
+- name: Installed
+  shell:
+    cmd: /opt/jetbrains-rider-2020.3.2/bin/rider.sh
