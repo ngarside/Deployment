@@ -61,26 +61,26 @@ System keybindings:
 
 App keybindings have been standardised where possible:
 
-| Keys | Action |
-|-|-|
-| Ctrl + T | New tab |
-| Ctrl + W | Close current tab |
-| Ctrl + Shift + W | Close all tabs |
-| Ctrl + Tab | Switch to tab to right of current |
-| Ctrl + Shift + Tab | Switch to tab to left of current |
-| Ctrl + X | Cut |
-| Ctrl + C | Copy |
-| Ctrl + V | Paste |
-| Ctrl + Z | Undo |
-| Ctrl + Shift + Z | Redo |
-| Ctrl + I | Interrupt |
-| Ctrl + D | Duplicate |
-| Ctrl + S | Save |
-| Ctrl + Shift + S | Save As |
-| Ctrl + Alt + S | Save All |
-| Ctrl + O | Open |
-| Ctrl + A | Select All |
-| Ctrl + Shift + A | Clear Selection |
+| Category | Keys | Action |
+|-|-|-|
+| System | Ctrl + T | New tab |
+| System | Ctrl + W | Close current tab |
+| System | Ctrl + Shift + W | Close all tabs |
+| System | Ctrl + Tab | Switch to tab to right of current |
+| System | Ctrl + Shift + Tab | Switch to tab to left of current |
+| System | Ctrl + X | Cut |
+| System | Ctrl + C | Copy |
+| System | Ctrl + V | Paste |
+| System | Ctrl + Z | Undo |
+| System | Ctrl + Shift + Z | Redo |
+| System | Ctrl + I | Interrupt |
+| System | Ctrl + D | Duplicate |
+| System | Ctrl + S | Save |
+| System | Ctrl + Shift + S | Save As |
+| System | Ctrl + Alt + S | Save All |
+| System | Ctrl + O | Open |
+| System | Ctrl + A | Select All |
+| System | Ctrl + Shift + A | Clear Selection |
 
 # License
 
