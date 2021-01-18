@@ -1,6 +1,6 @@
 - name: Rider Exists
   stat:
-    path: /opt/jetbrains-rider-2020.3.2
+    path: /opt/JetBrains.Rider-2020.3.2
   register: rider
   changed_when: False
 
@@ -32,15 +32,9 @@
     - not rider.stat.exists
     - archive.stat.checksum != '123418dfcd3fc03c1f274cfca50499bcd88495cef60e791cd74c4e6c455b6fb6'
 
-- name: Directory Exists
-  file:
-    path: /opt/jetbrains-rider-2020.3.2
-    state: directory
-  when: not rider.stat.exists
-
 - name: Archive Extracted
   unarchive:
     src: /tmp/JetBrains.Rider-2020.3.2.tar.gz
-    dest: /opt/jetbrains-rider-2020.3.2
+    dest: /opt
     remote_src: yes
   when: not rider.stat.exists
