@@ -50,16 +50,30 @@ https://ubuntuforums.org/showthread.php?t=2420066
 
 # Keybindings
 
-System keybindings:
+All keybindings have been standardised where possible.
+
+Desktop Environment
 
 | Keys | Action |
 |-|-|
 | Super | Toggle launcher |
 | Super + Enter | Open terminal |
-| Alt + F4 | Close active window |
-| Super + [1-9] | Open workspace at specified index |
+| Super + W | Close active window |
+| Super + D | Toggle show desktop |
+| Super + [1-9] | Switch to workspace at specified index |
 
-App keybindings have been standardised where possible:
+Selection
+
+| Keys | Action |
+|-|-|
+| Ctrl + X | Cut |
+| Ctrl + C | Copy |
+| Ctrl + V | Paste |
+| Ctrl + D | Duplicate |
+| Ctrl + A | Select All |
+| Ctrl + Shift + A | Clear Selection |
+
+Tabs
 
 | Keys | Action |
 |-|-|
@@ -68,19 +82,23 @@ App keybindings have been standardised where possible:
 | Ctrl + Shift + W | Close all tabs |
 | Ctrl + Tab | Switch to tab to right of current |
 | Ctrl + Shift + Tab | Switch to tab to left of current |
-| Ctrl + X | Cut |
-| Ctrl + C | Copy |
-| Ctrl + V | Paste |
-| Ctrl + Z | Undo |
-| Ctrl + Shift + Z | Redo |
-| Ctrl + I | Interrupt |
-| Ctrl + D | Duplicate |
+
+Document
+
+| Keys | Action |
+|-|-|
 | Ctrl + S | Save |
 | Ctrl + Shift + S | Save As |
 | Ctrl + Alt + S | Save All |
 | Ctrl + O | Open |
-| Ctrl + A | Select All |
-| Ctrl + Shift + A | Clear Selection |
+
+Miscellaneous
+
+| Keys | Action |
+|-|-|
+| Ctrl + Z | Undo |
+| Ctrl + Shift + Z | Redo |
+| Ctrl + I | Interrupt |
 
 # License
 
