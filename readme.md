@@ -26,6 +26,12 @@ curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/
 
 https://ubuntuforums.org/showthread.php?t=2420066
 
+sudo /usr/sbin/install_bcm43xx_firmware_wrapper
+
+sudo zypper install bcm43xx-firmware
+
+bcm4360
+
 # Playbooks
 
 - Base
