@@ -2,10 +2,10 @@
 
 Ansible scripts for setting up my devices. Very much a work in progress.
 
-# Platforms
+# Supported Operating Systems
 
-- Fedora Workstation
-- openSUSE Leap
+- Fedora Workstation 33
+- openSUSE Leap 15.2
 - openSUSE Tumbleweed
 
 # Setup
