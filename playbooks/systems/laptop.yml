@@ -1,7 +1,10 @@
-- import_playbook: ../includes/base.yml
-- import_playbook: ../includes/mobile.yml
-- import_playbook: ../includes/kde.yml
-- import_playbook: ../includes/workstation.yml
+#- import_playbook: ../includes/base.yml
+#- import_playbook: ../includes/mobile.yml
+#- import_playbook: ../includes/kde.yml
+#- import_playbook: ../includes/workstation.yml
 - hosts: localhost
+  pre_tasks:
+    - name: Kernel
+      include_tasks: ../../tasks/kernel.yml
   roles:
     - macbook

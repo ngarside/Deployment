@@ -1,12 +1,43 @@
-- name: Faulty gpe06 Disabled
-  become: yes
-  cron:
-    name: "Disable faulty gpe06 when running on Mac"
-    special_time: reboot
-    job: "echo \"disable\" > /sys/firmware/acpi/interrupts/gpe06"
-
-- name: Sleep Config File Exists
-  become: yes
+- name: GPE06 File Exists
   copy:
-    src: 30_disable_gpe06
-    dest: /etc/pm/sleep.d/30_disable_gpe06
+    src: disable-gpe06.service
+    dest: /etc/systemd/system/disable-gpe06.service
+
+- name: GPE17 File Exists
+  copy:
+    src: disable-gpe17.service
+    dest: /etc/systemd/system/disable-gpe17.service
+
+- name: SCI File Exists
+  copy:
+    src: disable-sci.service
+    dest: /etc/systemd/system/disable-sci.service
+
+- name: SCI_NOT File Exists
+  copy:
+    src: disable-sci.service
+    dest: /etc/systemd/system/disable-sci_not.service
+
+- name: GPE06 Service Started
+  systemd:
+    name: disable-gpe06.service
+    state: started
+    enabled: yes
+
+- name: GPE17 Service Started
+  systemd:
+    name: disable-gpe17.service
+    state: started
+    enabled: yes
+
+- name: SCI Service Started
+  systemd:
+    name: disable-sci.service
+    state: started
+    enabled: yes
+
+- name: SCI_NOT Service Started
+  systemd:
+    name: disable-sci_not.service
+    state: started
+    enabled: yes
