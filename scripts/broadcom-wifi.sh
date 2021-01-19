@@ -1,15 +1,17 @@
 # ------------------------------------------------------------------------------
 # Configures wireless adaptor
 # openSUSE only
-# Run with:
+# Usage:
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/scripts/broadcom-wifi.sh | sudo bash
 # https://en.opensuse.org/Additional_package_repositories
 # https://pmbs.links2linux.de/project/show/Essentials
+# If running script locally must be run as root
 # ------------------------------------------------------------------------------
 
-sudo zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials packman-essentials
+zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials packman-essentials
 
-sudo zypper dup --from packman --allow-vendor-change
+zypper dup --from packman --allow-vendor-change
 
-sudo zypper refresh
+zypper refresh
 
-sudo zypper install broadcom-wl
+zypper install broadcom-wl
