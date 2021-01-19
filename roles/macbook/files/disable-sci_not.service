@@ -1,0 +1,10 @@
+# https://gist.github.com/samerickson/747517fc48fae6543775ce0a8d63c331
+
+[Unit]
+Description=Disables sci_not
+
+[Service]
+ExecStart=/usr/bin/bash -c 'echo "disable" > /sys/firmware/acpi/interrupts/sci_not'
+
+[Install]
+WantedBy=multi-user.target
