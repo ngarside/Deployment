@@ -1,8 +1,8 @@
-#- name: Fan
-#  include_tasks: fan.yml
+- name: Fan
+  include_tasks: fan.yml
 
-#- name: Keyboard
-#  include_tasks: keyboard.yml
+- name: Keyboard
+  include_tasks: keyboard.yml
 
 - name: Power
   include_tasks: power.yml
