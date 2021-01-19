@@ -10,4 +10,6 @@ sudo zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_
 
 sudo zypper dup --from packman --allow-vendor-change
 
+sudo zypper refresh
+
 sudo zypper install broadcom-wl
