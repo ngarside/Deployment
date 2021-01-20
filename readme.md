@@ -52,6 +52,13 @@ sudo zypper install broadcom-wl
 	- Mobile
 	- Gnome
 
+# Folders
+
+| Name | Description |
+|-|-|
+| roles | Ansible roles for installing software and configuring the system. Note that these only handle system-wide configuration. User-specific configuration is handled by the user folder (see below). |
+| user | Default user folder with basic configuration for apps installed by ansible. |
+
 # Keybindings
 
 All keybindings have been standardised where possible.

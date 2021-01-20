@@ -1,0 +1,5 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-171f3d87-d0dc-4fea-a4c4-fe7784f50108]
+ordering=preferred://browser,/usr/share/applications/org.kde.kontact.desktop,/usr/share/applications/writer.desktop,/usr/share/applications/kde4/org.kde.amarok.desktop,/usr/share/applications/org.kde.digikam.desktop,/usr/share/applications/org.kde.dolphin.desktop,/usr/share/applications/systemsettings.desktop,/usr/share/applications/org.kde.Help.desktop,/usr/share/applications/org.kde.konsole.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
+ordering=preferred://browser,/usr/share/applications/org.kde.kontact.desktop,/usr/share/applications/writer.desktop,/usr/share/applications/kde4/org.kde.amarok.desktop,/usr/share/applications/org.kde.digikam.desktop,/usr/share/applications/org.kde.dolphin.desktop,/usr/share/applications/systemsettings.desktop,/usr/share/applications/org.kde.Help.desktop,/usr/share/applications/org.kde.konsole.desktop

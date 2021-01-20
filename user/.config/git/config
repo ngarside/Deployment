@@ -1,0 +1,19 @@
+[core]
+autocrlf=input
+editor=nano
+
+[color]
+ui=auto
+
+[filter "lfs"]
+clean=git-lfs clean -- %f
+smudge=git-lfs smudge -- %f
+process=git-lfs filter-process
+required=true
+
+[init]
+defaultBranch=master
+
+[user]
+email=code@nathangarside.com
+name=Nathan Garside
