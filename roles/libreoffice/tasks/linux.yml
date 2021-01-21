@@ -11,3 +11,8 @@
     dest: ~/.config/libreoffice/4/user/registrymodifications.xcu
   become: yes
   become_user: nathan
+
+- name: Desktop File Absent
+  file:
+    path: /usr/share/applications/startcenter.desktop
+    state: absent
