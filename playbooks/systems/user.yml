@@ -12,7 +12,7 @@
   tasks:
     - name: User Created
       user:
-        name: {{ username }}
-        password: {{ password }}
+        name: '{{ username }}'
+        password: '{{ password }}'
         state: present
       register: user
