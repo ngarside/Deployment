@@ -8,7 +8,7 @@
       private: yes
       encrypt: bcrypt
       confirm: yes
-      salt_size: 7
+      salt_size: 22
   tasks:
     - name: User Created
       user:
