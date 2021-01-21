@@ -19,6 +19,6 @@
 
 - name: Build Directory Templates
   file:
-    path: "{{ item | splitext | first }}"
+    path: "{{ item.path | splitext | first }}"
     state: directory
   with_items: "{{ directorytemplates.files }}"
