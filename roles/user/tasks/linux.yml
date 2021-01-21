@@ -2,9 +2,8 @@
   ansible.posix.synchronize:
     src: ../../../user/
     dest: /home/nathan/
+    archive: no
     delete: yes
-  become: yes
-  become_user: nathan
 
 - name: Find Directory Templates
   find:
