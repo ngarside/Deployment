@@ -1,4 +1,4 @@
 - name: Home Directory Sync
-  copy:
+  ansible.posix.synchronize:
     src: ../../../user/
     dest: /home/nathan/
