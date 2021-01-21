@@ -3,6 +3,7 @@
     src: ../../../user/
     dest: /home/nathan/
     archive: no
+    recursive: yes
     delete: yes
 
 - name: Find Directory Templates
