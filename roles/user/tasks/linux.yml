@@ -2,3 +2,5 @@
   ansible.posix.synchronize:
     src: ../../../user/
     dest: /home/nathan/
+  become: yes
+  become_user: nathan
