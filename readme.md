@@ -59,6 +59,7 @@ sudo zypper install broadcom-wl
 | playbooks | Ansible playbooks. |
 | roles | Ansible roles for installing software and configuring the system. Note that these only handle system-wide configuration. User-specific configuration is handled by the user folder (see below). |
 | scripts | Miscellaneous scripts primarily used to bootstrap Ansible. |
+| submodules | Git submodules. |
 | tasks | Ansible pre-tasks. Only basic fact finding, configuration is all handled by roles. |
 | user | Default user folder with basic configuration for apps installed by ansible. |
 
