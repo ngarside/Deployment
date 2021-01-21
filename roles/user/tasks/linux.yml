@@ -3,6 +3,8 @@
     src: ../../../user/
     dest: /home/nathan/
     delete: yes
+  become: yes
+  become_user: nathan
 
 - name: Find Directory Templates
   find:
@@ -22,9 +24,5 @@
     path: "{{ item.path | splitext | first }}"
     state: directory
   with_items: "{{ directorytemplates.files }}"
-
-- name: Home Directory Permissions
-  file:
-    path: /home/nathan
-    state: directory
-    mode: u=rwx,g=rx,o=r-x
+  become: yes
+  become_user: nathan
