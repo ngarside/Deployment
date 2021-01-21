@@ -4,16 +4,6 @@
     name: nautilus
     state: present
 
-- name: Bookmarks Directory Exists
-  file:
-    path: ~/.config/gtk-3.0
-    state: directory
-
-- name: Bookmarks File Sync
-  copy:
-    src: bookmarks
-    dest: ~/.config/gtk-3.0/bookmarks
-
 - name: Sort Folders First
   dconf:
     key: /org/gtk/settings/file-chooser/sort-directories-first

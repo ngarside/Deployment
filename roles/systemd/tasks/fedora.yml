@@ -1,24 +1,20 @@
 - name: DNS Over TLS - Copy Configuration File
-  become: yes
   copy:
     src: resolved.conf
     dest: /etc/systemd/resolved.conf
 
 - name: DNS Over TLS - Copy Network Manager File
-  become: yes
   copy:
     src: 10-dns-systemd-resolved.conf
     dest: /etc/NetworkManager/conf.d/10-dns-systemd-resolved.conf
 
 - name: DNS Over TLS - Start & Enable Systemd Resolved
-  become: yes
   systemd:
     name: systemd-resolved
     state: started
     enabled: yes
 
 - name: DNS Over TLS - Reload Network Manager
-  become: yes
   systemd:
     name: NetworkManager
     state: reloaded

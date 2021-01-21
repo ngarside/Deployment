@@ -8,6 +8,7 @@
 	"editor.insertSpaces": false,
 	"editor.renderLineHighlight": "all",
 	"editor.wordWrap": "on",
+	"explorer.compactFolders": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
 	"explorer.openEditors.visible": 0,

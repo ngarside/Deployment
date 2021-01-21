@@ -1,6 +1,0 @@
-- name: Config File Sync
-  copy:
-    src: krunnerrc
-    dest: ~/.config/krunnerrc
-  become: yes
-  become_user: nathan

@@ -1,9 +1,0 @@
-[Desktop Entry]
-DefaultProfile = Profile.profile
-
-[Notification Messages]
-CloseAllEmptyTabs = true
-
-[TabBar]
-CloseTabOnMiddleMouseButton = true
-TabBarPosition = Top

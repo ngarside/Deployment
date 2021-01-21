@@ -3,10 +3,3 @@
   package:
     name: dolphin
     state: present
-
-- name: Config File Sync
-  copy:
-    src: dolphinrc
-    dest: ~/.config/dolphinrc
-  become: yes
-  become_user: nathan

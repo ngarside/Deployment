@@ -1,17 +1,3 @@
-- name: Config Directory Exists
-  file:
-    path: ~/.config/libreoffice/4/user
-    state: directory
-  become: yes
-  become_user: nathan
-
-- name: Settings File Sync
-  copy:
-    src: registrymodifications.xcu
-    dest: ~/.config/libreoffice/4/user/registrymodifications.xcu
-  become: yes
-  become_user: nathan
-
 - name: Desktop File Absent
   file:
     path: /usr/share/applications/startcenter.desktop

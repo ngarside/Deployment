@@ -1,22 +1,18 @@
 - name: Installed
-  become: yes
   package:
     name: gdm
     state: present
 
 - name: Enabled
-  become: yes
   systemd:
     name: gdm
     enabled: true
 
 - name: Get Target
-  become: yes
   command: systemctl get-default
   register: target
   changed_when: False
 
 - name: Set Target
-  become: yes
   command: systemctl set-default graphical.target
   when: target.stdout != "graphical.target"

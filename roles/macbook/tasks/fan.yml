@@ -1,29 +1,24 @@
 - name: Installed
-  become: yes
   package:
     name: mbpfan
 
 - name: Service File Exists
-  become: yes
   copy:
     src: mbpfan.service
     dest: /etc/systemd/system/mbpfan.service
 
 - name: Service Enabled
-  become: yes
   systemd:
     name: mbpfan.service
     enabled: yes
   register: enabled
 
 - name: Systemd Config Reloaded
-  become: yes
   systemd:
     daemon_reload: yes
   when: enabled.changed
 
 - name: Start Service
-  become: yes
   systemd:
     name: mbpfan.service
     state: started
@@ -48,28 +43,24 @@
   changed_when: False
 
 - name: Set Minimum Speed
-  become: yes
   lineinfile:
     path: /etc/mbpfan.conf
     regexp: 'min_fan1_speed = '
     line: 'min_fan1_speed = {{ speedmin.stdout }}'
 
 - name: Set Maximum Speed
-  become: yes
   lineinfile:
     path: /etc/mbpfan.conf
     regexp: 'max_fan1_speed = '
     line: 'max_fan1_speed = {{ speedmax.stdout }}'
 
 - name: Set Maximum Temperature
-  become: yes
   lineinfile:
     path: /etc/mbpfan.conf
     regexp: 'max_temp = '
     line: 'max_temp = {{ tempmax.stdout }}'
 
 - name: Set Polling Interval
-  become: yes
   lineinfile:
     path: /etc/mbpfan.conf
     regexp: 'polling_interval = '
