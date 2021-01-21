@@ -3,5 +3,3 @@
     src: ../../../user/
     dest: /home/nathan/
     delete: yes
-  become: yes
-  become_user: nathan
