@@ -1,18 +1,6 @@
 - hosts: localhost
-  vars_prompt:
-    - name: username
-      prompt: Specify the user account.
-      private: no
-    - name: password
-      prompt: Specify the user password.
-      private: yes
-      encrypt: bcrypt
-      confirm: yes
-      salt_size: 22
-  tasks:
-    - name: User Created
-      user:
-        name: '{{ username }}'
-        password: '{{ password }}'
-        state: present
-      register: user
+  pre_tasks:
+    - name: Kernel
+      include_tasks: ../../tasks/kernel.yml
+  roles:
+    - user
