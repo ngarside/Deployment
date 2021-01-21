@@ -12,10 +12,10 @@
 # - openSUSE Tumbleweed
 
 # Usage:
-# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | sudo bash -s <system>
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/scripts/unix.sh | sudo bash -s <system>
 # Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
 # Example to configure desktop:
-# curl https://raw.githubusercontent.com/ngarside/deployment/master/bootstrappers/unix.sh | sudo bash -s desktop
+# curl https://raw.githubusercontent.com/ngarside/deployment/master/scripts/unix.sh | sudo bash -s desktop
 
 #-------------------------------------------------------------------------------
 # Process arguments
