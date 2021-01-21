@@ -13,7 +13,7 @@
 
 # Usage:
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/scripts/unix.sh | sudo bash -s <system>
-# Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
+# Where <system> is one of [ 'desktop', 'laptop', 'tablet', 'user' ]
 # Example to configure desktop:
 # curl https://raw.githubusercontent.com/ngarside/deployment/master/scripts/unix.sh | sudo bash -s desktop
 
@@ -23,11 +23,11 @@
 
 if [[ -z "$1" ]]
 then
-    echo "Parameter not passed, must be one of [ 'desktop', 'laptop', 'tablet' ]"
+    echo "Parameter not passed, must be one of [ 'desktop', 'laptop', 'tablet', 'user' ]"
     exit 1
-elif [[ "$1" != "desktop" && "$1" != "laptop" && "$1" != "tablet" ]]
+elif [[ "$1" != "desktop" && "$1" != "laptop" && "$1" != "tablet" && "$1" != "user" ]]
 then
-    echo "Parameter invalid, must be one of [ 'desktop', 'laptop', 'tablet' ]"
+    echo "Parameter invalid, must be one of [ 'desktop', 'laptop', 'tablet', 'user' ]"
     exit 1
 else
     playbook=$1

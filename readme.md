@@ -16,7 +16,7 @@ Run with:
 curl https://raw.githubusercontent.com/ngarside/deployment/master/scripts/unix.sh | sudo bash -s <system>
 ```
 
-Where <system> is one of [ 'desktop', 'laptop', 'tablet' ]
+Where <system> is one of [ 'desktop', 'laptop', 'tablet', 'user' ]
 
 Example to configure desktop:
 
