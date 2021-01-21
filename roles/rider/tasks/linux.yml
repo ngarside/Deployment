@@ -38,3 +38,8 @@
     dest: /opt
     remote_src: yes
   when: not rider.stat.exists
+
+- name: Desktop File Sync
+  copy:
+    src: jetbrains-rider.desktop
+    dest: /usr/share/applications/jetbrains-rider.desktop
