@@ -1,11 +1,9 @@
 - name: Wallpapers Directory Not Exists
-  become: yes
   file:
     path: /usr/share/wallpapers
     state: absent
 
 - name: Backgrounds Directory Exists
-  become: yes
   file:
     path: /usr/share/backgrounds
     state: directory
@@ -18,7 +16,6 @@
   register: junk_images
 
 - name: No Junk Backgrounds
-  become: yes
   file:
     path: "{{ item.path }}"
     state: absent
@@ -32,26 +29,22 @@
   register: junk_properties
 
 - name: No Junk Properties
-  become: yes
   file:
     path: "{{ item.path }}"
     state: absent
   with_items: "{{ junk_properties.files }}"
 
 - name: Image Sync
-  become: yes
   copy:
     src: background.png
     dest: /usr/share/backgrounds/background.png
 
 - name: Properties Directory Exists
-  become: yes
   file:
     path: /usr/share/gnome-background-properties
     state: directory
 
 - name: Property Sync
-  become: yes
   copy:
     src: backgrounds.xml
     dest: /usr/share/gnome-background-properties/backgrounds.xml

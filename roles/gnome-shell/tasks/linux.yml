@@ -29,7 +29,6 @@
     value: "false"
 
 - name: Extra Themes Installed
-  become: yes
   package:
     name: gnome-themes-extra
     state: present

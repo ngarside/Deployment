@@ -1,11 +1,9 @@
 - name: Installed
-  become: yes
   package:
     name: libreoffice-writer
     state: present
 
 - name: Desktop Name
-  become: yes
   ini_file:
     path: /usr/share/applications/libreoffice-writer.desktop
     section: Desktop Entry

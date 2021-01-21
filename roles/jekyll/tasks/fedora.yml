@@ -1,5 +1,4 @@
 - name: Dependencies Installed
-  become: yes
   package:
     name:
     - ruby

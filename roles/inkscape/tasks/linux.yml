@@ -1,11 +1,9 @@
 - name: Package Uninstalled
-  become: yes
   package:
     name: inkscape
     state: absent
 
 - name: Flatpak Installed
-  become: yes
   flatpak:
     name: org.inkscape.Inkscape
     remote: flathub

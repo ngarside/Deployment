@@ -1,5 +1,4 @@
 - name: Installed
-  become: yes
   flatpak:
     name: org.gnome.Clocks
     remote: flathub

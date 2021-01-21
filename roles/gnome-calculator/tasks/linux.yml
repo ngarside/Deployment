@@ -1,11 +1,9 @@
 - name: Package Uninstalled
-  become: yes
   package:
     name: gnome-calculator
     state: absent
 
 - name: Flatpak Installed
-  become: yes
   flatpak:
     name: org.gnome.Calculator
     remote: flathub

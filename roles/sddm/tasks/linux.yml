@@ -1,5 +1,4 @@
 - name: Background
-  become: yes
   copy:
     src: /usr/share/backgrounds/background.png
     dest: /usr/share/sddm/themes/breeze/background.png
