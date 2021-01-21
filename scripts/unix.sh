@@ -69,6 +69,8 @@ elif [[ "$os_id" == "opensuse-leap" || "$os_id" == "opensuse-tumbleweed" ]]
 then
 	zypper --non-interactive --no-cd install --no-recommends git ansible python3-psutil
 fi
+
+ansible-galaxy collection install ansible.posix
 ansible-galaxy collection install community.general
 
 #-------------------------------------------------------------------------------
