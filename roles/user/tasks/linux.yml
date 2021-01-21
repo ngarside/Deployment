@@ -8,7 +8,7 @@
   find:
     path: /home/nathan/
     patterns: '*.directorytemplate'
-    recursive: yes
+    recurse: yes
   register: directorytemplates
 
 - name: No Directory Templates
