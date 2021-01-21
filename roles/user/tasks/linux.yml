@@ -3,3 +3,22 @@
     src: ../../../user/
     dest: /home/nathan/
     delete: yes
+
+- name: Find Directory Templates
+  find:
+    path: /home/nathan/
+    patterns: '*.directorytemplate'
+    recursive: yes
+  register: directorytemplates
+
+- name: No Directory Templates
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ directorytemplates.files }}"
+
+- name: Build Directory Templates
+  file:
+    path: "{{ (item | splittext)[0] }}"
+    state: directory
+  with_items: "{{ directorytemplates.files }}"
