@@ -6,6 +6,7 @@
     recursive: yes
     delete: yes
     rsync_opts:
+      - '-og'
       - '--chown=nathan:users'
 
 - name: Find Directory Templates
