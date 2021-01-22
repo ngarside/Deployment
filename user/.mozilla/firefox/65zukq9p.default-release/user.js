@@ -1,3 +1,8 @@
+// -----------------------------------------------------------------------------
+// All custom configuration for Firefox should go in here, not prefs.js.
+// https://github.com/amq/firefox-debloat
+// -----------------------------------------------------------------------------
+
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("browser.contentblocking.category", "custom");
 user_pref("browser.ctrlTab.recentlyUsedOrder", false);
@@ -9,6 +14,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
 user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 2);
 user_pref("browser.newtabpage.pinned", "[]");
+user_pref("browser.pocket.enabled", false);
 user_pref("browser.search.region", "GB");
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.startup.homepage", "about:home");
@@ -20,7 +26,9 @@ user_pref("distribution.openSUSE.bookmarksProcessed", true);
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_ever_enabled", true);
 user_pref("gfx.webrender.all", true);
+user_pref("loop.enabled", false);
 user_pref("media.autoplay.default", 5);
+user_pref("media.peerconnection.ice.default_address_only", true);
 user_pref("mozilla.widget.use-argb-visuals", true);
 user_pref("network.cookie.cookieBehavior", 1);
 user_pref("permissions.default.desktop-notification", 2);
@@ -31,3 +39,5 @@ user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("signon.autofillForms", false);
 user_pref("signon.generation.enabled", false);
 user_pref("signon.rememberSignons", false);
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.enabled", false);
