@@ -1,4 +1,11 @@
+- name: Flatpak Installed
+  shell:
+    cmd: which flatpak
+  register: installed
+  ignore_errors: True
+
 - name: Cumulonimbus
   flatpak:
     name: com.github.z.Cumulonimbus
     state: absent
+  when: installed.rc != 0

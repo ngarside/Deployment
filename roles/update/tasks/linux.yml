@@ -1,3 +1,10 @@
+- name: Flatpak Installed
+  shell:
+    cmd: which flatpak
+  register: installed
+  ignore_errors: True
+
 - name: Flatpaks Updated
   shell:
     cmd: flatpak update --noninteractive
+  when: installed.rc != 0
