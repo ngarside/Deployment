@@ -1,0 +1,4 @@
+- name: Installed
+  package:
+    name: gitg
+    state: present
