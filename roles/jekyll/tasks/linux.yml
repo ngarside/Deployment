@@ -6,12 +6,12 @@
   include_tasks: opensuse.yml
   when: ansible_distribution in ['openSUSE Tumbleweed', 'openSUSE Leap']
 
-- name: Jekyll Installed
-  gem:
-    name: jekyll
-    state: present
-
 - name: Bundler Installed
   gem:
     name: bundler
+    state: present
+
+- name: Jekyll Installed
+  gem:
+    name: jekyll
     state: present
