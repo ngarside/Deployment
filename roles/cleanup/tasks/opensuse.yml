@@ -24,3 +24,12 @@
 - name: No Old Journal Logs
   shell:
     cmd: journalctl --vacuum-time=1d
+
+- name: Patterns Uninstalled
+  community.general.zypper:
+    name:
+      - patterns-games-games
+      - patterns-kde-kde_games
+      - patterns-kde-kde_pim
+    type: pattern
+    state: absent
