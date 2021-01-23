@@ -18,13 +18,3 @@
 - name: Run Updated '.bashrc'
   shell: . ~/.bashrc
   when: bashrc_updated.changed
-
-- name: Jekyll Installed
-  gem:
-    name: jekyll
-    state: present
-
-- name: Bundler Installed
-  gem:
-    name: bundler
-    state: present

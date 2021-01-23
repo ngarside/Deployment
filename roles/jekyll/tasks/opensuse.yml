@@ -1,0 +1,7 @@
+- name: Dependencies Installed
+  community.general.zypper:
+    name:
+      - devel_ruby
+      - devel_C_C++
+    type: pattern
+    state: present

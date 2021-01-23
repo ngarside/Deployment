@@ -1,0 +1,17 @@
+- name: Fedora
+  include_tasks: fedora.yml
+  when: ansible_distribution == 'Fedora'
+
+- name: openSUSE
+  include_tasks: opensuse.yml
+  when: ansible_distribution in ['openSUSE Tumbleweed', 'openSUSE Leap']
+
+- name: Jekyll Installed
+  gem:
+    name: jekyll
+    state: present
+
+- name: Bundler Installed
+  gem:
+    name: bundler
+    state: present
