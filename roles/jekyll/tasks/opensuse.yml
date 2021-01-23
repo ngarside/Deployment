@@ -8,5 +8,7 @@
 
 - name: Dependencies Installed
   package:
-    name: ruby-devel
+    name:
+      - ruby-devel
+      - gcc-c++
     state: present
