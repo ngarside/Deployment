@@ -5,3 +5,8 @@
       - devel_C_C++
     type: pattern
     state: present
+
+- name: Dependencies Installed
+  package:
+    name: ruby-devel
+    state: present
