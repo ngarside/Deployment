@@ -1,10 +1,10 @@
-- name: '`' Key Remapped To 'D'
+- name: Tilde Remapped To D
   lineinfile:
     path: /usr/share/X11/xkb/keycodes/evdev
     regexp: '<TLDE> = '
     line: '        <TLDE> = 40;'
 
-- name: 'D' Key Remapped To '`'
+- name: D Remapped To Tilde
   lineinfile:
     path: /usr/share/X11/xkb/keycodes/evdev
     regexp: '<AC03> = '
