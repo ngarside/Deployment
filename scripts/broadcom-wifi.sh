@@ -20,7 +20,7 @@ then
 	rpm --import http://packman.inode.at/suse/openSUSE_Tumbleweed/repodata/repomd.xml.key
 	zypper addrepo --check --priority 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials packman-essentials
 	zypper refresh
-	zypper dup --from packman-essentials --allow-vendor-change
+	zypper --non-interactive --no-cd dup --no-recommends --from packman-essentials --allow-vendor-change
 fi
 
 # ------------------------------------------------------------------------------
