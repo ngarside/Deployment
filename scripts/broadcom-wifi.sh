@@ -18,7 +18,7 @@ has_repo=$(zypper lr --details | grep https://ftp.gwdg.de/pub/linux/misc/packman
 if [[ -z "$has_repo" ]]
 then
 	rpm --import http://packman.inode.at/suse/openSUSE_Tumbleweed/repodata/repomd.xml.key
-	zypper addrepo --check --no-gpg-checks https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials packman-essentials
+	zypper addrepo --check https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials packman-essentials
 	zypper refresh
 fi
 
