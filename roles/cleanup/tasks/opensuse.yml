@@ -32,4 +32,4 @@
       - patterns-kde-kde_games
       - patterns-kde-kde_pim
     type: pattern
-    state: absent
+    state: removed
