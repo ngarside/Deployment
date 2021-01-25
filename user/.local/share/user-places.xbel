@@ -87,6 +87,19 @@
    </metadata>
   </info>
  </bookmark>
+ <bookmark href="file:///home/nathan/Projects">
+  <title>Projects</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-projects"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1611575136/0</ID>
+    <isSystemItem>false</isSystemItem>
+    <IsHidden>false</IsHidden>
+   </metadata>
+  </info>
+ </bookmark>
  <bookmark href="file:///home/nathan/Videos">
   <title>Videos</title>
   <info>
