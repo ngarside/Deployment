@@ -28,8 +28,7 @@
 - name: Patterns Uninstalled
   community.general.zypper:
     name:
-      - patterns-games-games
-      - patterns-kde-kde_games
-      - patterns-kde-kde_pim
+      - games
+      - kde_pim
     type: pattern
-    state: removed
+    state: absent

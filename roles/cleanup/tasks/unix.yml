@@ -35,4 +35,7 @@
     - vim
     - krdc
     - remmina
+    - patterns-games-games
+    - patterns-kde-kde_games
+    - patterns-kde-kde_pim
     state: absent
