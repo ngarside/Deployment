@@ -38,4 +38,5 @@
     - patterns-games-games
     - patterns-kde-kde_games
     - patterns-kde-kde_pim
+    - kdeconnect-kde
     state: absent
