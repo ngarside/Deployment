@@ -3,6 +3,7 @@
     cmd: which flatpak
   register: installed
   ignore_errors: True
+  changed_when: False
 
 - name: Cumulonimbus
   flatpak:

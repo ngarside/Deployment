@@ -3,4 +3,4 @@
     - name: Kernel
       include_tasks: ../tasks/kernel.yml
   roles:
-    - ssh
+    - cleanup
