@@ -61,5 +61,6 @@
  <ActionProperties scheme="Default">
   <Action name="edit_copy" shortcut="Ctrl+C"/>
   <Action name="edit_paste" shortcut="Ctrl+V"/>
+  <Action name="close-session" shortcut="Ctrl+W"/>
  </ActionProperties>
 </kpartgui>
