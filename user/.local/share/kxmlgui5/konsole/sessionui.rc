@@ -60,6 +60,6 @@
  </Menu>
  <ActionProperties scheme="Default">
   <Action name="edit_copy" shortcut="Ctrl+C"/>
-  <Action name="edit_paste" shortcut="Ctrl+V; Shift+Ins"/>
+  <Action name="edit_paste" shortcut="Ctrl+V"/>
  </ActionProperties>
 </kpartgui>
