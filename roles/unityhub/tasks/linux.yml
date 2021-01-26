@@ -52,8 +52,18 @@
     state: directory
     mode: a=rwx
 
+- name: Existsting Install Location
+  shell:
+    cmd: xvfb-run /opt/unityhub/unityhub.appimage --headless install-path --get | grep /opt/unityeditor/ | cat
+    warn: false
+  register: install_location
+  changed_when: False
+  become: yes
+  become_user: nathan
+
 - name: Editor Install Location
   shell:
     cmd: xvfb-run /opt/unityhub/unityhub.appimage --headless install-path --set /opt/unityeditor/
+  when: not install_location.stdout
   become: yes
   become_user: nathan

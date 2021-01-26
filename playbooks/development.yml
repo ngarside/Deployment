@@ -3,4 +3,5 @@
     - name: Kernel
       include_tasks: ../tasks/kernel.yml
   roles:
+    - unityhub
     - unity
