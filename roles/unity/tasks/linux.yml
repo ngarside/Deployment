@@ -1,12 +1,25 @@
 - name: Editor Exists
-  stat:
-    path: /opt/unityeditor/2019.4.18f1/
+  shell:
+    cmd: xvfb-run /opt/unityhub/unityhub.appimage --headless editors --installed | grep 2021.1 | cat
+    warn: false
   register: editor
   changed_when: False
+  become: yes
+  become_user: nathan
+
+- name: Editor Version
+  shell:
+    cmd: xvfb-run /opt/unityhub/unityhub.appimage --headless editors | grep 2021.1
+    warn: false
+  register: version
+  when: not editor.stdout
+  changed_when: False
+  become: yes
+  become_user: nathan
 
 - name: Editor Installed
   shell:
-    cmd: xvfb-run /opt/unityhub/unityhub.appimage --headless install --version 2019.4.18f1
-  when: not editor.stat.exists
+    cmd: 'xvfb-run /opt/unityhub/unityhub.appimage --headless install --version {{ version.stdout }}'
+  when: not editor.stdout
   become: yes
   become_user: nathan
