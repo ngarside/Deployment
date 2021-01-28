@@ -29,3 +29,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Run Ansible Lint
+        uses: ansible/ansible-lint-action@master
+        with:
+          targets: ""
