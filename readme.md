@@ -76,6 +76,8 @@ Desktop Environment
 | Super + W | Close active window |
 | Super + D | Toggle show desktop |
 | Super + [1-9] | Switch to workspace at specified index |
+| Super + Tab | Cycle active window |
+| Super + L | Lock session |
 
 Selection
 
